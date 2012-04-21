@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="NamePasswordCredentialsAreNull">
+    <value>The provided NamePassword Credentials object was null.</value>
+  </data>
+  <data name="NamePasswordCredentialsInvalid">
+    <value>The provided NamePassword Credentials are invalid or incomplete.</value>
+  </data>
+  <data name="DBAuthenticationProviderConfigDataIsNull">
+    <value>The provided DB Authentication Provider Configuration data was null.</value>
+  </data>
+  <data name="DBAuthenticationProviderConfigDataInvalid">
+    <value>The provided DB Authentication Provider Configuration data was incomplete.</value>
+  </data>
+  <data name="IdentityIsNull">
+    <value>The provided IIdentity object is null.</value>
+  </data>
+  <data name="IdentityInvalid">
+    <value>The provided IIdentity object is incomplete or invalid.</value>
+  </data>
+  <data name="DBProfileProviderConfigDataIsNull">
+    <value>The provided DB Profile Provider Configuration data was null.</value>
+  </data>
+  <data name="DBProfileProviderConfigDataInvalid">
+    <value>The provided DB Profile Provider Configuration data was incomplete.</value>
+  </data>
+  <data name="ProfileDictionaryZeroItems">
+    <value>Profile dictionary must contain 1 or more items.</value>
+  </data>
+  <data name="ConversionException">
+    <value>Unable to convert '{0}' into {1}.</value>
+    <comment>.
+ Parameters: 0 - keyValue (string), 1 - type (string) </comment>
+  </data>
+  <data name="ProfileIsNull">
+    <value>The provided Profile object is null.</value>
+  </data>
+  <data name="ProfileExceedsMaxLength">
+    <value>The profile has a length of {0}.  This exceeds the maximum allowed length of {1}.</value>
+    <comment>.
+ Parameters: 0 - length (int), 1 - maxLength (int) </comment>
+  </data>
+  <data name="LoadingProfileException">
+    <value>Error loading the profile for the following user '{0}'.</value>
+    <comment>.
+ Parameters: 0 - userName (string) </comment>
+  </data>
+  <data name="SavingProfileException">
+    <value>Error saving the profile for the following user '{0}'.</value>
+    <comment>.
+ Parameters: 0 - userName (string) </comment>
+  </data>
+  <data name="NoUserExists">
+    <value>There was an error deleting user '{0}'. User does not exist.</value>
+    <comment>.
+ Parameters: 0 - userName (string) </comment>
+  </data>
+  <data name="NoRoleExists">
+    <value>There was an error deleting role '{0}'. Role does not exist.</value>
+    <comment>.
+ Parameters: 0 - roleName (string) </comment>
+  </data>
+  <data name="BatchNoUserExists">
+    <value>One or more users did not exist while deleting user-roles. The data is unchanged.</value>
+  </data>
+  <data name="BatchNoRoleExists">
+    <value>One or more roles did not exist while deleting user-roles. The data is unchanged.</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

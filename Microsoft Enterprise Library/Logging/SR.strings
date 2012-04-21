@@ -1,0 +1,124 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Logging and Instrumentation Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+DistributionStrategyFactoryName = Distribution Strategies
+EmailSinkMissingParameters = E-Mail Sink is missing one of these keys in the Distributor's XML file: ToAddress, FromAddress, and/or SmtpServer.
+CategoryNotFound(string missingCategory, string defaultCategory) = The category '{0}' in the message is not found in configuration. The default category '{1}' is used instead to process the message.
+InvalidSink(string invalidSink) = Error logging with '{0}' sink from configuration. The default log sink will be used instead to process the message.
+InvalidSinkMessage(string body) = \nMessage: \n{0}
+ProcessMessageFailed = Processing of the message failed. See summary information below for more information. Should this problem persist, stop the service and check the configuration file(s) for possible error(s) in the configuration of the categories and sinks.
+ProcessMessageFailed2 = ProcessQueueMessage - additional information
+ProcessMessageFailed3(string contents) = \nMessage: \n{0}SinkFactoryName = Log Sink
+SinkFailure(string exceptionString) = Sink failed because: {0}.
+DefaultLogDestinationMessage = An error occurred while the Distributor was processing the message.  Please check your configuration files for errors or typos.  Verify that your sinks are reachable (queues exist, permissions are set, database exists, etc...)
+DefaultLogDestinationFailed = Failed to log message to the default log destination.
+EventLogSinkMissingEventSource = Event Log Sink is missing the key -EventSourceName- in the Distributor's configuration file.
+FileSinkMissingConfiguration = Flat File Sink is missing one of these keys in the Distributor's configuration file: FilePath and/or FileName
+DistEventLoggerMessagePrefix = Message: \n
+DistEventLoggerSummary = Summary for
+EventLogAccessDenied(string log) = Access denied to the event log '{0}'.
+ActivatorCacheCannotCreateType(string type) = Unable to create type '{0}'.
+FormatterFactoryName = Log Formatter Factory
+SinkFactoryName = Log Sink Factory
+MissingDefaultFormatter = The default formatter is missing from the configuration file.  The entry will be written using a TextFormatter and an embedded template.
+IntrinsicPropertyError(string msg) = Unable to read intrinsic property.  Error message: {0}
+
+#
+# Backup template if the default template is missing from the configuration file
+#
+DefaultTextFormat = Timestamp: {timestamp}{newline}Message: {message}{newline}Category: {category}{newline}Priority: {priority}{newline}EventId: {eventid}{newline}Severity: {severity}{newline}Title:{title}{newline}Machine: {machine}{newline}App Domain: {appDomain}{newline}ProcessId: {processId}{newline}Process Name: {processName}{newline}Thread Name: {threadName}{newline}Win32 ThreadId:{win32ThreadId}{newline}Extended Properties: {dictionary({key} - {value}{newline})}
+DefaultLogDestinationSinkName = Enterprise Library Backup Sink
+ApplicationLogName = Application
+DistributorEventLoggerDefaultApplicationName = Enterprise Library Distributor Service
+#
+# Instrumentation
+#
+InstrumentationEventSource = Enterprise Library Logging Service
+InstrumentationCounterCategory = Enterprise Library Logging Service
+InstrumentationCounterCategoryHelp = Enterprise Library Logging Service application performance counters.
+NumLogsWrittenSec = Client: # of Logs Written/Sec
+NumLogsWrittenSecMsg = Number of logs per second written by client using the Enterprise Library Logging Block.
+NumLogsDistributedSec = Distributor: # of Logs Distributed/Sec
+NumLogsDistributedSecMsg = Number of logs distributed per second by the Log Distributor.
+NumLogsDefaultSinkSec = Distributor: # of Logs to Default Sink/Sec
+NumLogsDefaultSinkSecMsg = Number of logs per second distributed by the Log Distributor to the Default Log Sink (EventLog).
+ExceptionCategoryFilterDataName = The name for the CategoryFilterData can not be null.
+ExceptionDestinationDataName = The sink for the DestinationData can not be null.
+
+#
+# Used by Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation
+#
+ComPlusInfo_ActivityId = ActivityId
+ComPlusInfo_ApplicationId = ApplicationId
+ComPlusInfo_DirectCallerAccountName = DirectCallerAccountName
+ComPlusInfo_OriginalCallerAccountName = OriginalCallerAccountName
+ComPlusInfo_TransactionID = TransactionID
+ExtendedPropertyError(msg) = Unable to read system property. Error message: {0}
+UnknownError = An unknown error has occurred.
+
+#
+# Used by DebugInformationProvider
+#
+DebugInfo_SchemaHelperAtString = \tat 
+DebugInfo_SchemaHelperUnknownType = <UnknownType>
+DebugInfo_SchemaHelperLine(file,int line) = \tin {0}: line {1}
+DebugInfo_StackTraceSecurityException=Insufficient privilege to generate stack trace.
+DebugInfo_StackTraceException = Unable to process stack trace.
+DebugInfo_StackTrace = StackTrace
+
+#
+# Used by ManagedSecurityContextInformationProvider
+#
+ManagedSecurity_AuthenticationType = AuthenticationType
+ManagedSecurity_IdentityName = IdentityName
+ManagedSecurity_IsAuthenticated = IsAuthenticated
+
+#
+# Used by UnmanagedSecurityContextInformationProvider
+#
+UnmanagedSecurity_CurrentUser = CurrentUser
+UnmanagedSecurity_ProcessAccountName = ProcessAccountName
+
+#
+# Used by Tracer
+#
+Tracer_StartMessageFormat(activity,method,long ticks) = Start Trace: Activity '{0}' in method '{1}' at {2} ticks
+Tracer_EndMessageFormat(activity,method,long ticks,decimal elapsedTime) = End Trace: Activity '{0}' in method '{1}' at {2} ticks (elapsed time: {3} seconds)
+
+#
+# Exception messages
+#
+ExceptionSeverityNotDefined = The value provided is not defined for Severity
+ExceptionEnumNotDefined(string value, string type) = The value {0} is not defined for {1}. 
+ExceptionNoStrategiesDefined = The Logging Settings does not have any distribution strategies defined in configuration.
+ExceptionNoDistributionStragegy(distributionName) = The requested distribution strategy '{0}' is not defined in the current configuration.
+ExceptionNoSinksDefined = The Distributor Settings does not have any log sinks defined in configuration.
+ExceptionNoSinkDefined(string sinkName) = The requested log sink '{0}' is not defined in the current configuration.
+ExceptionMsmqSinkMissingConfiguration = MSMQ Sink is missing this key in the Distributor's configuration file: QueuePath
+ExceptionMsmqStrategyMissingConfiguration = MSMQ Strategy is missing this key in the Distributor's configuration file: QueuePath
+ExceptionCategoryNotDefined(string categoryName) = The category '{0}' is not defined in the Logging Distributor configuration.
+ExceptionFormatterNotDefined(string formatterName) = The formatter '{0}' is not defined in the Logging Distributor configuration.
+ExceptionCannotLoadDefaultCategory(string defaultCategory) = The default category '{0}' is not defined in Logging Distributor configuration.
+ExceptionCannotLoadDefaultFormatter(string defaultFormatter) = The default formatter '{0}' is not defined in Logging Distributor configuration.

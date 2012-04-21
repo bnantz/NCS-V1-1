@@ -1,0 +1,97 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Cryptography Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Comments are lines starting with ";" or "#"
+
+# Comments should be added before the string. 
+
+# Options are specified as lines starting with "#!"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+CryptographyNodeName = Cryptography Application Block
+CryptographySectionCommandName = Cryptography Application Block
+HashProviderCollectionNodeName = Hash Providers
+HashProviderCollectionCommandName = Hash Providers
+SymmetricProviderCollectionNodeName = Symmetric Providers
+SymmetricProviderCollectionCommandName = Symmetric Providers
+HashProviderNodeName = Hash Provider
+KeyedHashProviderNodeName = Keyed Hash Provider
+CustomHashProviderNodeName = Custom Hash Provider
+HMACSHA1HashProviderNodeName = HMACSHA1 Hash Provider
+SymmetricCryptoProviderNodeName = Symmetric Cryptography Provider
+CustomSymmetricCryptoProviderNodeName = Custom Symmetric Cryptography Provider
+SymmetricAlgorithmProviderNodeName = Symmetric Algorithm Provider
+DpapiSymmetricCryptoProviderNodeName = DPAPI Symmetric Cryptography Provider
+HashAlgorithmProviderNodeName = HashAlgorithm Provider
+
+HashProviderTypeNameDescription = Any hash provider that implements IHashProvider.
+CustomHashProviderNodeExtensionsDescription = Custom configuration extensions if applicable for this type.
+CustomSymmetricCryptoProviderExtensionsDescription = Custom configuration extensions if applicable for this type.
+CustomSymmetricCryptoProviderTypeNameDescription = Any symmetric cryptography provider that implements ISymmetricCryptoProvider.
+DpapiSymmetricCryptoProviderNodeModeDescription = The storage mode for DPAPI.  See the DpapiStorageMode enum for more information.
+
+
+KeyManagerEditorRequiresKeyInfoProperty = Invalid property type.  You may only use the KeyManagerEditor on properties of the type KeyInfo.
+KeyManagerUIKeyBoxEncrypted = The key is hidden for security purposes.  If you would like a new key you must create a new cryptography instance.  If you must replace the key for this instance, delete this instance and create a new instance with the same name.
+Bit = bit
+KeyManagerUICurrentKeySizeCaption = Key Size:
+KeyManagerUIInvalidKey = Invalid key
+
+CategoryGeneral = General
+
+
+#Import and Export
+ExportFileFilter = Key export files (*.txt)|*.txt|All files (*.*)|*.*
+ExportDialogTitle = Export Key As
+
+ExportDialogErrorTitle = Error
+ExportPasswordsDoNotMatch = Passwords do not match.
+
+ExportPasswordMinLength(min) = Password must be at least {0} characters.
+
+ExportSuccessfulTitle = Export
+ExportSuccessful = Key has been exported successfully.
+
+ExportDirectoryInvalid = Directory is invalid.
+
+ImportDialogErrorTitle = Error
+ImportSourceFileInvalid = File does not exist.
+
+ImportDecryptError = Unable to decrypt key.  Password may be incorrect.
+ImportDecryptFormatError = Unable to read key file. File format may be invalid.
+
+ImportSuccessfulTitle = Import
+ImportSuccessful = Key has been imported successfully.
+
+ImportPasswordInvalidTitle = Error
+ImportPasswordInvalid = Password is invalid.
+
+DecryptPasswordCheckFailure = Password is not correct.
+InvalidExportDestination = Invalid export destination.
+InvalidImportSource = Invalid source file.
+MissingPassword = Key file is password protected and no password was provided.
+
+DPAPIModeRequiredErrorMessage = DPAPI mode is required.
+
+GenericCreateStatusText(string name) = Create a new {0}
+
+OverwriteExportFileMessage(string file) = The file {0} is read-only.  Would you like to overwrite the file?
+OverwriteExportFileCaption = Export Key
+

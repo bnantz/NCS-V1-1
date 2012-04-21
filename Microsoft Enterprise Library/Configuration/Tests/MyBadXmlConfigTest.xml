@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <section name="enterpriselibrary.configurationSettings" type="Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationManagerSectionHandler,Microsoft.Practices.EnterpriseLibrary.Configuration" />
+    </configSections>
+    <enterpriselibrary.configurationSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.microsoft.com/practices/enterpriselibrary/08-31-2004/configuration">
+        <configurationSections>
+            <configurationSection name="ApplConfig1">
+                <storageProvider xsi:type="XmlFileStorageProviderData" name="XmlStorage" type="Microsoft.Practices.EnterpriseLibrary.Configuration.Storage.XmlFileStorageProvider,Microsoft.Practices.EnterpriseLibrary.Configuration" />
+                <dataTransformer xsi:type="XmlSerializerTransformerData" name="ApplConfig1" type="Microsoft.Practices.EnterpriseLibrary.Configuration.Transformer.XmlSerializerTransformer,Microsoft.Practices.EnterpriseLibrary.Configuration" />
+            </configurationSection>
+            <configurationSection name="MockConfig">
+                <storageProvider xsi:type="XmlFileStorageProviderData" name="XmlStorage" type="Microsoft.Practices.EnterpriseLibrary.Configuration.Storage.XmlFileStorageProvider,Microsoft.Practices.EnterpriseLibrary.Configuration"
+                    path="myconfig.xml" />
+                <dataTransformer xsi:type="XmlSerializerTransformerData" name="XmlTransformer" type="Microsoft.Practices.EnterpriseLibrary.Configuration.Transformer.XmlSerializerTransformer,Microsoft.Practices.EnterpriseLibrary.Configuration" />
+            </configurationSection>
+            <configurationSection name="ReadOnlyConfig">
+                <storageProvider xsi:type="MockStorageProviderData" name="ReadonlyStorage" type="Microsoft.Practices.EnterpriseLibrary.Configuration.Tests.ReadOnlyStorageProvider,Microsoft.Practices.EnterpriseLibrary.Configuration" />
+                <dataTransformer xsi:type="XmlSerializerTransformerData" name="XmlTransformer" type="Microsoft.Practices.EnterpriseLibrary.Configuration.Transformer.XmlSerializerTransformer,Microsoft.Practices.EnterpriseLibrary.Configuration" />
+                <includeTypes>
+                    <includeType name="MockStorageProvider" type="Microsoft.Practices.EnterpriseLibrary.Configuration.Tests.MockStorageProviderData,Microsoft.Practices.EnterpriseLibrary.Configuration" />
+                </includeTypes>
+            </configurationSection>
+            <configurationSection name="NoStorageConfig">
+                <storageProvider xsi:type="MockStorageProviderData" name="NotRealStorage" type="Microsoft.Practices.EnterpriseLibrary.Configuration.Tests.NotRealStorageProvider,Microsoft.Practices.EnterpriseLibrary.Configuration" />
+                <dataTransformer xsi:type="XmlSerializerTransformerData" name="XmlTransformer" type="Microsoft.Practices.EnterpriseLibrary.Configuration.Transformer.XmlSerializerTransformer,Microsoft.Practices.EnterpriseLibrary.Configuration" />
+                <includeTypes>
+                    <includeType name="MockStorageProvider" type="Microsoft.Practices.EnterpriseLibrary.Configuration.Tests.MockStorageProviderData,Microsoft.Practices.EnterpriseLibrary.Configuration" />
+                </includeTypes>
+            </configurationSection>
+        </configurationSections>
+    </enterpriselibrary.configurationSettings>
+</badconfiguration>

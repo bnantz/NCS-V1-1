@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="DistributionStrategyFactoryName">
+    <value>Distribution Strategies</value>
+  </data>
+  <data name="EmailSinkMissingParameters">
+    <value>E-Mail Sink is missing one of these keys in the Distributor's XML file: ToAddress, FromAddress, and/or SmtpServer.</value>
+  </data>
+  <data name="CategoryNotFound">
+    <value>The category '{0}' in the message is not found in configuration. The default category '{1}' is used instead to process the message.</value>
+    <comment>.
+ Parameters: 0 - missingCategory (string), 1 - defaultCategory (string) </comment>
+  </data>
+  <data name="InvalidSink">
+    <value>Error logging with '{0}' sink from configuration. The default log sink will be used instead to process the message.</value>
+    <comment>.
+ Parameters: 0 - invalidSink (string) </comment>
+  </data>
+  <data name="InvalidSinkMessage">
+    <value>
+Message: 
+{0}</value>
+    <comment>.
+ Parameters: 0 - body (string) </comment>
+  </data>
+  <data name="ProcessMessageFailed">
+    <value>Processing of the message failed. See summary information below for more information. Should this problem persist, stop the service and check the configuration file(s) for possible error(s) in the configuration of the categories and sinks.</value>
+  </data>
+  <data name="ProcessMessageFailed2">
+    <value>ProcessQueueMessage - additional information</value>
+  </data>
+  <data name="ProcessMessageFailed3">
+    <value>
+Message: 
+{0}SinkFactoryName = Log Sink</value>
+    <comment>.
+ Parameters: 0 - contents (string) </comment>
+  </data>
+  <data name="SinkFailure">
+    <value>Sink failed because: {0}.</value>
+    <comment>.
+ Parameters: 0 - exceptionString (string) </comment>
+  </data>
+  <data name="DefaultLogDestinationMessage">
+    <value>An error occurred while the Distributor was processing the message.  Please check your configuration files for errors or typos.  Verify that your sinks are reachable (queues exist, permissions are set, database exists, etc...)</value>
+  </data>
+  <data name="DefaultLogDestinationFailed">
+    <value>Failed to log message to the default log destination.</value>
+  </data>
+  <data name="EventLogSinkMissingEventSource">
+    <value>Event Log Sink is missing the key -EventSourceName- in the Distributor's configuration file.</value>
+  </data>
+  <data name="FileSinkMissingConfiguration">
+    <value>Flat File Sink is missing one of these keys in the Distributor's configuration file: FilePath and/or FileName</value>
+  </data>
+  <data name="DistEventLoggerMessagePrefix">
+    <value>Message: 
+</value>
+  </data>
+  <data name="DistEventLoggerSummary">
+    <value>Summary for</value>
+  </data>
+  <data name="EventLogAccessDenied">
+    <value>Access denied to the event log '{0}'.</value>
+    <comment>.
+ Parameters: 0 - log (string) </comment>
+  </data>
+  <data name="ActivatorCacheCannotCreateType">
+    <value>Unable to create type '{0}'.</value>
+    <comment>.
+ Parameters: 0 - type (string) </comment>
+  </data>
+  <data name="FormatterFactoryName">
+    <value>Log Formatter Factory</value>
+  </data>
+  <data name="SinkFactoryName">
+    <value>Log Sink Factory</value>
+  </data>
+  <data name="MissingDefaultFormatter">
+    <value>The default formatter is missing from the configuration file.  The entry will be written using a TextFormatter and an embedded template.</value>
+  </data>
+  <data name="IntrinsicPropertyError">
+    <value>Unable to read intrinsic property.  Error message: {0}</value>
+    <comment>.
+ Parameters: 0 - msg (string) </comment>
+  </data>
+  <data name="DefaultTextFormat">
+    <value>Timestamp: {timestamp}{newline}Message: {message}{newline}Category: {category}{newline}Priority: {priority}{newline}EventId: {eventid}{newline}Severity: {severity}{newline}Title:{title}{newline}Machine: {machine}{newline}App Domain: {appDomain}{newline}ProcessId: {processId}{newline}Process Name: {processName}{newline}Thread Name: {threadName}{newline}Win32 ThreadId:{win32ThreadId}{newline}Extended Properties: {dictionary({key} - {value}{newline})}</value>
+  </data>
+  <data name="DefaultLogDestinationSinkName">
+    <value>Enterprise Library Backup Sink</value>
+  </data>
+  <data name="ApplicationLogName">
+    <value>Application</value>
+  </data>
+  <data name="DistributorEventLoggerDefaultApplicationName">
+    <value>Enterprise Library Distributor Service</value>
+  </data>
+  <data name="InstrumentationEventSource">
+    <value>Enterprise Library Logging Service</value>
+  </data>
+  <data name="InstrumentationCounterCategory">
+    <value>Enterprise Library Logging Service</value>
+  </data>
+  <data name="InstrumentationCounterCategoryHelp">
+    <value>Enterprise Library Logging Service application performance counters.</value>
+  </data>
+  <data name="NumLogsWrittenSec">
+    <value>Client: # of Logs Written/Sec</value>
+  </data>
+  <data name="NumLogsWrittenSecMsg">
+    <value>Number of logs per second written by client using the Enterprise Library Logging Block.</value>
+  </data>
+  <data name="NumLogsDistributedSec">
+    <value>Distributor: # of Logs Distributed/Sec</value>
+  </data>
+  <data name="NumLogsDistributedSecMsg">
+    <value>Number of logs distributed per second by the Log Distributor.</value>
+  </data>
+  <data name="NumLogsDefaultSinkSec">
+    <value>Distributor: # of Logs to Default Sink/Sec</value>
+  </data>
+  <data name="NumLogsDefaultSinkSecMsg">
+    <value>Number of logs per second distributed by the Log Distributor to the Default Log Sink (EventLog).</value>
+  </data>
+  <data name="ExceptionCategoryFilterDataName">
+    <value>The name for the CategoryFilterData can not be null.</value>
+  </data>
+  <data name="ExceptionDestinationDataName">
+    <value>The sink for the DestinationData can not be null.</value>
+  </data>
+  <data name="ComPlusInfo_ActivityId">
+    <value>ActivityId</value>
+  </data>
+  <data name="ComPlusInfo_ApplicationId">
+    <value>ApplicationId</value>
+  </data>
+  <data name="ComPlusInfo_DirectCallerAccountName">
+    <value>DirectCallerAccountName</value>
+  </data>
+  <data name="ComPlusInfo_OriginalCallerAccountName">
+    <value>OriginalCallerAccountName</value>
+  </data>
+  <data name="ComPlusInfo_TransactionID">
+    <value>TransactionID</value>
+  </data>
+  <data name="ExtendedPropertyError">
+    <value>Unable to read system property. Error message: {0}</value>
+    <comment>.
+ Parameters: 0 - msg (string) </comment>
+  </data>
+  <data name="UnknownError">
+    <value>An unknown error has occurred.</value>
+  </data>
+  <data name="DebugInfo_SchemaHelperAtString">
+    <value>	at </value>
+  </data>
+  <data name="DebugInfo_SchemaHelperUnknownType">
+    <value>&lt;UnknownType&gt;</value>
+  </data>
+  <data name="DebugInfo_SchemaHelperLine">
+    <value>	in {0}: line {1}</value>
+    <comment>.
+ Parameters: 0 - file (string), 1 - line (int) </comment>
+  </data>
+  <data name="DebugInfo_StackTraceSecurityException">
+    <value>Insufficient privilege to generate stack trace.</value>
+  </data>
+  <data name="DebugInfo_StackTraceException">
+    <value>Unable to process stack trace.</value>
+  </data>
+  <data name="DebugInfo_StackTrace">
+    <value>StackTrace</value>
+  </data>
+  <data name="ManagedSecurity_AuthenticationType">
+    <value>AuthenticationType</value>
+  </data>
+  <data name="ManagedSecurity_IdentityName">
+    <value>IdentityName</value>
+  </data>
+  <data name="ManagedSecurity_IsAuthenticated">
+    <value>IsAuthenticated</value>
+  </data>
+  <data name="UnmanagedSecurity_CurrentUser">
+    <value>CurrentUser</value>
+  </data>
+  <data name="UnmanagedSecurity_ProcessAccountName">
+    <value>ProcessAccountName</value>
+  </data>
+  <data name="Tracer_StartMessageFormat">
+    <value>Start Trace: Activity '{0}' in method '{1}' at {2} ticks</value>
+    <comment>.
+ Parameters: 0 - activity (string), 1 - method (string), 2 - ticks (long) </comment>
+  </data>
+  <data name="Tracer_EndMessageFormat">
+    <value>End Trace: Activity '{0}' in method '{1}' at {2} ticks (elapsed time: {3} seconds)</value>
+    <comment>.
+ Parameters: 0 - activity (string), 1 - method (string), 2 - ticks (long), 3 - elapsedTime (decimal) </comment>
+  </data>
+  <data name="ExceptionSeverityNotDefined">
+    <value>The value provided is not defined for Severity</value>
+  </data>
+  <data name="ExceptionEnumNotDefined">
+    <value>The value {0} is not defined for {1}. </value>
+    <comment>.
+ Parameters: 0 - value (string), 1 - type (string) </comment>
+  </data>
+  <data name="ExceptionNoStrategiesDefined">
+    <value>The Logging Settings does not have any distribution strategies defined in configuration.</value>
+  </data>
+  <data name="ExceptionNoDistributionStragegy">
+    <value>The requested distribution strategy '{0}' is not defined in the current configuration.</value>
+    <comment>.
+ Parameters: 0 - distributionName (string) </comment>
+  </data>
+  <data name="ExceptionNoSinksDefined">
+    <value>The Distributor Settings does not have any log sinks defined in configuration.</value>
+  </data>
+  <data name="ExceptionNoSinkDefined">
+    <value>The requested log sink '{0}' is not defined in the current configuration.</value>
+    <comment>.
+ Parameters: 0 - sinkName (string) </comment>
+  </data>
+  <data name="ExceptionMsmqSinkMissingConfiguration">
+    <value>MSMQ Sink is missing this key in the Distributor's configuration file: QueuePath</value>
+  </data>
+  <data name="ExceptionMsmqStrategyMissingConfiguration">
+    <value>MSMQ Strategy is missing this key in the Distributor's configuration file: QueuePath</value>
+  </data>
+  <data name="ExceptionCategoryNotDefined">
+    <value>The category '{0}' is not defined in the Logging Distributor configuration.</value>
+    <comment>.
+ Parameters: 0 - categoryName (string) </comment>
+  </data>
+  <data name="ExceptionFormatterNotDefined">
+    <value>The formatter '{0}' is not defined in the Logging Distributor configuration.</value>
+    <comment>.
+ Parameters: 0 - formatterName (string) </comment>
+  </data>
+  <data name="ExceptionCannotLoadDefaultCategory">
+    <value>The default category '{0}' is not defined in Logging Distributor configuration.</value>
+    <comment>.
+ Parameters: 0 - defaultCategory (string) </comment>
+  </data>
+  <data name="ExceptionCannotLoadDefaultFormatter">
+    <value>The default formatter '{0}' is not defined in Logging Distributor configuration.</value>
+    <comment>.
+ Parameters: 0 - defaultFormatter (string) </comment>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

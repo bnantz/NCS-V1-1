@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="ExceptionAccessDeniedFailure">
+    <value>Access Denied - the current user does not have permission to perform the action.  
+</value>
+  </data>
+  <data name="ExceptionCollectionModified">
+    <value>Collection was modified after the enumerator was instantiated.</value>
+  </data>
+  <data name="ExceptionCreateInstanceFailure">
+    <value>Failed to create instances of performance counter '{0}' - {1}.</value>
+    <comment>.
+ Parameters: 0 - name (string), 1 - value (string) </comment>
+  </data>
+  <data name="ExceptionSetRawValueFailure">
+    <value>Failed to set raw value for performance counter '{0}' - {1}.</value>
+    <comment>.
+ Parameters: 0 - name (string), 1 - value (string) </comment>
+  </data>
+  <data name="ExceptionCollectionReadOnly">
+    <value>Collection is read-only.</value>
+  </data>
+  <data name="ExceptionIncrementValueFailure">
+    <value>Failed to increment the value for performance counter '{0}' - {1}</value>
+    <comment>.
+ Parameters: 0 - name (string), 1 - value (string) </comment>
+  </data>
+  <data name="ExceptionDecrementValueFailure">
+    <value>Failed to decrement the value for performance counter '{0}' - {1}</value>
+    <comment>.
+ Parameters: 0 - name (string), 1 - value (string) </comment>
+  </data>
+  <data name="ExceptionDuplicateEntry">
+    <value>The collection already contains an entry for '{0}'.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionDetails">
+    <value>Exception Information Details:</value>
+  </data>
+  <data name="ExceptionStackTraceDetails">
+    <value>StackTrace Information Details:</value>
+  </data>
+  <data name="ExceptionSummary">
+    <value>Summary for</value>
+  </data>
+  <data name="ExceptionStringArray">
+    <value>The array must be a string array.</value>
+  </data>
+  <data name="ExceptionByteArrayValueMustBeGreaterThanZeroBytes">
+    <value>The value must be greater than 0 bytes.</value>
+  </data>
+  <data name="ExceptionEmptyString">
+    <value>The value of '{0}' can not be an empty string.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionExpectedType">
+    <value>The type is invalid. Expected type '{0}'.</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="ExceptionInvalidNullNameArgument">
+    <value>The name for the '{0}' can not be null or an empty string.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionDecrypting">
+    <value>Unable to decrypt data.</value>
+  </data>
+  <data name="ExceptionCreatingSymmetricAlgorithmInstance">
+    <value>Unable to load algorithm.</value>
+  </data>
+  <data name="ExceptionCastingSymmetricAlgorithmInstance">
+    <value>Type must inherit from SymmetricAlgorithm</value>
+  </data>
+  <data name="ExceptionCreatingHashAlgorithmInstance">
+    <value>Unable to load algorithm.</value>
+  </data>
+  <data name="ExceptionCastingHashAlgorithmInstance">
+    <value>Type must inherit from HashAlgorithm.</value>
+  </data>
+  <data name="ExceptionEnumerationNotDefined">
+    <value>{0} is not a valid value for {1}.</value>
+    <comment>.
+ Parameters: 0 - variableName (string), 1 - typeName (string) </comment>
+  </data>
+  <data name="DpapiFormattingError">
+    <value>A formatting error occurred with an error code of {0}.</value>
+    <comment>.
+ Parameters: 0 - errorCode (int) </comment>
+  </data>
+  <data name="DpapiMustHaveEntropyForMachineMode">
+    <value>You must define the entropy when using machine mode.</value>
+  </data>
+  <data name="DpapiZeroLengthEntropy">
+    <value>Entropy length must be greater than zero.</value>
+  </data>
+  <data name="DpapiAllocatingEntropyBuffer">
+    <value>Unable to allocate entropy buffer.</value>
+  </data>
+  <data name="DpapiEncryptionFailed">
+    <value>Encryption failed: {0}.</value>
+    <comment>.
+ Parameters: 0 - reason (string) </comment>
+  </data>
+  <data name="DpapiUnableToAllocateCipherTextBuffer">
+    <value>Unable to allocate cipher text buffer.</value>
+  </data>
+  <data name="DpapiDecryptionFailed">
+    <value>Decryption failed: {0}.</value>
+    <comment>.
+ Parameters: 0 - reason (string) </comment>
+  </data>
+  <data name="InvalidHexString">
+    <value>String must represent a valid hexadecimal (e.g. : 0F99DD)</value>
+  </data>
+  <data name="EnterpriseLibraryCryptography">
+    <value>Enterprise Library Cryptography</value>
+  </data>
+  <data name="LogName">
+    <value>Application</value>
+  </data>
+  <data name="MachineName">
+    <value>.</value>
+  </data>
+  <data name="FailureLogSource">
+    <value>Enterprise Library Instrumentation</value>
+  </data>
+  <data name="LineSeperator">
+    <value>-----------------------------------</value>
+  </data>
+  <data name="WmiEventFailure">
+    <value>Failed to fire the WMI event '{0}'.  Exception: {1}.</value>
+    <comment>.
+ Parameters: 0 - eventName (string), 1 - exceptionMessage (string) </comment>
+  </data>
+  <data name="DefaultInstanceName">
+    <value>Enterprise Library Application</value>
+  </data>
+  <data name="GlobalInstanceName">
+    <value>_total_</value>
+  </data>
+  <data name="AppSettingApplicationName">
+    <value>Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationManager.ApplicationName</value>
+  </data>
+  <data name="ExceptionType">
+    <value>Exception Type</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

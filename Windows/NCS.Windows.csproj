@@ -1,0 +1,525 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{F0194901-CAED-4FD1-925A-CC10D6D3F1A9}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "NCS.Windows"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "NCS.Windows"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Button.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Button.resx"
+                    DependentUpon = "Button.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\CheckBox.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\CheckBox.resx"
+                    DependentUpon = "CheckBox.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\CheckedListBox.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\CheckedListBox.resx"
+                    DependentUpon = "CheckedListBox.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\ColorDialog.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\ComboBox.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\ComboBox.resx"
+                    DependentUpon = "ComboBox.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\ContextMenu.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\ContextMenu.resx"
+                    DependentUpon = "ContextMenu.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\CustomValidators.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\DataGrid.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\DataTimePicker.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\DirtyChecker.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\DirtyChecker.resx"
+                    DependentUpon = "DirtyChecker.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\DomainUpDown.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\ErrorProvider.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\FontDialog.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\FontDialog.resx"
+                    DependentUpon = "FontDialog.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\GroupBox.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\HelpProvider.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\HScrollBar.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Label.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\LinkLabel.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\ListBox.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\ListBox.resx"
+                    DependentUpon = "ListBox.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\ListView.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\MainMenu.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\MonthCalendar.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\NumericUpDown.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Panel.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\PictureBox.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\RadioButton.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\RichTextBox.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Splitter.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\StatusBar.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\TabControl.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\TextBox.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\TextBox.resx"
+                    DependentUpon = "TextBox.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\ToolBar.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\TrackBar.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\TreeView.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\VScollBar.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "images\CompareValidator.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\CustomValidator.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\RangeValidator.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\RegularExpressionValidator.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\RequiredFieldValidator.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.Button.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.CheckBox.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.CheckedListBox.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.ColorDialog.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.ComboBox.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.ContextMenu.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.DataGrid.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.DateTimePicker.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.DomainUpDown.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.ErrorProvider.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.FolderBrowserDialog.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.FontDialog.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.GroupBox.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.HelpProvider.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.HScrollBar.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.ImageList.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.Label.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.LinkLabel.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.ListBox.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.ListView.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.MainMenu.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.MonthCalendar.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.NotifyIcon.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.NumericUpDown.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.OpenFileDialog.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.PageSetupDialog.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.Panel.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.PictureBox.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.PrintDialog.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.PrintPreviewControl.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.PrintPreviewDialog.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.ProgressBar.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.RadioButton.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.RichTextBox.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.SaveFileDialog.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.Splitter.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.StatusBar.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.TabControl.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.TextBox.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.Timer.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.ToolBar.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.ToolTip.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.TrackBar.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.TreeView.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "images\System.Windows.Forms.VScrollBar.bmp"
+                    BuildAction = "EmbeddedResource"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

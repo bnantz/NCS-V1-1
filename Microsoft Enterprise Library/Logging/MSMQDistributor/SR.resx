@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="ApplicationLogName">
+    <value>Application</value>
+  </data>
+  <data name="DistributorEventLoggerDefaultApplicationName">
+    <value>Enterprise Library Distributor Service</value>
+  </data>
+  <data name="InstallerCannotReadServiceName">
+    <value>Unable to locate serviceName in distributor configuration file</value>
+  </data>
+  <data name="ProcessQMsgSeeDetails">
+    <value>See 'Exception Information Details' below for more information.</value>
+  </data>
+  <data name="InitializeComponentStartedMessage">
+    <value>InitializeComponent - begin</value>
+  </data>
+  <data name="InitializeComponentStarted">
+    <value>The windows service initialization sequence has started.</value>
+  </data>
+  <data name="ErrorLoadingDistributorConfiguration">
+    <value>Error loading Logging Distributor configuration file.</value>
+  </data>
+  <data name="InitializeComponentCompletedMessage">
+    <value>InitializeComponent - end</value>
+  </data>
+  <data name="InitializeComponentCompleted">
+    <value>The windows service initialization sequence is complete. No errors have occurred.</value>
+  </data>
+  <data name="ErrorInitializingService">
+    <value>Error initializing the service. See EventLog for error details.</value>
+  </data>
+  <data name="InitializeStartupSequenceStartedMessage">
+    <value>InitializeStartupSequence - begin</value>
+  </data>
+  <data name="InitializeStartupSequenceFinishedMessage">
+    <value>InitializeStartupSequence - end</value>
+  </data>
+  <data name="InitializeStartupSequenceErrorMessage">
+    <value>InitializeStartupSequence - error</value>
+  </data>
+  <data name="ValidationStarted">
+    <value>The validation sequence has been started.</value>
+  </data>
+  <data name="ValidationComplete">
+    <value>The validation sequence is complete. No errors have occurred.</value>
+  </data>
+  <data name="ValidationError">
+    <value>An error occurred in one of the validation sequences. See 'Exception Information Details' below for more information. The service will be stopped.</value>
+  </data>
+  <data name="ListenerStopStartedMessage">
+    <value>StopListener - begin</value>
+  </data>
+  <data name="ListenerStopStarted">
+    <value>Attempting to stop the queue listener.</value>
+  </data>
+  <data name="ListenerStopCompletedMessage">
+    <value>StopListener - end</value>
+  </data>
+  <data name="ListenerStopCompleted">
+    <value>The queue listener was successfully stopped. No errors occurred. Note: it took [{0}] tries to stop the queue listener.</value>
+    <comment>.
+ Parameters: 0 - attempts (string) </comment>
+  </data>
+  <data name="StopListenerWarningMessage">
+    <value>StopListener - warning</value>
+  </data>
+  <data name="ListenerCannotStop">
+    <value>The queue listener could not be successfully stopped. No errors occurred. Note: it took [{0}] tries to stop the queue listener. The queue listener might be busy, please retry.</value>
+    <comment>.
+ Parameters: 0 - attempts (string) </comment>
+  </data>
+  <data name="ListenerStopErrorMessage">
+    <value>StopListener - error</value>
+  </data>
+  <data name="ListenerStopError">
+    <value>An error occurred while trying to stop the queue listener. See 'Exception Information Detail' below for more information.</value>
+  </data>
+  <data name="ListenerStartingMessage">
+    <value>StartListener - begin</value>
+  </data>
+  <data name="ListenerStarting">
+    <value>Attempting to start the queue listener.</value>
+  </data>
+  <data name="ListenerStartCompleteMessage">
+    <value>StartListener - end</value>
+  </data>
+  <data name="ListenerStartComplete">
+    <value>The queue listener has started successfully. Note: the listener timer is set to [{0}] milliseconds.</value>
+    <comment>.
+ Parameters: 0 - interval (int) </comment>
+  </data>
+  <data name="ListenerStartErrorMessage">
+    <value>StartListener - error</value>
+  </data>
+  <data name="ListenerStartError">
+    <value>An error occurred while trying to start the queue listener. See 'Exception Information Detail' below for more information.</value>
+  </data>
+  <data name="ServiceStartComplete">
+    <value>The service '{0}' started correctly.</value>
+    <comment>.
+ Parameters: 0 - service (string) </comment>
+  </data>
+  <data name="ServiceStartError">
+    <value>An error occurred while starting the service {0}.
+See 'Summary for {0}' and additional 'Exception Information Details' below for more information. The service needs to be stopped.</value>
+    <comment>.
+ Parameters: 0 - service (string) </comment>
+  </data>
+  <data name="ServiceStopComplete">
+    <value>The service '{0}' stopped correctly.</value>
+    <comment>.
+ Parameters: 0 - service (string) </comment>
+  </data>
+  <data name="ServiceStopWarning">
+    <value>The service '{0}' did not stop gracefully. 
+See 'Summary for {0}' and additional 'Exception Information Details' below for more information.</value>
+    <comment>.
+ Parameters: 0 - service (string) </comment>
+  </data>
+  <data name="ServiceStopError">
+    <value>The service '{0}' did not stop correctly.
+See 'Summary for {0}' and additional 'Exception Information Details' below for more information. The service will be stopped.</value>
+    <comment>.
+ Parameters: 0 - service (string) </comment>
+  </data>
+  <data name="ServicePausedSuccess">
+    <value>The service '{0}' was paused correctly.</value>
+    <comment>.
+ Parameters: 0 - service (string) </comment>
+  </data>
+  <data name="ServicePauseWarning">
+    <value>The service '{0}' did not pause gracefully. 
+See 'Summary for {0}' and additional 'Exception Information Details' below for more information.</value>
+    <comment>.
+ Parameters: 0 - service (string) </comment>
+  </data>
+  <data name="ServicePauseError">
+    <value>The service '{0}' did not pause correctly.
+See 'Summary for {0}' and additional 'Exception Information Details' below for more information. The service will be stopped.</value>
+    <comment>.
+ Parameters: 0 - service (string) </comment>
+  </data>
+  <data name="ServiceUnableToShutdown">
+    <value>An error occurred while creating the domain for DoCallBack. This error will disable the ability for this service to shut itself down.</value>
+  </data>
+  <data name="ServiceResumeComplete">
+    <value> The service '{0}' resumed correctly.</value>
+    <comment>.
+ Parameters: 0 - service (string) </comment>
+  </data>
+  <data name="ServiceResumeError">
+    <value> The service '{0}' was not resumed correctly.
+See 'Summary for {0}' and additional 'Exception Information Details' below for more information. The service will be stopped.</value>
+    <comment>.
+ Parameters: 0 - service (string) </comment>
+  </data>
+  <data name="QueueTimedEventError">
+    <value>An error occurred while receiving message(s) from the queue. The service will be stopped.</value>
+  </data>
+  <data name="ServiceControllerStopError">
+    <value>The Service Controller could not stop the service '{0}'. Make sure the service name listed in the Service Management Console is the same as {0}.
+ To solve this problem, stop the service manually and uninstall it. Try the installation procedure again and make sure the same application configuration file is available when the service is started.</value>
+    <comment>.
+ Parameters: 0 - service (string) </comment>
+  </data>
+  <data name="ServiceControllerStopException">
+    <value>Cannot stop the service '{0}'.</value>
+    <comment>.
+ Parameters: 0 - p (string) </comment>
+  </data>
+  <data name="MsmqInvalidTransactionUsage">
+    <value>The MSMQDistributor queue '{0}' returned an invalid transaction usage error.  See 'Exception Information Details' below for more information.</value>
+    <comment>.
+ Parameters: 0 - msmqPath (string) </comment>
+  </data>
+  <data name="MsmqReceiveTimeout">
+    <value>The DistributorMSMQ queue  '{0}'  encountered a receive timeout error.  See 'Exception Information Details' below for more information.</value>
+    <comment>.
+ Parameters: 0 - msmqPath (string) </comment>
+  </data>
+  <data name="MsmqAccessDenied">
+    <value>Access denied to the DistributorMSMQ queue '{0}'. Identity trying to access the queue : {1}.   See 'Exception Information Details' below for more information.</value>
+    <comment>.
+ Parameters: 0 - msmqPath (string), 1 - identity (string) </comment>
+  </data>
+  <data name="MsmqReceiveError">
+    <value>An error occurred while receiving a message from the queue '{0}'.  See 'Exception Information Details' below for more information.</value>
+    <comment>.
+ Parameters: 0 - msmqPath (string) </comment>
+  </data>
+  <data name="MsmqReceiveGeneralError">
+    <value>A general error occurred while receiving a message from the queue '{0}'.</value>
+    <comment>.
+ Parameters: 0 - msmqPath (string) </comment>
+  </data>
+  <data name="MsmqLogReceived">
+    <value>Log received by MSMQ Log Distributor.  
+
+Message: {0}</value>
+    <comment>.
+ Parameters: 0 - messageBody (string) </comment>
+  </data>
+  <data name="UnknownError">
+    <value>An unknown error has occurred.</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

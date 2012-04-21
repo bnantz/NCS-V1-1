@@ -1,0 +1,31 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Logging and Instrumentation Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Comments are lines starting with ";" or "#"
+
+# Comments should be added before the string. 
+
+# Options are specified as lines starting with "#!"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+DatabaseSink = Database Sink
+StoredProcNameDescription = The stored procedure name.
+CategoryGeneral = General
+

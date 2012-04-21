@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="EmptyParameterName">
+    <value>Parameter name cannot be an empty string.</value>
+  </data>
+  <data name="CachingInstrumentationEventSource">
+    <value>Enterprise Library Caching</value>
+  </data>
+  <data name="CachingInstrumentationCounterCategory">
+    <value>Enterprise Library Caching</value>
+  </data>
+  <data name="CachingInstrumentationCounterCategoryHelp">
+    <value>Enterprise Library Caching application performance counters.</value>
+  </data>
+  <data name="PerfCounterTotalCacheEntries">
+    <value>Total Cache Entries</value>
+  </data>
+  <data name="PerfCounterTotalCacheEntriesMsg">
+    <value>Number of entries exists in the cache.</value>
+  </data>
+  <data name="PerfCounterCacheHitsSec">
+    <value>Cache Hits Per Sec</value>
+  </data>
+  <data name="PerfCounterCacheHitsSecMsg">
+    <value>The number of cache hits per second.</value>
+  </data>
+  <data name="PerfCounterCacheMissesSec">
+    <value>Cache Misses Per Sec</value>
+  </data>
+  <data name="PerfCounterCacheMissesSecMsg">
+    <value>The number of cache misses per second.</value>
+  </data>
+  <data name="PerfCounterCacheHitRatio">
+    <value>Cache Hit Ratio</value>
+  </data>
+  <data name="PerfCounterCacheHitRatioMsg">
+    <value>Ratio of hits from all cache calls.</value>
+  </data>
+  <data name="PerfCounterCacheAccessAttempts">
+    <value>Total # of Cache Access Attempts</value>
+  </data>
+  <data name="PerfCounterCacheAccessAttemptsMsg">
+    <value>Total number of cache reads.</value>
+  </data>
+  <data name="PerfCounterCacheTurnoverRate">
+    <value>Cache Total Turnover Rate</value>
+  </data>
+  <data name="PerfCounterCacheTurnoverRateMsg">
+    <value>Number of additions and removals to the total cache per second.</value>
+  </data>
+  <data name="ExceptionRangeAbsoluteTime">
+    <value>Absolute time cannot be less than current time.</value>
+  </data>
+  <data name="ExceptionNullTimeFormat">
+    <value>Time format cannot be null.</value>
+  </data>
+  <data name="ExceptionRangeTimeFormat">
+    <value>Time format cannot be empty.</value>
+  </data>
+  <data name="ExceptionInvalidExtendedFormatArguments">
+    <value>The format length is invalid.</value>
+  </data>
+  <data name="ExceptionRangeMinute">
+    <value>Minutes in Extended Format out of range.</value>
+  </data>
+  <data name="ExceptionRangeDayOfMonth">
+    <value>Day of Month in Extended Format out of range.</value>
+  </data>
+  <data name="ExceptionRangeMonth">
+    <value>Month of Year in Extended Format out of range.</value>
+  </data>
+  <data name="ExceptionRangeDay">
+    <value>Day of Week in Extended Format out of range.</value>
+  </data>
+  <data name="ExceptionInvalidDay">
+    <value>Invalid Day.</value>
+  </data>
+  <data name="ExceptionRangeHour">
+    <value>Hour in Extended Format out of range.</value>
+  </data>
+  <data name="ExceptionInvalidExtendedFormatTime">
+    <value>The extended format time should not be negative.</value>
+  </data>
+  <data name="ExceptionEmptyFormat">
+    <value>Format cannot be empty.</value>
+  </data>
+  <data name="ExceptionNullFormat">
+    <value>Format cannot be null.</value>
+  </data>
+  <data name="ExceptionNullDays">
+    <value>Days cannot be null.</value>
+  </data>
+  <data name="ExceptionNullDaysOfWeek">
+    <value>DaysOfWeek cannot be null.</value>
+  </data>
+  <data name="ExceptionNullHours">
+    <value>Hours cannot be null.</value>
+  </data>
+  <data name="ExceptionNullMinutes">
+    <value>Minutes cannot be null.</value>
+  </data>
+  <data name="ExceptionNullMonths">
+    <value>Months cannot be null.</value>
+  </data>
+  <data name="ExceptionNullFileName">
+    <value>The file name cannot be null.</value>
+  </data>
+  <data name="ExceptionEmptyFileName">
+    <value>The file name cannot be empty.</value>
+  </data>
+  <data name="ExceptionInvalidFileName">
+    <value>The file does not exist.</value>
+  </data>
+  <data name="ExceptionRangeSlidingExpiration">
+    <value>Sliding time should be greater than or equal to 1s.</value>
+  </data>
+  <data name="ExceptionNullCacheManagerDataName">
+    <value>The CacheManagerData name can not be null.</value>
+  </data>
+  <data name="ExceptionMessageNoDefault">
+    <value>A default instance was not defined in configuration so no cache manager can be created.</value>
+  </data>
+  <data name="UnknownFailureReason">
+    <value>"The process failed for an unknown reason."</value>
+  </data>
+  <data name="BackgroundSchedulerProducerConsumerQueueFailure">
+    <value>Internal ProducerConsumerQueue thread failed.</value>
+  </data>
+  <data name="CacheNotInitializedException">
+    <value>Add called without setting BackgroundScheduler.</value>
+  </data>
+  <data name="EmptyCacheManagerNameException">
+    <value>CacheManagerName cannot be empty</value>
+  </data>
+  <data name="UnableToFindCacheManagerInstance">
+    <value>Cannot find CacheManager instance name {0}</value>
+    <comment>.
+ Parameters: 0 - cacheManagerName (string) </comment>
+  </data>
+  <data name="CannotInstantiateCacheStorage">
+    <value>Cannot instantiate cacheStorage for Cache Manager {0}.</value>
+    <comment>.
+ Parameters: 0 - cacheManagerName (string) </comment>
+  </data>
+  <data name="CannotInstantiateCacheStorageType">
+    <value>Cannot instantiate cacheStorage type named {0} for Cache Manager {1}.</value>
+    <comment>.
+ Parameters: 0 - cacheStorageTypeName (string), 1 - cacheManagerName (string) </comment>
+  </data>
+  <data name="CannotInstantiateCacheStorageWithNullName">
+    <value>Cannot instantiate cacheStorage type with null name for Cache Manager {0}</value>
+    <comment>.
+ Parameters: 0 - cacheManagerName (string) </comment>
+  </data>
+  <data name="UnspecifiedExceptionWhileCreatingType">
+    <value>Unspecified exception while instantiating {0} for Cache Manager {1}.</value>
+    <comment>.
+ Parameters: 0 - cacheStorageTypeName (string), 1 - cacheManagerName (string) </comment>
+  </data>
+  <data name="InvalidExpirationPollCycleTime">
+    <value>Expiration poll cycle time must be at least 1 second.</value>
+  </data>
+  <data name="InvalidPollingStopOperation">
+    <value>Cannot stop polling before it is started.</value>
+  </data>
+  <data name="FailureToRemoveCacheItemInBackground">
+    <value>Failure while removing item from cache in background.</value>
+  </data>
+  <data name="FailureToSpawnUserSpecifiedRefreshAction">
+    <value>Failure while starting application-specified refresh action.</value>
+  </data>
+  <data name="FailureWhileRunningUserSpecifiedRefreshAction">
+    <value>Failure while running application-specified refresh action.</value>
+  </data>
+  <data name="IsolatedStoreAreaNameNullException">
+    <value>Failed to create Isolated Storage {0} -- storage area name is null in configuration</value>
+    <comment>.
+ Parameters: 0 - isoStoreName (string) </comment>
+  </data>
+  <data name="IsolatedStoreAreaNameEmptyException">
+    <value>Failed to create Isolated Storage {0} -- storage area name is empty in configuration</value>
+    <comment>.
+ Parameters: 0 - isoStoreName (string) </comment>
+  </data>
+  <data name="WildcardAll">
+    <value>*</value>
+  </data>
+  <data name="ArgumentDelimiter">
+    <value>'</value>
+  </data>
+  <data name="BackingStoreFactoryName">
+    <value>Backing Store Factory</value>
+  </data>
+  <data name="CacheManagerFactoryName">
+    <value>Cache Manager Factory</value>
+  </data>
+  <data name="StorageEncryptionFactoryName">
+    <value>Storage Encryption Factory</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

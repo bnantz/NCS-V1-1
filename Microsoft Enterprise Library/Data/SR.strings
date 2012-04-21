@@ -1,0 +1,82 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Data Access Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+UserName=User id,uid
+Password=Password,pwd
+FactoryName = Database
+
+#
+# Instrumentation
+#
+ExceptionMsg =  Exception: 
+EventSource = Enterprise Library Data Service
+CounterCategory = Enterprise Library Data Service
+CounterCategoryHelp    = Enterprise Library Data Service application performance counters.
+LogName = Application
+NumConnPerSec = # of Connections Opened/Sec
+NumConnPerSecMsg = Number of database connections opened by the Enterprise Library Data Service.
+NumConnFailPerSec = # of Connection Failures/Sec
+NumConnFailPerSecMsg = Number of database connections that failed to open by the Enterprise Library Data Service.
+NumCmdsPerSec = # of Commands Executed/Sec
+NumCmdsPerSecMsg = Number of database commands executed by the Enterprise Library Data Service.
+NumCmdsFailPerSec = # of Command Failures/Sec
+NumCmdsFailPerSecMsg = Number of database commands that failed to execute by the Enterprise Library Data Service.
+NumTransOpenPerSec = # of Transactions Opened/Sec
+NumTransOpenPerSecMsg = Number of database transactions opened by the Enterprise Library Data Service.
+NumTransFailPerSec = # of Transaction Failures/Sec
+NumTransFailPerSecMsg = Number of database transactions that failed to open by the Enterprise Library Data Service.
+NumTransCommitPerSec = # of Transactions Committed/Sec
+NumTransCommitPerSecMsg = Number of database transactions committed by the Enterprise Library Data Service.
+NumTransAbortPerSec = # of Transactions Aborted/Sec
+NumTransAbortPerSecMsg = Number of database transactions rolled back by the Enterprise Library Data Service.
+AvgCmdTime = Average Command Execution Time
+AvgCmdTimeMsg = Average round-trip time, in seconds, for executing a database command.
+TotalCmd = Total Command Executions
+TotalCmdMsg = Total database command executed.
+MessageConnection(string connectionString) = Connection: {0}
+MessageDataConnectionOpened(string connectionString) = Data Connection opened: {0}
+
+#
+# Exception Messages
+#
+ExceptionConnectionStringNotSet = The connection string value is not set.
+ExceptionParameterStringIsEmpty = The contents of this parameter cannot be empty.
+ExceptionCommandTypeNotValid = The value of the parameter was not valid.
+ExceptionTableNameArrayEmpty = The table name array used to map results to user-specified table names cannot be empty.
+ExceptionTableNameEmpty = The specified table name is empty.
+ExceptionExpectedType(string typeName) = The type is invalid. Expected type '{0}'.
+ExceptionDatabaseSettingsMissing = The database settings are not present in the context.
+ExceptionMessageCreateServiceFailure(string databaseServiceKey) = Error creating EnterpriseLibrary.DataService database \"{0}\".
+ExceptionMessageDatabaseCommandFailed(string connectionString) = Database command failed: {0}
+ExceptionMessageDatabaseConnectionFailed(string connectionString) = Data connection failed to open: {0}
+ExceptionMessageConfigurationLoadFailed(string configFilename, string exceptionMessage) = Unable to load configuration file \"{0}\".  Exception: {1}
+ExceptionMessageNoDefault = A default instance was not defined in configuration so no database can be created.
+ExceptionMessageUpdateDataSetArgumentFailure = At least one command must be initialized
+ExceptionMessageUpdateDataSetRowFailure = Failed to update row 
+ExceptionNoInstance(string name) = '{0}' is not a named instance in configuration.
+ExceptionNoDatabaesType(string name) = '{0}' is not a named database type in configuration.
+ExceptionNoConnectionStringType(string name) = '{0}' is not a named connection string in configuration.
+ExceptionMessageParameterMatchFailure = The number of parameters does not match number of values for stored procedure.
+ExceptionMessageEmptyTableName = Expected a non-empty string for SourceTable name.

@@ -1,0 +1,100 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Caching Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+EmptyParameterName = Parameter name cannot be an empty string.
+
+# Instrumentation
+CachingInstrumentationEventSource = Enterprise Library Caching
+CachingInstrumentationCounterCategory = Enterprise Library Caching
+CachingInstrumentationCounterCategoryHelp = Enterprise Library Caching application performance counters.
+
+PerfCounterTotalCacheEntries = Total Cache Entries
+PerfCounterTotalCacheEntriesMsg = Number of entries exists in the cache.
+
+PerfCounterCacheHitsSec = Cache Hits Per Sec
+PerfCounterCacheHitsSecMsg = The number of cache hits per second.
+
+PerfCounterCacheMissesSec = Cache Misses Per Sec
+PerfCounterCacheMissesSecMsg = The number of cache misses per second.
+
+PerfCounterCacheHitRatio = Cache Hit Ratio
+PerfCounterCacheHitRatioMsg = Ratio of hits from all cache calls.
+
+PerfCounterCacheAccessAttempts = Total # of Cache Access Attempts
+PerfCounterCacheAccessAttemptsMsg = Total number of cache reads.
+
+PerfCounterCacheTurnoverRate = Cache Total Turnover Rate
+PerfCounterCacheTurnoverRateMsg = Number of additions and removals to the total cache per second.
+	
+
+# Exception Messages
+ExceptionRangeAbsoluteTime = Absolute time cannot be less than current time.
+ExceptionNullTimeFormat = Time format cannot be null.
+ExceptionRangeTimeFormat = Time format cannot be empty.
+ExceptionInvalidExtendedFormatArguments = The format length is invalid.
+ExceptionRangeMinute = Minutes in Extended Format out of range.
+ExceptionRangeDayOfMonth = Day of Month in Extended Format out of range.
+ExceptionRangeMonth = Month of Year in Extended Format out of range.
+ExceptionRangeDay = Day of Week in Extended Format out of range.
+ExceptionInvalidDay = Invalid Day.
+ExceptionRangeHour = Hour in Extended Format out of range.
+ExceptionInvalidExtendedFormatTime = The extended format time should not be negative.
+ExceptionEmptyFormat = Format cannot be empty.
+ExceptionNullFormat = Format cannot be null.
+ExceptionNullDays = Days cannot be null.
+ExceptionNullDaysOfWeek = DaysOfWeek cannot be null.
+ExceptionNullHours = Hours cannot be null.
+ExceptionNullMinutes = Minutes cannot be null.
+ExceptionNullMonths = Months cannot be null.
+ExceptionNullFileName = The file name cannot be null.
+ExceptionEmptyFileName = The file name cannot be empty.
+ExceptionInvalidFileName = The file does not exist.
+ExceptionRangeSlidingExpiration = Sliding time should be greater than or equal to 1s.
+ExceptionNullCacheManagerDataName = The CacheManagerData name can not be null.
+ExceptionMessageNoDefault = A default instance was not defined in configuration so no cache manager can be created.
+
+UnknownFailureReason = "The process failed for an unknown reason."
+BackgroundSchedulerProducerConsumerQueueFailure = Internal ProducerConsumerQueue thread failed.
+CacheNotInitializedException = Add called without setting BackgroundScheduler.
+EmptyCacheManagerNameException = CacheManagerName cannot be empty
+UnableToFindCacheManagerInstance(string cacheManagerName) = Cannot find CacheManager instance name {0}
+CannotInstantiateCacheStorage(string cacheManagerName) = Cannot instantiate cacheStorage for Cache Manager {0}.
+CannotInstantiateCacheStorageType(string cacheStorageTypeName, string cacheManagerName) = Cannot instantiate cacheStorage type named {0} for Cache Manager {1}.
+CannotInstantiateCacheStorageWithNullName(string cacheManagerName) = Cannot instantiate cacheStorage type with null name for Cache Manager {0}
+UnspecifiedExceptionWhileCreatingType(string cacheStorageTypeName, string cacheManagerName) = Unspecified exception while instantiating {0} for Cache Manager {1}.
+InvalidExpirationPollCycleTime = Expiration poll cycle time must be at least 1 second.
+InvalidPollingStopOperation = Cannot stop polling before it is started.
+FailureToRemoveCacheItemInBackground = Failure while removing item from cache in background.
+FailureToSpawnUserSpecifiedRefreshAction = Failure while starting application-specified refresh action.
+FailureWhileRunningUserSpecifiedRefreshAction = Failure while running application-specified refresh action.
+
+IsolatedStoreAreaNameNullException(string isoStoreName) = Failed to create Isolated Storage {0} -- storage area name is null in configuration
+IsolatedStoreAreaNameEmptyException(string isoStoreName) = Failed to create Isolated Storage {0} -- storage area name is empty in configuration
+WildcardAll = *
+
+ArgumentDelimiter = '
+BackingStoreFactoryName = Backing Store Factory
+CacheManagerFactoryName = Cache Manager Factory
+StorageEncryptionFactoryName = Storage Encryption Factory

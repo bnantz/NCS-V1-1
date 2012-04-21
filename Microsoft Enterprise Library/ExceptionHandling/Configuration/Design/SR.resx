@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="CategoryGeneral">
+    <value>General</value>
+    <comment> category for all properties</comment>
+  </data>
+  <data name="DefaultExceptionPolicyNodeName">
+    <value>Exception Policy</value>
+    <comment> The defaul name of the ExceptionPolicyNode</comment>
+  </data>
+  <data name="DefaultExceptionTypeNodeName">
+    <value>Exception Type</value>
+    <comment> The default name for the ExceptionTypeNode</comment>
+  </data>
+  <data name="DefaultExceptionHandlingSettingsNodeName">
+    <value>Exception Handling Application Block</value>
+    <comment> The default name of the ExceptionHandlingSettingsNode</comment>
+  </data>
+  <data name="DefaultWrapHandlerNodeName">
+    <value>Wrap Handler</value>
+    <comment> The default name of WrapHandlerNode</comment>
+  </data>
+  <data name="DefaultReplaceHandlerNodeName">
+    <value>Replace Handler</value>
+    <comment> The default name of ReplaceHandlerNode</comment>
+  </data>
+  <data name="DefaultCustomHandlerNodeName">
+    <value>Custom Handler</value>
+    <comment> The default name of CustomHandlerNode</comment>
+  </data>
+  <data name="SelectTypeDialogCaption">
+    <value>Select Exception Type.</value>
+    <comment> select type dialog caption</comment>
+  </data>
+  <data name="DuplicateExceptionTypeErrorMessage">
+    <value>An exception of type {0} is already configured for this policy.</value>
+    <comment> Message for duplication.
+ Parameters: 0 - exceptionTypeName (string) </comment>
+  </data>
+  <data name="ExceptionTypeNodeNameDescription">
+    <value>The fully qualified name of the type of Exception to get handled.  Must inherit from System.Exception.</value>
+  </data>
+  <data name="WrapHandlerNodeMessageDescription">
+    <value>The optional message for the wrap exception.</value>
+  </data>
+  <data name="ExceptionReplaceMessageDescription">
+    <value>The optional message for the replace exception.</value>
+  </data>
+  <data name="ExceptionWrapTypeNameDescription">
+    <value>The fully qualified name of the type of exception to use for wrapping.</value>
+  </data>
+  <data name="ExceptionReplaceTypeNameDescription">
+    <value>The fully qualified name of the type of exception to use for replacing.</value>
+  </data>
+  <data name="ExceptionTypePostHandlingActionDescription">
+    <value>Determines what action should occur after an exception is handled by the configured exception handling chain. 
+None: Indicates that no post handling action should occur.
+NotifyRethrow: Notifies the caller that a Rethrow of the original exception is recommended.
+ThrowNewException: Throws the resulting exception from the completed exception handling chain.</value>
+  </data>
+  <data name="ExceptionHandlerNameDescription">
+    <value>The friendly name of the exception handler.</value>
+  </data>
+  <data name="ExceptionHandlerTypeDescription">
+    <value>The fully qualified name of the type of exception handler.</value>
+  </data>
+  <data name="ExceptionHandlerAdditionalPropertiesDescription">
+    <value>Defines any number of custom properties that can be passed to a handler.</value>
+  </data>
+  <data name="ExceptionHandlingSettingsNodeMenuText">
+    <value>Exception Handling Application Block</value>
+    <comment> Menu Text</comment>
+  </data>
+  <data name="ExceptionPolicyNodeMenuText">
+    <value>Exception Policy</value>
+  </data>
+  <data name="ExceptionTypeNodeMenuText">
+    <value>Exception Type</value>
+  </data>
+  <data name="MoveUpMenuItemText">
+    <value>Move Up</value>
+  </data>
+  <data name="MoveDownMenuItemText">
+    <value>Move Down</value>
+  </data>
+  <data name="GenericCreateStatusText">
+    <value>Create a new {0}</value>
+    <comment> Statusbar Text.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionTypeNodeStatusText">
+    <value>Create a new Exception Type</value>
+  </data>
+  <data name="ExceptionPolicyNodeStatusText">
+    <value>Create a new Exception Type</value>
+  </data>
+  <data name="ExceptionHandlingSettingsNodeStatusText">
+    <value>Add the Exception Handling Application Block to the configuration</value>
+  </data>
+  <data name="MoveUpStatusText">
+    <value>Move currently selected node up</value>
+  </data>
+  <data name="MoveDownStatusText">
+    <value>Move currently selected node down</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

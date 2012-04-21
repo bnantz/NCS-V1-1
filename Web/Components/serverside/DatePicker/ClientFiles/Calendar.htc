@@ -1,0 +1,447 @@
+<html>
+<head>
+<public:component tagName="Calendar">
+  <public:defaults viewLinkContent />
+  <public:defaults viewInheritStyle="false" />
+  <public:property name="selectedDate" get="get_selectedDate" put="set_selectedDate" />
+  <public:property name="calendarStyle" internalName="g_strCalendarStyle" />
+  <public:property name="titleStyle" internalName="g_strTitleStyle" />
+  <public:property name="dayHeaderStyle" internalName="g_strDayHeaderStyle" />
+  <public:property name="normalDayStyle" internalName="g_strNormalDayStyle" />
+  <public:property name="otherMonthDayStyle" internalName="g_strOtherMonthDayStyle" />
+  <public:property name="todayDayStyle" internalName="g_strTodayDayStyle" />
+  <public:property name="selectedDayStyle" internalName="g_strSelectedDayStyle" />
+  <public:event id="datePicked" name="onDatePicked" />
+  <public:attach event="onContentReady" onevent="OnContentReady()" />
+</public:component>
+<style>
+body {
+  cursor: default;
+}
+.NavButton {
+  font-weight: normal;
+  font-family: marlett;
+  font-size: 10pt;
+  text-decoration: none;
+}
+.Calendar {
+}
+.Title {
+}
+.DayHeader {
+}
+.NormalDay {
+  cursor: hand;
+}
+.OtherMonthDay {
+}
+.TodayDay {
+}
+.SelectedDay {
+}
+</style>
+<script language="JavaScript">
+
+var c_nMinYear = 1900;
+var c_nMaxYear = 2099;
+var c_iCalendarStyle = 2;
+var c_iTitleStyle = 3;
+var c_iDayHeaderStyle = 4;
+var c_iNormalDayStyle = 5;
+var c_iOtherMonthDayStyle = 6;
+var c_iTodayDayStyle = 7;
+var c_iSelectedDayStyle = 8;
+
+var c_arrMonthNames =
+    new Array('January', 'February', 'March', 'April', 'May', 'June', 'July',
+              'August', 'September', 'October', 'November', 'December');
+
+var c_arrMonthDays = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+
+var g_strCalendarStyle = null;
+var g_strTitleStyle = null;
+var g_strDayHeaderStyle = null;
+var g_strNormalDayStyle = null;
+var g_strOtherMonthDayStyle = null;
+var g_strTodayDayStyle = null;
+var g_strSelectedDayStyle = null;
+
+var g_nDay = null;
+var g_nMonth = null;
+var g_nYear = null;
+var g_dtSelected = null;
+var g_fCancel = false;
+var g_fInitialized = false;
+
+var g_arrDayCells = new Array();
+
+function get_selectedDate() {
+    if (g_fCancel == true) {
+        g_fCancel = false;
+        return null;
+    }
+    if (g_dtSelected == null) {
+        return new Date();
+    }
+    return g_dtSelected;
+}
+
+function set_selectedDate(value) {
+    if (typeof(value) == "string") {
+        if (value.length != 0) {
+            var dateRegex = new RegExp("^\\s*(\\d{1,2})([-./])(\\d{1,2})\\2((\\d{4})|(\\d{2}))\\s*$");
+            m = value.match(dateRegex);
+            if (m == null) {
+                g_dtSelected = null;
+                return;
+            }
+        
+            value = new Date(value);
+        }
+        else {
+            return;
+        }
+    }
+
+    var nYear = value.getYear();
+    if (nYear < 100) {
+        nYear += 1900;
+    }
+    if ((nYear >= c_nMinYear) && (nYear <= c_nMaxYear)) {
+        g_nYear = nYear;
+        g_nMonth = value.getMonth() + 1;
+        g_nDay = value.getDate();
+
+        InitializeLeapYear();
+
+        if (g_fInitialized == true) {
+            UpdateCalendar();
+        }
+    }
+
+    g_dtSelected = value;
+}
+
+function InitializeCurrentDate() {
+    var dateInitial = g_dtSelected;
+    
+    if (dateInitial == null) {
+        dateInitial = new Date();
+    }
+
+    g_nDay = dateInitial.getDate();
+    g_nMonth = dateInitial.getMonth() + 1;
+    g_nYear = dateInitial.getYear();
+    if (g_nYear < 100) {
+        g_nYear += 1900;
+    }
+    InitializeLeapYear();
+}
+
+function InitializeLeapYear() {
+    var leapYear = false;
+    
+    if ((g_nYear % 4) == 0) {
+        if (((g_nYear % 100) != 0) ||
+            ((g_nYear % 400) == 0)) {
+            leapYear = true;
+        }
+    }
+
+    if (leapYear == true) {
+        c_arrMonthDays[1] = 29;
+    }
+    else {
+        c_arrMonthDays[2] = 28;
+    }
+}
+
+function OnClickClose() {
+    g_fCancel = true;
+    datePicked.fire();
+}
+
+function OnClickDayCell() {
+    var e = window.event.srcElement;
+
+    if (e.tagName == 'TD') {
+        var day = e.day;
+        var month = e.month;
+        var year = e.year;
+
+        if (month != g_nMonth) {
+            if (year != g_nYear) {
+                if ((year < c_nMinYear) || (year > c_nMaxYear)) {
+                    return;
+                }
+                g_nYear = year;
+                InitializeLeapYear();
+            }
+
+            g_nMonth = month;
+            g_nDay = day;
+
+            UpdateCalendar();
+        }
+        else {
+            g_dtSelected = new Date(year, month - 1, day);
+            datePicked.fire(createEventObject());
+        }
+    }
+}
+
+function OnClickNextMonth() {
+    var month = g_nMonth + 1;
+    if (month == 13) {
+        if (g_nYear < c_nMaxYear) {
+            g_nYear++;
+            InitializeLeapYear();
+        }
+        else {
+            return;
+        }
+
+        month = 1;
+    }
+
+    g_nMonth = month;
+    g_nDay = 1;
+
+    UpdateCalendar();
+}
+
+function OnClickPrevMonth() {
+    var month = g_nMonth - 1;
+    if (month == 0) {
+        if (g_nYear > c_nMinYear) {
+            g_nYear--;
+            InitializeLeapYear();
+        }
+        else {
+            return;
+        }
+        month = 12;
+    }
+
+    g_nMonth = month;
+    g_nDay = 1;
+
+    UpdateCalendar();
+}
+
+function OnContentReady() {
+    var nRow;
+    var nCell;
+    for (nRow = 0; nRow < 6; nRow++) {
+        for (nCell = 0; nCell < 7; nCell++) {
+            g_arrDayCells[nRow * 7 + nCell] = daysTable.rows[nRow + 1].cells[nCell];
+        }
+    }
+
+    if (g_strCalendarStyle != null) {
+        document.styleSheets(0).rules(c_iCalendarStyle).style.cssText = g_strCalendarStyle;
+    }
+    if (g_strTitleStyle != null) {
+        document.styleSheets(0).rules(c_iTitleStyle).style.cssText = g_strTitleStyle;
+    }
+    if (g_strDayHeaderStyle != null) {
+        document.styleSheets(0).rules(c_iDayHeaderStyle).style.cssText = g_strDayHeaderStyle;
+    }
+    if (g_strNormalDayStyle != null) {
+        document.styleSheets(0).rules(c_iNormalDayStyle).style.cssText =
+            document.styleSheets(0).rules(c_iNormalDayStyle).style.cssText + g_strNormalDayStyle;
+    }
+    if (g_strOtherMonthDayStyle != null) {
+        document.styleSheets(0).rules(c_iOtherMonthDayStyle).style.cssText = g_strOtherMonthDayStyle;
+    }
+    if (g_strTodayDayStyle != null) {
+        document.styleSheets(0).rules(c_iTodayDayStyle).style.cssText = g_strTodayDayStyle;
+    }
+    if (g_strSelectedDayStyle != null) {
+        document.styleSheets(0).rules(c_iSelectedDayStyle).style.cssText = g_strSelectedDayStyle;
+    }
+    daysTable.style.fontFamily = calendarTable.currentStyle.fontFamily;
+    daysTable.style.fontSize = calendarTable.currentStyle.fontSize;
+    daysTable.style.color = calendarTable.currentStyle.color;
+
+    prevMonthAnchor.style.color = titleRow.currentStyle.color;
+    nextMonthAnchor.style.color = titleRow.currentStyle.color;
+    closeAnchor.style.color = titleRow.currentStyle.color;
+
+    g_fInitialized = true;
+
+    InitializeCurrentDate();
+    UpdateCalendar();
+}
+
+function OnMouseOutDayCell() {
+    var e = window.event.srcElement;
+
+    if (e.tagName == 'TD') {
+        var className = e.className;
+        var i = className.indexOf(' SelectedDay');
+
+        if (i > 0) {
+            e.className = className.substr(0, i);
+        }
+    }
+}
+
+function OnMouseOverDayCell() {
+    var e = window.event.srcElement;
+
+    if (e.tagName == 'TD') {
+        if (e.className.indexOf(' SelectedDay') < 0) {
+            e.className = e.className + ' SelectedDay';
+        }
+    }
+}
+
+function UpdateCalendar() {
+    titleCell.innerHTML = "<nobr>" + c_arrMonthNames[g_nMonth - 1] + ", " + g_nYear + "</nobr>";
+
+    var nLastMonth = g_nMonth - 1;
+    var nLastMonthYear = g_nYear;
+    var nNextMonth = g_nMonth + 1;
+    var nNextMonthYear = g_nYear;
+
+    if (g_nMonth == 1) {
+        nLastMonth = 12;
+        nLastMonthYear = g_nYear - 1;
+    }
+    else if (g_nMonth == 12) {
+        nNextMonth = 1;
+        nNextMonthYear = g_nYear + 1;
+    }
+
+    var nLastMonthDays = c_arrMonthDays[nLastMonth - 1];
+    var nNextMonthDays = c_arrMonthDays[nNextMonth - 1];
+
+    var iDayCell = 0;
+    var dtFirstDay = new Date(g_nYear, (g_nMonth - 1), 1);
+
+    var dtTodayDay = new Date();
+    var nTodayDay = new Date().getDate();
+    var nTodayYear = dtTodayDay.getYear();
+    if (nTodayYear < 100) {
+        nTodayYear += 1900;
+    }
+    var fThisMonth = ((g_nYear == nTodayYear) && (g_nMonth == dtTodayDay.getMonth() + 1));
+
+    var nStartDay = dtFirstDay.getDay();
+    nStartDay = nLastMonthDays - nStartDay + 1;
+
+    for (i = nStartDay; i <= nLastMonthDays; i++, iDayCell++) {
+        g_arrDayCells[iDayCell].innerText = i;
+
+        g_arrDayCells[iDayCell].className = 'NormalDay OtherMonthDay';
+        g_arrDayCells[iDayCell].day = i;
+        g_arrDayCells[iDayCell].month = nLastMonth;
+        g_arrDayCells[iDayCell].year = nLastMonthYear;
+    }
+
+    for (i = 1; i <= c_arrMonthDays[g_nMonth - 1]; i++, iDayCell++) {
+        g_arrDayCells[iDayCell].innerText = i;
+
+        if ((fThisMonth == true) && (i == nTodayDay)) {
+            g_arrDayCells[iDayCell].className = 'NormalDay TodayDay';
+        }
+        else {
+            g_arrDayCells[iDayCell].className = 'NormalDay';
+        }
+        g_arrDayCells[iDayCell].day = i;
+        g_arrDayCells[iDayCell].month = g_nMonth;
+        g_arrDayCells[iDayCell].year = g_nYear;
+    }
+
+    for (i = 1; iDayCell < 42; i++, iDayCell++) {
+        g_arrDayCells[iDayCell].innerText = i;
+
+        g_arrDayCells[iDayCell].className = 'NormalDay OtherMonthDay';
+        g_arrDayCells[iDayCell].day = i;
+        g_arrDayCells[iDayCell].month = nNextMonth;
+        g_arrDayCells[iDayCell].year = nNextMonthYear;
+    }
+}
+</script>
+<body>
+  <table id="calendarTable" cellspacing="0" cellpadding="0" class="Calendar" style="border-collapse: collapse; width: 100%; height: 100%">
+    <tr id="titleRow" class="Title" style="height: 16pt">
+      <td align="left">&nbsp;<a class="NavButton" id="prevMonthAnchor" href="" onclick="OnClickPrevMonth(); return false;" title="Previous Month">3</a>&nbsp;</td>
+      <td id="titleCell" align="center" width="100%"></td>
+      <td>&nbsp;<a class="NavButton" id="nextMonthAnchor" href="" onclick="OnClickNextMonth(); return false;" title="Next Month">4</a>&nbsp;</td>
+      <td>&nbsp;<a class="NavButton" id="closeAnchor" href="" onclick="OnClickClose(); return false;" title="Cancel">r</a>&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <table id="daysTable" width="100%" height="100%" cellspacing="0" cellpadding="1" style="border-collapse: collapse">
+          <tr class="DayHeader" style="height: 16pt">
+            <td width="14%" align="center">S</td>
+            <td width="14%" align="center">M</td>
+            <td width="14%" align="center">T</td>
+            <td width="14%" align="center">W</td>
+            <td width="14%" align="center">T</td>
+            <td width="14%" align="center">F</td>
+            <td width="14%" align="center">S</td>
+          </tr>
+          <tr onclick="OnClickDayCell()" onMouseOver="OnMouseOverDayCell()" onMouseOut="OnMouseOutDayCell()">
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+          </tr>
+          <tr onclick="OnClickDayCell()" onMouseOver="OnMouseOverDayCell()" onMouseOut="OnMouseOutDayCell()">
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+          </tr>
+          <tr onclick="OnClickDayCell()" onMouseOver="OnMouseOverDayCell()" onMouseOut="OnMouseOutDayCell()">
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+          </tr>
+          <tr onclick="OnClickDayCell()" onMouseOver="OnMouseOverDayCell()" onMouseOut="OnMouseOutDayCell()">
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+          </tr>
+          <tr onclick="OnClickDayCell()" onMouseOver="OnMouseOverDayCell()" onMouseOut="OnMouseOutDayCell()">
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+          </tr>
+          <tr onclick="OnClickDayCell()" onMouseOver="OnMouseOverDayCell()" onMouseOut="OnMouseOutDayCell()">
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+

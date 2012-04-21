@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="HandlerFactoryName">
+    <value>Exception Handler Factory</value>
+  </data>
+  <data name="PolicyFactoryName">
+    <value>Exception Policy Factory</value>
+  </data>
+  <data name="PermissionDenied">
+    <value>Permission Denied</value>
+  </data>
+  <data name="UnknownReadError">
+    <value>Unknown Error Reading Information</value>
+  </data>
+  <data name="UnableToLoadExceptionHandlers">
+    <value>Unable to load handler(s) for type "{0}" under policy "{1}"</value>
+    <comment>.
+ Parameters: 0 - exceptionTypeName (string), 1 - policyName (string) </comment>
+  </data>
+  <data name="UnableToHandleException">
+    <value>Unable to handle exception: "{0}".</value>
+    <comment>.
+ Parameters: 0 - handlerName (string) </comment>
+  </data>
+  <data name="ExceptionWasCaught">
+    <value>An exception of type '{0}' occurred and was caught.</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="StackTraceUnavailable">
+    <value>The stack trace is unavailable.</value>
+  </data>
+  <data name="UndefinedValue">
+    <value>&lt;undefined value&gt;</value>
+  </data>
+  <data name="AdditionalInfo">
+    <value>Additional Info:</value>
+  </data>
+  <data name="OffendingException">
+    <value>OFFENDING EXCEPTION:</value>
+  </data>
+  <data name="OriginalException">
+    <value>ORIGINAL EXCEPTION:</value>
+  </data>
+  <data name="ChainException">
+    <value>HANDLING CHAIN EXCEPTION:</value>
+  </data>
+  <data name="PolicyName">
+    <value>POLICY NAME: {0}</value>
+    <comment>.
+ Parameters: 0 - policyName (string) </comment>
+  </data>
+  <data name="Message">
+    <value>Message : {0}</value>
+  </data>
+  <data name="Source">
+    <value>Source : {0}</value>
+  </data>
+  <data name="ExceptionString">
+    <value> Exception: </value>
+  </data>
+  <data name="StackTrace">
+    <value>Stack Trace</value>
+  </data>
+  <data name="HelpLink">
+    <value>Help link : {0}</value>
+  </data>
+  <data name="TypeString">
+    <value>Type : {0}</value>
+  </data>
+  <data name="InnerException">
+    <value>Inner Exception</value>
+  </data>
+  <data name="ExceptionExceptionTypeDataName">
+    <value>The name for the ExceptionTypeData can not be null.</value>
+  </data>
+  <data name="ExceptionNullException">
+    <value>Unable to rethrow exception: The exception to throw is null.</value>
+  </data>
+  <data name="ExceptionUnableToWrapException">
+    <value>Unable to wrap exception of type "{0}".  Please check the constructor as it must support the following signature: .ctor(String message, Exception innerException).</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="ExceptionUnableToReplaceException">
+    <value>Unable to replace exception of type "{0}".  Please check the constructor as it must support the following signature: .ctor(String message).</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="ExceptionSimpleProviderNotFound">
+    <value>The requested exception policy '{0}' could not be found.</value>
+    <comment>.
+ Parameters: 0 - policyName (string) </comment>
+  </data>
+  <data name="ExceptionExtendedProviderNotFound">
+    <value>The requested exception policy “{0}” could not be found while processing the following exception: {1}</value>
+    <comment>.
+ Parameters: 0 - policyName (string), 1 - exceptionMessage (string) </comment>
+  </data>
+  <data name="ExceptionNoPoliciesDefined">
+    <value>No polices are defined in configuration.</value>
+  </data>
+  <data name="ExceptionNoExceptionTypesForPolicy">
+    <value>No exception types are defined for policy '{0}' in configuration.</value>
+    <comment>.
+ Parameters: 0 - policyName (string) </comment>
+  </data>
+  <data name="ExceptionExceptionTypeNotFound">
+    <value>The requested exception type '{0}' could not be found for the policy '{0}'.</value>
+    <comment>.
+ Parameters: 0 - exceptionType (string), 1 - policyName (string) </comment>
+  </data>
+  <data name="ExceptionNoExceptionHandlerForType">
+    <value>No exception handlers are defined for the exception type '{0}' for policy '{1}' in configuration.</value>
+    <comment>.
+ Parameters: 0 - exceptionTypeName (string), 1 - policyName (string) </comment>
+  </data>
+  <data name="ExceptionExceptionHanlderNotFoun">
+    <value>The requested exception handler '{0}' could not be found for the exception type '{1}' in the policy '{2}'.</value>
+    <comment>.
+ Parameters: 0 - handlerName (string), 1 - exceptionTypeName (string), 2 - policyName (string) </comment>
+  </data>
+  <data name="ExceptionUnknownExceptionTypeInConfiguration">
+    <value>The exception type {0} cannot be loaded.</value>
+    <comment>.
+ Parameters: 0 - exceptionTypeName (string) </comment>
+  </data>
+  <data name="InstrumentationCounterCategoryHelp">
+    <value>Enterprise Library Exception Handling application performance counters.</value>
+  </data>
+  <data name="PerfCounterExceptionsHandledMsg">
+    <value>Number of exceptions per second handled by the Exception Handling block.</value>
+  </data>
+  <data name="PerfCounterExceptionsUnhandledMsg">
+    <value>Number of exceptions per second not handled by the Exception Handling block.</value>
+  </data>
+  <data name="EntLibExceptionHandlerSource">
+    <value>EntLib Exception Handler</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

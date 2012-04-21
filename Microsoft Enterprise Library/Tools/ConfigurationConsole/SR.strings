@@ -1,0 +1,103 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Configuration Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Comments are lines starting with ";" or "#"
+
+# Comments should be added before the string. 
+
+# Options are specified as lines starting with "#!"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+
+[strings]
+; Default name of the solution node
+DefaultSolutionNodeName = Enterprise Library Configuration
+
+; Status bar text
+DefaultStatusBarText = Ready
+NewApplicationStatusBarText = Create a new configuration application
+OpenApplicationStatusBarText = Open an existing configuration application
+SaveApplicationStatusBarText = Save the current application configuration
+SaveAllStatusBarText = Save all the application configuration
+
+
+# Exception Strings
+Close = Close
+SaveConfigurationCaption = Save Configuration
+SaveConfigurationMessage = Please select the application to save and click on the Save button again.
+ConfirmNodeRemoveMessage = Are you sure you want to remove this node?
+ConfirmNodeRemoveCaption = Confirm Node Remove
+OpenApplicationCaption = Open Application
+NewApplicationFormText = New Application
+OpenApplicationFormText = Open Existing Application
+SaveApplicationAsFormText = Save Application As
+CopyErrorsMenuItemText = Copy
+ValidationFailedCaption = Validation failed
+ValidationFailedMessage(int count) = Validation failed. {0} validation errors. 
+OverwriteFilesCaption = Overwrite files?
+OverwriteFilesMessage = The file already exists. Do you want to overwrite it and all associated configuration files?
+UnhandledExceptionFormText = Unhandled Exception
+NodeLabelEditCaption = Node Label Edit
+NodeLabelEditText = Invalid tree node label.\nThe label cannot be blank.
+NodeLabelEditFailedText = Unable to rename the TreeNode -> 
+CreateDirectoryText(string directory) = The directory '{0}' does not exists. Do you want to create it?
+CreateDirectoryCaption = Create Directory?
+PathNotRooted = The configuration file path must include a drive letter.
+PathNotRootedCaption = Absolute Path Required
+UnspecifiedDirectory = The specified path does not contain a valid directory.
+UnspecifiedDirectoryCaption = Invalid Directory
+CreateDirectoryException = Failed to create the specified directory.
+CreateDirectoryExceptionCaption = Create Directory Error.
+RemoveNodeCommandInterceptorPath = root/Remove
+ValidateNodeCommandInterceptorPath = root/Validate
+ValidationSucceeded = Validation succeeded.
+SaveApplicationCommandInterceptorPath = root/Save
+ValidateSaveApplicationCommandInterceptorPath = root/Validate and Save
+OverwriteFileMessage(string fileName) = The file {0} cannot be saved because it is write-protected.\n\nDo you want to remove the write-protection and overwrite the file in its current location?
+OverwriteFileCaption = Save of Read-Only File
+SaveWithoutValidatingMessage = Do you really want to save without validating?
+SaveWithoutValidatingCaption = Save without Validating?
+ValidateSaveApplicationCommmandError = Do you want to save the application anyway?
+SaveConfigurationQuestionCaption = Save Configuration?
+SaveConfigurationQuestionMessage(string applicationName) = Do you want to save the configuration for application '{0}'?
+ConfigurationFileDialogFilter = Configuration Files(web.config, *.exe.config, *.dll.config, app.config)|web.config;*.exe.config;app.config;*.dll.config|All Files(*.*)|*.*
+OpenApplicationCommandPath = root/Open/Application
+SaveApplicationDialogText(string name) = Save '{0}' As
+SaveApplicationDialogDefaultExt = .config
+
+OpenApplicationErrorMessageBoxText(string path, string message) = An error was encountered while attempting to open the configuration file '{0}'. Please fix the problem and try again. \r\n\r\n {1}
+OpenApplicationErrorMessageBoxCaption = Open Application Error
+SaveApplicationPrompt(string appName) = Do you want to save the configuration for application {0}?
+SaveAppCaption = Save Configuration
+
+ErrorApplicationConfigNodeExpected = The node must be of type ApplicationConfigurationNode.
+
+MoveDown = Move Down
+MoveUp = Move Up
+Rename = Rename
+SaveAs = Save As...
+
+ExceptionFileInUse(string fileName) = The file '{0}' is in use by another configuration. Please choose a different name.
+ExceptionFileInUseCaption = File In Use
+
+RemoveNodeMessage = The node can not be removed.
+RemoveNodeCaption = Remove Node
+
+SaveApplicationsMessage = One or more of the applications could not be saved. Please correct the errors and try again.
+SaveApplicationCaption = Save Application
+
+InvalidSaveHierarchyMessage(string name) = Could not save {0}.

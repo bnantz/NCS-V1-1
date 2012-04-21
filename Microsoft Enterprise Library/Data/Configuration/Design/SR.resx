@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="ExceptionConnectionStringNodeNotFound">
+    <value>The connection string node named {0} could not be found for the instance {1}.
+ Please make sure that all connection string nodes are loaded before the instance and check that the name exists.</value>
+    <comment> Exception MessagesMessage when connection string node not found for instance.
+ Parameters: 0 - connectionString (string), 1 - instanceName (string) </comment>
+  </data>
+  <data name="ExceptionInstanceNodeNotFound">
+    <value>The instance node named {0} could not be found for the database settings.
+ Please make sure that all instance nodes are loaded before the database settings checks for the instance and check that the name exists.</value>
+    <comment>Message when instance node not found for database settings.
+ Parameters: 0 - instanceName (string) </comment>
+  </data>
+  <data name="ExceptionDatabaseTypeNodeNotFound">
+    <value>The database type node named {0} could not be found for the instance {1}.
+ Please make sure that all database type nodes are loaded before the instance and check that the name exists.</value>
+    <comment>Message when database type node not found for instance.
+ Parameters: 0 - typeName (string), 1 - instanceName (string) </comment>
+  </data>
+  <data name="DataConfigurationMenuText">
+    <value>Data Access Application Block</value>
+    <comment> Menu Item Text</comment>
+  </data>
+  <data name="ParameterMenuText">
+    <value>Parameter</value>
+  </data>
+  <data name="SensitiveParameterMenuText">
+    <value>Password Parameter</value>
+  </data>
+  <data name="DatabaseTypeNodeMenuText">
+    <value>Database Type</value>
+  </data>
+  <data name="InstanceNodeMenuText">
+    <value>Database Instance</value>
+  </data>
+  <data name="InstanceColectionNodeMenuText">
+    <value>Instance Collection</value>
+  </data>
+  <data name="DatabaseTypeColectionNodeMenuText">
+    <value>Database Type Collection</value>
+  </data>
+  <data name="ConnectionStringColectionNodeMenuText">
+    <value>Connection String Collection</value>
+  </data>
+  <data name="ConnectionStringMenuText">
+    <value>Connection String</value>
+  </data>
+  <data name="DataConfigurationStatusText">
+    <value>Create a new Data Access Application Block</value>
+    <comment> Statusbar Text</comment>
+  </data>
+  <data name="ParameterStatusText">
+    <value>Create a new Parameter</value>
+  </data>
+  <data name="SensitiveParameterStatusText">
+    <value>Create a new Password Parameter</value>
+  </data>
+  <data name="GenericCreateStatusText">
+    <value>Create a new {0}</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="DatabaseTypeNodeStatusText">
+    <value>Create a new Database Type</value>
+  </data>
+  <data name="InstanceNodeStatusText">
+    <value>Create a new Database Instance</value>
+  </data>
+  <data name="InstanceColectionNodeStatusText">
+    <value>Create a new Instance Collection</value>
+  </data>
+  <data name="DatabaseTypeColectionNodeStatusText">
+    <value>Create a new Database Type Collection</value>
+  </data>
+  <data name="ConnectionStringColectionNodeStatusText">
+    <value>Create a new Connection String Collection</value>
+  </data>
+  <data name="OracleConnectionStringNodeFriendlyName">
+    <value>Oracle Connection String</value>
+    <comment> The friendly name of the oracle connection string</comment>
+  </data>
+  <data name="ConnectionStringNodeFriendlyName">
+    <value>Connection String</value>
+    <comment> The friendly name of the connection string</comment>
+  </data>
+  <data name="DefaultParameterNodeName">
+    <value>Parameter</value>
+    <comment> The default display name for a PrameterNode</comment>
+  </data>
+  <data name="ParameterValueDescription">
+    <value>The value of the parameter for the connection string.</value>
+    <comment> The description of the parameter value</comment>
+  </data>
+  <data name="DefaultOraclePackageNodeName">
+    <value>Oracle Package</value>
+    <comment> The default name for a OraclePackageNode</comment>
+  </data>
+  <data name="DefaultDatabaseSettingsName">
+    <value>Data Access Application Block</value>
+    <comment> The default name for a DatabaseSettingsNode</comment>
+  </data>
+  <data name="DefaultConnectionStringCollectionNodeName">
+    <value>Connection Strings</value>
+    <comment> The default name for a ConnectionStringCollectionNode </comment>
+  </data>
+  <data name="DefaultConnectionStringNodeName">
+    <value>Connection String</value>
+    <comment> The default name for a ConnectionStringNode</comment>
+  </data>
+  <data name="DefaultOracleConnectionStringName">
+    <value>Oracle Connection String</value>
+    <comment> The default name for an OracleConnectionStringNode</comment>
+  </data>
+  <data name="DefaultDatabaseTypeCollectionNodeName">
+    <value>Database Types</value>
+    <comment> The default name for a DatabaseTypeCollectionNode</comment>
+  </data>
+  <data name="DefaultDatabaseTypeNodeName">
+    <value>Database Type</value>
+    <comment> The default name for a DatabaseTypeNode</comment>
+  </data>
+  <data name="DefaultInstaceCollectionNodeName">
+    <value>Database Instances</value>
+    <comment> The default name for an InstanceCollectionNode (plural)</comment>
+  </data>
+  <data name="DefaultInstanceNodeName">
+    <value>Database Instance</value>
+    <comment> The default display name for an InstanceNode</comment>
+  </data>
+  <data name="DefaultDatabaseName">
+    <value>Sql Server</value>
+    <comment> Name for default database</comment>
+  </data>
+  <data name="DefaultConnectionStringName">
+    <value>Connection String</value>
+    <comment> The name for default paramter nodes</comment>
+  </data>
+  <data name="DefaultInstanceTypeDescription">
+    <value>The default instance for the database settings.</value>
+    <comment> The description for the InstanceNode in the database settings node</comment>
+  </data>
+  <data name="InstanceDatabaseTypeDescription">
+    <value>The type of database used by this instance.</value>
+    <comment> The description for the DatabaseTypeNode in the instance node</comment>
+  </data>
+  <data name="DatabaseTypeFullyQualifedNameDescription">
+    <value>The fully qualified type name of the database.</value>
+    <comment> The description for the type of the DatabaseTypeNode</comment>
+  </data>
+  <data name="CategoryGeneral">
+    <value>General</value>
+    <comment> The category for all nodes</comment>
+  </data>
+  <data name="DefaultDatabaseTypeName">
+    <value>Sql Server</value>
+    <comment> The default name for the database type when created new</comment>
+  </data>
+  <data name="DefaultServerParameterName">
+    <value>server</value>
+    <comment> The default name of the server parameter</comment>
+  </data>
+  <data name="DefaultDatabaseParameterName">
+    <value>database</value>
+    <comment> The default name of the database paraemter</comment>
+  </data>
+  <data name="DefaultSecurityParameterName">
+    <value>Integrated Security</value>
+    <comment> The default name of the security parameter</comment>
+  </data>
+  <data name="DefaultNewConnectionStringName">
+    <value>Sql Connection String</value>
+    <comment> The default connection string name when new</comment>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

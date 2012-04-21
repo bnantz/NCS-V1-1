@@ -1,0 +1,71 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Exception Handling Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+HandlerFactoryName = Exception Handler Factory
+PolicyFactoryName = Exception Policy Factory
+PermissionDenied = Permission Denied
+UnknownReadError = Unknown Error Reading Information
+UnableToLoadExceptionHandlers(string exceptionTypeName, string policyName) = Unable to load handler(s) for type "{0}" under policy "{1}"
+UnableToHandleException(string handlerName) = Unable to handle exception: "{0}".
+ExceptionWasCaught(string typeName) = An exception of type '{0}' occurred and was caught.
+StackTraceUnavailable = The stack trace is unavailable.
+UndefinedValue = <undefined value>
+AdditionalInfo = Additional Info:
+OffendingException = OFFENDING EXCEPTION:
+OriginalException = ORIGINAL EXCEPTION:
+ChainException = HANDLING CHAIN EXCEPTION:
+PolicyName(string policyName) = POLICY NAME: {0}
+Message = Message : {0}
+Source = Source : {0}
+ExceptionString =  Exception: 
+StackTrace = Stack Trace
+HelpLink = Help link : {0}
+TypeString = Type : {0}
+InnerException = Inner Exception
+
+# 
+# Exception Messages
+#
+ExceptionExceptionTypeDataName = The name for the ExceptionTypeData can not be null.
+ExceptionNullException = Unable to rethrow exception: The exception to throw is null.
+ExceptionUnableToWrapException(string typeName) = Unable to wrap exception of type "{0}".  Please check the constructor as it must support the following signature: .ctor(String message, Exception innerException).
+ExceptionUnableToReplaceException(string typeName) = Unable to replace exception of type "{0}".  Please check the constructor as it must support the following signature: .ctor(String message).
+ExceptionSimpleProviderNotFound(string policyName) = The requested exception policy '{0}' could not be found.
+ExceptionExtendedProviderNotFound(string policyName, string exceptionMessage) = The requested exception policy “{0}” could not be found while processing the following exception: {1}
+ExceptionNoPoliciesDefined = No polices are defined in configuration.
+ExceptionNoExceptionTypesForPolicy(string policyName) = No exception types are defined for policy '{0}' in configuration.
+ExceptionExceptionTypeNotFound(string exceptionType, string policyName) = The requested exception type '{0}' could not be found for the policy '{0}'.
+ExceptionNoExceptionHandlerForType(string exceptionTypeName, string policyName) = No exception handlers are defined for the exception type '{0}' for policy '{1}' in configuration.
+ExceptionExceptionHanlderNotFoun(string handlerName, string exceptionTypeName, string policyName) = The requested exception handler '{0}' could not be found for the exception type '{1}' in the policy '{2}'.
+ExceptionUnknownExceptionTypeInConfiguration(string exceptionTypeName) = The exception type {0} cannot be loaded.
+
+#
+# Instrumentation
+#
+InstrumentationCounterCategoryHelp = Enterprise Library Exception Handling application performance counters.
+PerfCounterExceptionsHandledMsg = Number of exceptions per second handled by the Exception Handling block.
+PerfCounterExceptionsUnhandledMsg = Number of exceptions per second not handled by the Exception Handling block.
+
+EntLibExceptionHandlerSource = EntLib Exception Handler

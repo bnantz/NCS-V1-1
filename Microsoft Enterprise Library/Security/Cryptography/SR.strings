@@ -1,0 +1,57 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Cryptography Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Comments are lines starting with ";" or "#"
+
+# Comments should be added before the string. 
+
+# Options are specified as lines starting with "#!"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+MissingPassword = Key file is password protected and no password was provided.
+MustUseKeyedHashAlgorithmProvider = You must use a KeyedHashAlgorithmProvider for a KeyedHashAlgorithm.
+SymmetricCryptoFactory = Symmetric Cryptography Factory
+HashFactory = Hash Factory
+
+#
+# Exception strings
+#
+ExceptionCreatingHashAlgorithmInstance = Unable to load algorithm.
+ExceptionCreatingSymmetricAlgorithmInstance = Unable to load algorithm.
+ExceptionCastingSymmetricAlgorithmInstance = Type must inherit from SymmetricAlgorithm
+ExceptionValidatingDataArgument = Data is invalid.
+ExceptionDecrypting = Unable to decrypt data.
+ExceptionNoSymmetricCryptoProvider(string name) = The symmetric cryptography provider '{0}' could not be found in configuration.
+ExceptionCryptoSettingsMissing = The cryptography settings are not present in configuration.
+ExceptionNoCryptoProvider(string name) = '{0}' is not a named symmetric cryptography provider in configuration.
+ExceptionNoHashProvider(string name) = '{0}' is not a named hash cryptography provider in configuration.
+
+
+#
+# Instrumentation
+#
+InstrumentationEventSource = Enterprise Library Security Cryptography
+InstrumentationCounterCategory = Enterprise Library Security Cryptography
+InstrumentationCounterCategoryHelp = Enterprise Library Security Cryptography application performance counters.
+PerfCounterNumSymmEncryptionSecMsg = Number of symmetric encryptions per second.
+PerfCounterNumSymmDecryptionSecMsg = Number of symmetric decryptions per second.
+PerfCounterNumCreateHashSecMsg = Number of hash creates per second.
+PerfCounterNumCheckHashSecMsg = Number of hash checks per second.
+PerfCounterNumCheckHashFailureSecMsg = Number of hash check failures per second.

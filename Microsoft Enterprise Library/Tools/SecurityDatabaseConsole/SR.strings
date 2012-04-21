@@ -1,0 +1,42 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Security Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Comments are lines starting with ";" or "#"
+
+# Comments should be added before the string. 
+
+# Options are specified as lines starting with "#!"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+[strings]
+MustCreateRole = You must first create a role.
+MustSelectUserToAdd = You must select user to add.
+MustSelectUserToRemove = You must select user to remove.
+MustSelectUserToDelete = You must select a user to delete.
+MustSelectRoleToDelete = You must select a role to delete.
+DeleteRoleConfirmation = Are you sure you want to delete this role?
+UsersInRole(string role) = Users in Role {0}
+PasswordsMustMatch = Passwords must match.
+UserAlreadyExists = User already exists.
+RoleAlreadyExists = Role already exists.
+UnhandledException = An unhandled exception has occurred
+NewPasswordLabel = New Password
+DeleteUserConfirmation = Are you sure you want to delete this user?
+DeleteUserConfirmationCaption = Delete user confirmation
+DatabaseConnectionError = Error Connecting to Database
+
+NoDatabaseExceptionMessage(string paragraphSeparator1, string paragraphSeparator2, string paragraphSeparator3, string exceptionMessage) = Unable to connect to the specified security database. Please make sure that your database server is running, and that you have executed the scripts that create the security database schema. {0}If you wish to modify the database connection information used by the Security Database Console, use the Enterprise Library Configuration tool to edit the Security Database Console's configuration file (securitydatabaseconsole.exe.config). {1} The following exception was returned when attempting to connect to the database: {2}{3}

@@ -1,0 +1,126 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Data Access Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+; Exception Messages
+;Message when connection string node not found for instance
+ExceptionConnectionStringNodeNotFound(connectionString, instanceName) = The connection string node named {0} could not be found for the instance {1}.\n Please make sure that all connection string nodes are loaded before the instance and check that the name exists.
+;Message when instance node not found for database settings
+ExceptionInstanceNodeNotFound(instanceName) = The instance node named {0} could not be found for the database settings.\n Please make sure that all instance nodes are loaded before the database settings checks for the instance and check that the name exists.
+;Message when database type node not found for instance
+ExceptionDatabaseTypeNodeNotFound(typeName, instanceName) = The database type node named {0} could not be found for the instance {1}.\n Please make sure that all database type nodes are loaded before the instance and check that the name exists.
+
+; Menu Item Text
+DataConfigurationMenuText = Data Access Application Block
+ParameterMenuText = Parameter
+SensitiveParameterMenuText = Password Parameter
+DatabaseTypeNodeMenuText = Database Type
+InstanceNodeMenuText = Database Instance
+InstanceColectionNodeMenuText = Instance Collection
+DatabaseTypeColectionNodeMenuText = Database Type Collection
+ConnectionStringColectionNodeMenuText = Connection String Collection
+ConnectionStringMenuText = Connection String
+
+; Statusbar Text
+DataConfigurationStatusText = Create a new Data Access Application Block
+ParameterStatusText = Create a new Parameter
+SensitiveParameterStatusText = Create a new Password Parameter
+GenericCreateStatusText(string name) = Create a new {0}
+DatabaseTypeNodeStatusText = Create a new Database Type
+InstanceNodeStatusText = Create a new Database Instance
+InstanceColectionNodeStatusText = Create a new Instance Collection
+DatabaseTypeColectionNodeStatusText = Create a new Database Type Collection
+ConnectionStringColectionNodeStatusText = Create a new Connection String Collection
+
+; The friendly name of the oracle connection string
+OracleConnectionStringNodeFriendlyName = Oracle Connection String
+
+; The friendly name of the connection string
+ConnectionStringNodeFriendlyName = Connection String
+
+; The default display name for a PrameterNode
+DefaultParameterNodeName = Parameter
+
+; The description of the parameter value
+ParameterValueDescription = The value of the parameter for the connection string.
+
+; The default name for a OraclePackageNode
+DefaultOraclePackageNodeName = Oracle Package
+
+; The default name for a DatabaseSettingsNode
+DefaultDatabaseSettingsName = Data Access Application Block
+
+; The default name for a ConnectionStringCollectionNode 
+DefaultConnectionStringCollectionNodeName = Connection Strings
+
+; The default name for a ConnectionStringNode
+DefaultConnectionStringNodeName = Connection String
+
+; The default name for an OracleConnectionStringNode
+DefaultOracleConnectionStringName = Oracle Connection String
+
+; The default name for a DatabaseTypeCollectionNode
+DefaultDatabaseTypeCollectionNodeName = Database Types
+
+; The default name for a DatabaseTypeNode
+DefaultDatabaseTypeNodeName = Database Type
+
+; The default name for an InstanceCollectionNode (plural)
+DefaultInstaceCollectionNodeName = Database Instances
+
+; The default display name for an InstanceNode
+DefaultInstanceNodeName = Database Instance
+
+; Name for default database
+DefaultDatabaseName = Sql Server
+
+; The name for default paramter nodes
+DefaultConnectionStringName = Connection String
+
+; The description for the InstanceNode in the database settings node
+DefaultInstanceTypeDescription = The default instance for the database settings.
+
+; The description for the DatabaseTypeNode in the instance node
+InstanceDatabaseTypeDescription = The type of database used by this instance.
+
+; The description for the type of the DatabaseTypeNode
+DatabaseTypeFullyQualifedNameDescription = The fully qualified type name of the database.
+
+; The category for all nodes
+CategoryGeneral = General
+
+; The default name for the database type when created new
+DefaultDatabaseTypeName = Sql Server
+
+; The default name of the server parameter
+DefaultServerParameterName = server
+
+; The default name of the database paraemter
+DefaultDatabaseParameterName = database
+
+; The default name of the security parameter
+DefaultSecurityParameterName = Integrated Security
+
+; The default connection string name when new
+DefaultNewConnectionStringName = Sql Connection String

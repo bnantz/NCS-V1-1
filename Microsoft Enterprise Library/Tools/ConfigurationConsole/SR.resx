@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="DefaultSolutionNodeName">
+    <value>Enterprise Library Configuration</value>
+    <comment> Default name of the solution node</comment>
+  </data>
+  <data name="DefaultStatusBarText">
+    <value>Ready</value>
+    <comment> Status bar text</comment>
+  </data>
+  <data name="NewApplicationStatusBarText">
+    <value>Create a new configuration application</value>
+  </data>
+  <data name="OpenApplicationStatusBarText">
+    <value>Open an existing configuration application</value>
+  </data>
+  <data name="SaveApplicationStatusBarText">
+    <value>Save the current application configuration</value>
+  </data>
+  <data name="SaveAllStatusBarText">
+    <value>Save all the application configuration</value>
+  </data>
+  <data name="Close">
+    <value>Close</value>
+  </data>
+  <data name="SaveConfigurationCaption">
+    <value>Save Configuration</value>
+  </data>
+  <data name="SaveConfigurationMessage">
+    <value>Please select the application to save and click on the Save button again.</value>
+  </data>
+  <data name="ConfirmNodeRemoveMessage">
+    <value>Are you sure you want to remove this node?</value>
+  </data>
+  <data name="ConfirmNodeRemoveCaption">
+    <value>Confirm Node Remove</value>
+  </data>
+  <data name="OpenApplicationCaption">
+    <value>Open Application</value>
+  </data>
+  <data name="NewApplicationFormText">
+    <value>New Application</value>
+  </data>
+  <data name="OpenApplicationFormText">
+    <value>Open Existing Application</value>
+  </data>
+  <data name="SaveApplicationAsFormText">
+    <value>Save Application As</value>
+  </data>
+  <data name="CopyErrorsMenuItemText">
+    <value>Copy</value>
+  </data>
+  <data name="ValidationFailedCaption">
+    <value>Validation failed</value>
+  </data>
+  <data name="ValidationFailedMessage">
+    <value>Validation failed. {0} validation errors. </value>
+    <comment>.
+ Parameters: 0 - count (int) </comment>
+  </data>
+  <data name="OverwriteFilesCaption">
+    <value>Overwrite files?</value>
+  </data>
+  <data name="OverwriteFilesMessage">
+    <value>The file already exists. Do you want to overwrite it and all associated configuration files?</value>
+  </data>
+  <data name="UnhandledExceptionFormText">
+    <value>Unhandled Exception</value>
+  </data>
+  <data name="NodeLabelEditCaption">
+    <value>Node Label Edit</value>
+  </data>
+  <data name="NodeLabelEditText">
+    <value>Invalid tree node label.
+The label cannot be blank.</value>
+  </data>
+  <data name="NodeLabelEditFailedText">
+    <value>Unable to rename the TreeNode -&gt; </value>
+  </data>
+  <data name="CreateDirectoryText">
+    <value>The directory '{0}' does not exists. Do you want to create it?</value>
+    <comment>.
+ Parameters: 0 - directory (string) </comment>
+  </data>
+  <data name="CreateDirectoryCaption">
+    <value>Create Directory?</value>
+  </data>
+  <data name="PathNotRooted">
+    <value>The configuration file path must include a drive letter.</value>
+  </data>
+  <data name="PathNotRootedCaption">
+    <value>Absolute Path Required</value>
+  </data>
+  <data name="UnspecifiedDirectory">
+    <value>The specified path does not contain a valid directory.</value>
+  </data>
+  <data name="UnspecifiedDirectoryCaption">
+    <value>Invalid Directory</value>
+  </data>
+  <data name="CreateDirectoryException">
+    <value>Failed to create the specified directory.</value>
+  </data>
+  <data name="CreateDirectoryExceptionCaption">
+    <value>Create Directory Error.</value>
+  </data>
+  <data name="RemoveNodeCommandInterceptorPath">
+    <value>root/Remove</value>
+  </data>
+  <data name="ValidateNodeCommandInterceptorPath">
+    <value>root/Validate</value>
+  </data>
+  <data name="ValidationSucceeded">
+    <value>Validation succeeded.</value>
+  </data>
+  <data name="SaveApplicationCommandInterceptorPath">
+    <value>root/Save</value>
+  </data>
+  <data name="ValidateSaveApplicationCommandInterceptorPath">
+    <value>root/Validate and Save</value>
+  </data>
+  <data name="OverwriteFileMessage">
+    <value>The file {0} cannot be saved because it is write-protected.
+
+Do you want to remove the write-protection and overwrite the file in its current location?</value>
+    <comment>.
+ Parameters: 0 - fileName (string) </comment>
+  </data>
+  <data name="OverwriteFileCaption">
+    <value>Save of Read-Only File</value>
+  </data>
+  <data name="SaveWithoutValidatingMessage">
+    <value>Do you really want to save without validating?</value>
+  </data>
+  <data name="SaveWithoutValidatingCaption">
+    <value>Save without Validating?</value>
+  </data>
+  <data name="ValidateSaveApplicationCommmandError">
+    <value>Do you want to save the application anyway?</value>
+  </data>
+  <data name="SaveConfigurationQuestionCaption">
+    <value>Save Configuration?</value>
+  </data>
+  <data name="SaveConfigurationQuestionMessage">
+    <value>Do you want to save the configuration for application '{0}'?</value>
+    <comment>.
+ Parameters: 0 - applicationName (string) </comment>
+  </data>
+  <data name="ConfigurationFileDialogFilter">
+    <value>Configuration Files(web.config, *.exe.config, *.dll.config, app.config)|web.config;*.exe.config;app.config;*.dll.config|All Files(*.*)|*.*</value>
+  </data>
+  <data name="OpenApplicationCommandPath">
+    <value>root/Open/Application</value>
+  </data>
+  <data name="SaveApplicationDialogText">
+    <value>Save '{0}' As</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="SaveApplicationDialogDefaultExt">
+    <value>.config</value>
+  </data>
+  <data name="OpenApplicationErrorMessageBoxText">
+    <value>An error was encountered while attempting to open the configuration file '{0}'. Please fix the problem and try again. 
+
+ {1}</value>
+    <comment>.
+ Parameters: 0 - path (string), 1 - message (string) </comment>
+  </data>
+  <data name="OpenApplicationErrorMessageBoxCaption">
+    <value>Open Application Error</value>
+  </data>
+  <data name="SaveApplicationPrompt">
+    <value>Do you want to save the configuration for application {0}?</value>
+    <comment>.
+ Parameters: 0 - appName (string) </comment>
+  </data>
+  <data name="SaveAppCaption">
+    <value>Save Configuration</value>
+  </data>
+  <data name="ErrorApplicationConfigNodeExpected">
+    <value>The node must be of type ApplicationConfigurationNode.</value>
+  </data>
+  <data name="MoveDown">
+    <value>Move Down</value>
+  </data>
+  <data name="MoveUp">
+    <value>Move Up</value>
+  </data>
+  <data name="Rename">
+    <value>Rename</value>
+  </data>
+  <data name="SaveAs">
+    <value>Save As...</value>
+  </data>
+  <data name="ExceptionFileInUse">
+    <value>The file '{0}' is in use by another configuration. Please choose a different name.</value>
+    <comment>.
+ Parameters: 0 - fileName (string) </comment>
+  </data>
+  <data name="ExceptionFileInUseCaption">
+    <value>File In Use</value>
+  </data>
+  <data name="RemoveNodeMessage">
+    <value>The node can not be removed.</value>
+  </data>
+  <data name="RemoveNodeCaption">
+    <value>Remove Node</value>
+  </data>
+  <data name="SaveApplicationsMessage">
+    <value>One or more of the applications could not be saved. Please correct the errors and try again.</value>
+  </data>
+  <data name="SaveApplicationCaption">
+    <value>Save Application</value>
+  </data>
+  <data name="InvalidSaveHierarchyMessage">
+    <value>Could not save {0}.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

@@ -1,0 +1,38 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Security Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Comments are lines starting with ";" or "#"
+
+# Comments should be added before the string. 
+
+# Options are specified as lines starting with "#!"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+AzManProvider = AzMan Provider
+
+ApplicationDescription = Authorization Manager application name.
+
+AuditIdentiferPrefixDescription = Prefix to append to each audit identifier.  Audit identifier will be the "<prefix> <username>:<operation>".  Optional.
+
+ScopeDescription = Application scope name.  Optional.
+
+StoreLocationDescription = Authorization store location Active Directory or xml file.  For xml file storage - msxml://c:/temp/authstore.xml.  For Active Directory storage - msldap://myserver/CN=MyStore,OU=AzMan,DC=MyDomain,DC=Com
+
+AuditIdentifierPrefixDescription = Audit identifier prefix to append to the generated audit identifer.The audit identifier is generated to be "prefix username:operation".

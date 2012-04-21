@@ -1,0 +1,546 @@
+<!------------------------------------------------------------------------
+//
+//  File:         ColorPicker.htc
+//
+//  Description:  The ColorPicker behavior provides an easy, declarative way
+//                to add a standard color picker control to web pages and html
+//                based applications.  It provides a variety of properties
+//                to customize the look and feel along with a strong set 
+//                events and functionality.
+//
+//	Author:		  Venkata Karthikeyan, GE Power Systems (Bently Nevada)
+//				  venkat_it@hotmail.com
+//----------------------------------------------------------------------->
+
+<public:component>
+<script language="javascript">
+
+//MCP container
+var mpcContainer
+
+//Result color string
+var resultColorString = '#ffffff'
+
+//System Colors
+var systemClrs = new Array('ActiveBorder', 'ActiveCaption', 'AppWorkspace', 'Background', 
+		'ButtonFace', 'ButtonHighlight', 'ButtonShadow', 'ButtonText', 'CaptionText', 'GrayText', 
+		'Highlight', 'HighlightText', 'InactiveBorder', 'InactiveCaption', 'InactiveCaptionText',
+		'InfoBackground', 'InfoText', 'Menu', 'MenuText', 'ScrollBar', 'ThreeDDarkShadow', 'ThreeDFace', 
+		'ThreeDHighlight', 'ThreeDLightShadow', 'ThreeDShadow', 'Window', 'WindowFrame', 'WindowText') 
+
+//Description info array
+var systemClrsDescription = new Array('Active Window Border', 'Active Window Caption', 'Background color of multiple document interface',
+		'Desktop background', 'Face color for three-dimensional display elements', 
+		'Dark shadow for three-dimensional display elements (for edges facing away from the light source)', 
+		'Shadow color for three-dimensional display elements', 'Text on push buttons', 
+		'Text in caption, size box and scrollbar arrow box', 
+		'Grayed (disabled) text. This color is set to #000 if the current display driver does not support a solid gray color',
+		'Item(s) selected in a control', 'Text of item(s) selected in a control', 'Inactive window border', 
+		'Inactive window caption', 'Color of text in an inactive caption', 'Background color for tooltip controls',
+		'Text color for tooltip controls', 'Menu background', 'Text in menus', 'Scroll bar gray area', 
+		'Dark shadow for three-dimensional display elements', 'Face color for three-dimensional display elements',
+		'Highlight color for three-dimensional display elements', 
+		'Light color for three-dimensional display elements (for edges facing the light source)', 
+		'Shadow color for three-dimensional display elements (for edges facing away from the light source)', 
+		'Window background', 'Window frame', 'Text in windows')
+
+var basicClrs = new Array('Green', 'Lime', 'Teal', 'Aqua', 'Navy', 'Blue', 'Purple', 'Fuchsia', 'Maroon', 'Red', 'Olive',
+						'Yellow', 'White', 'Silver', 'Gray', 'Black')
+var additionalClrs = new Array('DarkOliveGreen', 'DarkGreen', 'DarkSlateGray', 'SlateGray', 'DarkBlue', 'MidnightBlue', 
+						'Indigo', 'DarkMagenta', 'Brown', 'DarkRed', 'Sienna', 'SaddleBrown', 'DarkGoldenrod', 'Beige', 
+						'HoneyDew', 'DimGray', 'OliveDrab', 'ForestGreen', 'DarkCyan', 'LightSlateGray', 'MediumBlue', 
+						'DarkSlateBlue', 'DarkViolet', 'MediumVioletRed', 'IndianRed', 'Firebrick', 'Chocolate', 'Peru', 
+						'Goldenrod', 'LightGoldenrodYellow', 'MintCream', 'DarkGray', 'YellowGreen', 'SeaGreen', 'CadetBlue',
+						'SteelBlue', 'RoyalBlue', 'BlueViolet', 'DarkOrchid', 'DeepPink', 'RosyBrown', 'Crimson', 'DarkOrange',
+						'BurlyWood', 'DarkKhaki', 'LightYellow', 'Azure', 'LightGrey', 'LawnGreen', 'MediumSeaGreen', 'LightSeaGreen',
+						'DeepSkyBlue', 'DodgerBlue', 'SlateBlue', 'MediumOrchid', 'PaleVioletRed', 'Salmon', 'OrangeRed', 
+						'SandyBrown', 'Tan', 'Gold', 'Ivory', 'GhostWhite', 'Gainsboro', 'Chartreuse', 'LimeGreen', 
+						'MediumAquamarine', 'DarkTurquoise', 'CornflowerBlue', 'MediumSlateBlue', 'Orchid', 'HotPink',
+						'LightCoral', 'Tomato', 'Orange', 'Bisque', 'Khaki', 'Cornsilk', 'Linen', 'WhiteSmoke', 
+						'GreenYellow', 'DarkSeaGreen', 'Turquoise', 'MediumTurquoise', 'SkyBlue', 'MediumPurple', 'Violet', 
+						'LightPink', 'DarkSalmon', 'Coral', 'NavajoWhite', 'BlanchedAlmond', 'PaleGoldenrod', 'Oldlace', 
+						'Seashell', 'GhostWhite', 'PaleGreen', 'SpringGreen', 'Aquamarine', 'PowderBlue', 'LightSkyBlue', 
+						'LightSteelBlue', 'Plum', 'Pink', 'LightSalmon', 'Wheat', 'Moccasin', 'AntiqueWhite', 'LemonChiffon', 
+						'FloralWhite', 'Snow', 'AliceBlue', 'LightGreen', 'MediumSpringGreen', 'PaleTurquoise', 'LightCyan',
+						'LightBlue', 'Lavender', 'Thistle', 'MistyRose', 'Peachpuff', 'PapayaWhip')
+	
+
+//------------------------------------------------------------------------
+// Attach to element events
+//------------------------------------------------------------------------
+
+//Create Tab Control
+fnCreateTabControl()
+
+//Create all styles used in this component
+fnCreateStyleSheets()
+
+//Create Tab Control
+function fnCreateTabControl()
+{
+	////Create mpc container and 4 tabs
+	var tabString = '<mpc:container id="mpcContainer" style="position: absolute; left: 7px; top: 30px; width: 350px; height: 85%">' +
+					'<mpc:page id="tab1" TABTEXT="Web Palette" TABTITLE="Web Palette">' + fnCreateWebPalette() + '</mpc:page>' +
+					'<mpc:page id="tab2" TABTEXT="Named Colors" TABTITLE="Named Colors">' + fnCreateNamedColorsPalette() + '</mpc:page>' +
+					'<mpc:page id="tab3" TABTEXT="System Colors" TABTITLE="System Colors">' + fnCreateSystemColorsPalette() + '</mpc:page>' +
+					'<mpc:page id="tab4" TABTEXT="Custom Color" TABTITLE="Custom Color">' + fnCreateCustomColor() + '</mpc:page></mpc:container>'
+	element.innerHTML = tabString;
+	
+	//attach tab change event
+	mpcContainer = element.children[0]
+	mpcContainer.attachEvent('onclick', fnOnTabChange)
+	
+	//Create Ok, Cancel buttons and attach events
+	var ok = document.createElement('<INPUT id="ok" style="FONT-WEIGHT: normal; FONT-SIZE: 8pt; LEFT: 201px; WIDTH: 75px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 402px; HEIGHT: 22px" type="button" value="OK" >')
+	ok.attachEvent('onclick', fnOnOk)
+	var cancel = document.createElement('<INPUT id="cancel" style="FONT-WEIGHT: normal; FONT-SIZE: 8pt; LEFT: 282px; WIDTH: 75px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 402px; HEIGHT: 22px" type="button" value="Cancel">')
+	cancel.attachEvent('onclick', fnOnCancel)
+	
+	//Add into this component
+	element.insertAdjacentElement('afterEnd', ok)
+	element.insertAdjacentElement('afterEnd', cancel)
+}
+
+function fnOnTabChange()
+{
+	//Depends upon the selected tab render the controls
+	switch(mpcContainer.selectedIndex)
+	{
+	case '1':		//Web Palette
+		element.document.all['webPalette'].style.visibility		= 'visible'
+		element.document.all['namedColors'].style.visibility	= 'hidden'
+		element.document.all['systemColors'].style.visibility	= 'hidden'
+		element.document.all['customColor'].style.visibility	= 'hidden'
+		
+		element.document.all['webPaletteDisplay'].innerText		= resultColorString
+		break;
+	case '2':		//Named Colors
+		element.document.all['webPalette'].style.visibility		= 'hidden'
+		element.document.all['namedColors'].style.visibility	= 'visible'
+		element.document.all['systemColors'].style.visibility	= 'hidden'
+		element.document.all['customColor'].style.visibility	= 'hidden'
+		
+		element.document.all['namedColorsDisplay'].innerText	= resultColorString
+		break;
+	case '3':		//System Colors
+		element.document.all['webPalette'].style.visibility		= 'hidden'
+		element.document.all['namedColors'].style.visibility	= 'hidden'
+		element.document.all['systemColors'].style.visibility	= 'visible'
+		element.document.all['customColor'].style.visibility	= 'hidden'
+		
+		element.document.all['systemColorsDisplay'].innerText	= resultColorString
+		break;
+	case '4':		//Custom Color
+		element.document.all['webPalette'].style.visibility		= 'hidden'
+		element.document.all['namedColors'].style.visibility	= 'hidden'
+		element.document.all['systemColors'].style.visibility	= 'hidden'
+		element.document.all['customColor'].style.visibility	= 'visible'
+		
+		element.document.all['customColorDisplay'].innerText	= resultColorString
+		break;
+	}
+}
+
+function fnOnOk()
+{
+	//Set to return
+	self.returnValue = resultColorString
+	
+	//Close this dialog
+	self.close();
+}
+
+function fnOnCancel()
+{
+	self.close();
+}
+
+
+//Create Stylesheets for this component
+function fnCreateStyleSheets()
+{
+	var styleSheet = element.document.createStyleSheet()
+	styleSheet.addRule('.webitem', 'cursor:hand;height:12px;width:19px;border-style:Groove;border-color:white;border-width:2px')
+	styleSheet.addRule('.nameditem', 'cursor:hand;height:15;width:12;border-style:Groove;border-color:white;border-width:2px')
+}
+
+//Set the given color
+function fnSetGivenColor()
+{
+	
+	var colorType = 5	//custom color in default
+	var colorIndex
+	var bColorTypeFound = false
+	var str1 = resultColorString.toLowerCase()
+	
+	//Find given color is system color or not
+	for(i=0;i<systemClrs.length;i++)
+	{
+		var str2 = systemClrs[i].toLowerCase()
+		
+		if(str1 == str2) 
+		{
+			colorType = 4	//system color
+			colorIndex = i
+			bColorTypeFound = true
+			break
+		}
+	}
+	
+	//check for named colors (basic colors)
+	if(!bColorTypeFound)
+	{
+		for(i=0;i<basicClrs.length;i++)
+		{
+			var str2 = basicClrs[i].toLowerCase()
+			
+			if(str1 == str2) 
+			{
+				colorType = 3	//basic color
+				colorIndex = i
+				bColorTypeFound = true
+				break
+			}
+		}
+	}
+	
+	//check for named colors (additional colors)
+	if(!bColorTypeFound)
+	{
+		for(i=0;i<additionalClrs.length;i++)
+		{
+			var str2 = additionalClrs[i].toLowerCase()
+			if(str1 == str2) 
+			{
+				colorType = 2	//additional color
+				colorIndex = i
+				bColorTypeFound = true
+				break
+			}
+		}
+	}
+	
+	//check in web palette
+	if(!bColorTypeFound)
+	{
+		var colors = new Array('00', '33', '66', '99', 'cc', 'ff')
+		var clr1 = 'ff'
+		var clr2 = 'ff'
+		var clr3 = 'ff'
+		
+		//table rows
+		for(var i=0;i<18;i++)
+		{
+				
+			//R values
+			if(i>=0 && i<=5)	clr1 = colors[5-i]
+			if(i>=6 && i<=11)	clr1 = colors[i-6]
+			if(i>=12 && i<=17)	clr1 = colors[17-i]
+		
+			//table cols
+			for(var j=0;j<12;j++)
+			{
+				//G values
+				if(j>=0 && j<=5)	clr2 = colors[j]
+				if(j>=6 && j<=11)	clr2 = colors[5-(j-6)]
+			
+				//B values
+				if(i>=0 && i<=5 && j>=0 && j<=5)	clr3 = "ff"
+				if(i>=0 && i<=5 && j>=6 && j<=11)	clr3 = "66"
+				if(i>=6 && i<=11 && j>=0 && j<=5)	clr3 = "cc"
+				if(i>=6 && i<=11 && j>=6 && j<=11)	clr3 = "33"
+				if(i>=12 && i<=17 && j>=0 && j<=5)	clr3 = "99"
+				if(i>=12 && i<=17 && j>=6 && j<=11)	clr3 = "00"
+					
+				//construct the color string			
+				var color = "#" + clr1 + clr2 + clr3
+				
+				var str2 = color.toLowerCase()
+				
+				if(str1 == str2) 
+				{
+					colorType = 1	//web palette
+					colorIndex = i
+					bColorTypeFound = true
+					break
+				}
+			}
+		}
+	}
+	
+	//set tab page & bottom box text
+	if(colorType == 1)//web palette
+	{
+		element.document.all['webPaletteDisplay'].innerText	= resultColorString
+		element.document.all['webPalette'].style.visibility = 'visible'
+		mpcContainer.selectedIndex = 1
+		
+		//get table object for selection
+		var table = element.document.all['webPalette']
+		for(var i=0;i<table.rows.length;i++) 
+		{
+			for(var j=0;j<table.rows(i).cells.length;j++) 
+			{
+				var str2 = table.rows(i).cells(j).title.toLowerCase()
+				if(str1 == str2) 
+				{
+					table.rows(i).cells(j).style.borderColor = 'black'
+					break
+				}
+			}
+		}
+	}
+	else if(colorType == 2 || colorType == 3)//named colors
+	{
+		element.document.all['namedColorsDisplay'].innerText	= resultColorString
+		element.document.all['namedColors'].style.visibility = 'visible'
+		mpcContainer.selectedIndex = 2
+		
+		//get table object for selection
+		var table = element.document.all['namedColors']
+		for(i=0;i<table.rows.length;i++) 
+		{
+			for(j=0;j<table.rows(i).cells.length;j++) 
+			{
+				var str2 = table.rows(i).cells(j).title.toLowerCase()
+				if(str1 == str2) 
+				{
+					table.rows(i).cells(j).style.borderColor = 'black'
+					break
+				}
+			}
+		}
+	}
+	else if(colorType == 4)//System Color
+	{
+		element.document.all['systemColorsDisplay'].innerText	= resultColorString
+		element.document.all['systemColors'].style.visibility = 'visible'
+		mpcContainer.selectedIndex = 3
+		
+		//Set Colors index in drop down list
+		var sysClrs = element.document.all['systemColorsCombo']
+		sysClrs.selectedIndex = colorIndex
+		sysClrs.scrollIntoView(true)
+		
+		//Set Description & preview
+		element.document.all['sysClrsDescription'].innerText = systemClrsDescription[sysClrs.selectedIndex]
+		element.document.all['sysClrsPreview'].style.backgroundColor = sysClrs.options[colorIndex].innerText
+	}
+	else if(colorType == 5)	//Custom Color
+	{
+		element.document.all['customColorDisplay'].innerText	= resultColorString
+		element.document.all['customColor'].style.visibility = 'visible'
+		mpcContainer.selectedIndex = 4
+		
+		var rValue = parseInt(str1.substr(1, 2), 16)
+		var gValue = parseInt(str1.substr(3, 2), 16)
+		var bValue = parseInt(str1.substr(5, 2), 16)
+		
+		var redScroll	= element.document.all['redScroll']
+		var greenScroll = element.document.all['greenScroll']
+		var blueScroll	= element.document.all['blueScroll']
+		
+		redScroll.scrollLeft	= (rValue * redScroll.scrollWidth) / redScroll.offsetWidth + 1
+		greenScroll.scrollLeft	= (gValue * greenScroll.scrollWidth) / greenScroll.offsetWidth + 1
+		blueScroll.scrollLeft	= (bValue * blueScroll.scrollWidth) / blueScroll.offsetWidth + 1
+	}
+	
+}
+
+//Create Web palette
+function fnCreateWebPalette()
+{
+	var htmlString = '<table style=visibility:hidden;position:absolute;left:5px;border-collapse:collapse; cellspacing=4 bgcolor=scrollbar id=webPalette onclick="fnOnWebPaletteClick()">'
+	var colors = new Array('00', '33', '66', '99', 'cc', 'ff')
+	var clr1 = 'ff'
+	var clr2 = 'ff'
+	var clr3 = 'ff'
+	
+	//Add Empty rows
+	htmlString += '<tr></tr><tr></tr>'
+	
+	//table rows
+	for(var i=0;i<18;i++)
+	{
+		htmlString += '<tr>'
+		
+		//R values
+		if(i>=0 && i<=5)	clr1 = colors[5-i]
+		if(i>=6 && i<=11)	clr1 = colors[i-6]
+		if(i>=12 && i<=17)	clr1 = colors[17-i]
+		
+		//table cols
+		for(var j=0;j<12;j++)
+		{
+			//G values
+			if(j>=0 && j<=5)	clr2 = colors[j]
+			if(j>=6 && j<=11)	clr2 = colors[5-(j-6)]
+			
+			//B values
+			if(i>=0 && i<=5 && j>=0 && j<=5)	clr3 = "ff"
+			if(i>=0 && i<=5 && j>=6 && j<=11)	clr3 = "66"
+			if(i>=6 && i<=11 && j>=0 && j<=5)	clr3 = "cc"
+			if(i>=6 && i<=11 && j>=6 && j<=11)	clr3 = "33"
+			if(i>=12 && i<=17 && j>=0 && j<=5)	clr3 = "99"
+			if(i>=12 && i<=17 && j>=6 && j<=11)	clr3 = "00"
+			
+			var color = "#" + clr1 + clr2 + clr3
+			htmlString += '<td title=' + color + ' class=webitem style=background-color:'+ color + '></td>'
+		}
+		
+		htmlString += '</tr>'
+	}
+	htmlString += '</table>'
+	
+	//Selected Color controls
+	htmlString += '<div style="FONT-SIZE: 8pt; LEFT: 8px; WIDTH: 33px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 322px; HEIGHT: 15px">Color:</div>'
+	htmlString += '<div id="webPaletteDisplay" style="FONT-SIZE: 8pt; BORDER-COLOR: white; LEFT: 60px; WIDTH: 270px; BORDER-STYLE: groove; LINE-HEIGHT: 3; FONT-FAMILY: verdana; POSITION: absolute; TOP: 310px; HEIGHT: 25px; TEXT-ALIGN: center; border-width: 1px">#000000</div>'
+	
+	return htmlString
+}
+
+//Create Named Colors Palette
+function fnCreateNamedColorsPalette()
+{
+	
+	//Prepare html tags string to render
+	var htmlString = '<table style=visibility:hidden;border-collapse:collapse; cellspacing=6 bgcolor=scrollbar id=namedColors onclick="fnOnNamedColorsClick()">'
+	
+	//Add Empty rows
+	htmlString += '<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>'
+	
+	//Add Basic Colors row
+	htmlString += '<tr>'
+	for(var i=0;i<16;i++) htmlString += '<td title=' + basicClrs[i] + ' class=nameditem style=BACKGROUND:'+ basicClrs[i] + '></td>'
+	htmlString += '</tr>'
+	
+	//Add Empty rows
+	htmlString += '<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>'
+	
+	//Add Addional Colors row
+	for(var i=0;i<additionalClrs.length;i++) 
+	{
+		var ct=0
+		if(i%16 == 0) 
+		{
+			htmlString += '<tr>'
+			ct++
+		}
+		htmlString += '<td title=' + additionalClrs[i] + ' class=nameditem style=BACKGROUND:'+ additionalClrs[i] + '></td>'
+		if(ct == 16) 
+		{
+			htmlString += '</tr>'
+			ct = 0
+		}
+	}
+	htmlString += '</table>'
+	
+	//Create labels
+	htmlString += '<div style="FONT-SIZE: 8pt; WIDTH: 40px; FONT-FAMILY: verdana; HEIGHT: 15px; position:absolute; left:7px; top:25px;">Basic:</DIV>'
+	htmlString += '<div style="FONT-SIZE: 8pt; WIDTH: 40px; FONT-FAMILY: verdana; HEIGHT: 15px; position:absolute; left:7px; top:90px;">Additional:</DIV>'
+	
+	//Add Check boxes
+	htmlString += '<input checked id="CheckboxColorNames" style="left: 10px; width: 16px; position: absolute; top: 280px; height: 20px" type="checkbox">'
+	htmlString += '<div style="font-size: 8pt; left: 30px; width: 118px; font-family: verdana; position: absolute; top: 283px; height: 13px">Use color names</div>'
+	
+	//Selected Color controls
+	htmlString += '<div style="FONT-SIZE: 8pt; LEFT: 8px; WIDTH: 33px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 322px; HEIGHT: 15px">Color:</div>'
+	htmlString += '<div id="namedColorsDisplay" style="FONT-SIZE: 8pt; BORDER-COLOR: white; LEFT: 60px; WIDTH: 270px; BORDER-STYLE: groove; LINE-HEIGHT: 3; FONT-FAMILY: verdana; POSITION: absolute; TOP: 310px; HEIGHT: 25px; TEXT-ALIGN: center; border-width: 1px">#000000</div>'
+
+	//return the constructed string	
+	return htmlString
+}
+
+function fnCreateSystemColorsPalette()
+{
+	var htmlString = '<table style=visibility:hidden; id=systemColors><select style="border-style:groove; border-color:white;border-width:1px;font-size: 8pt; left: 9px; width: 160px; font-family: verdana; list-style-type: circle; position: absolute; TOP: 46px; height: 234px" size="14" ID="systemColorsCombo" onchange="fnOnChange()">'
+	
+	for(var i=0;i<systemClrs.length;i++)
+	{
+		htmlString += '<option>'
+		htmlString += systemClrs[i]
+		htmlString += '</option>'
+	}
+	htmlString += '</select>'
+	
+	//Add description, preview control
+	htmlString += '<div style="FONT-SIZE: 8pt; WIDTH: 40px; FONT-FAMILY: verdana; HEIGHT: 15px; position:absolute; left:9px; top:25px;">Color:</DIV>'
+	htmlString += '<div style="FONT-SIZE: 8pt; WIDTH: 40px; FONT-FAMILY: verdana; HEIGHT: 15px; position:absolute; left:175px; top:25px;">Description:</DIV>'
+	htmlString += '<div style="FONT-SIZE: 8pt; WIDTH: 40px; FONT-FAMILY: verdana; HEIGHT: 15px; position:absolute; left:175px; top:160px;">Preview:</DIV>'
+	htmlString += '<div id="sysClrsDescription" style="FONT-FAMILY: verdana; FONT-SIZE: 8pt; border-style:solid;border-width:1px;border-color:gray;left:175px;width:165px;position:absolute;top:46px;height:100px;">Non system color currently selected.</div>'
+	htmlString += '<div id="sysClrsPreview" style="border-style:inset;border-width:1px;border-color:black;left:175px;width:165px;position:absolute;top:176px;height:100px;background-color:black"></div>'
+	
+	//Add Check boxes
+	htmlString += '<input id="CheckboxSystemColors" checked style="left: 10px; width: 16px; position: absolute; top: 280px; height: 20px" type="checkbox">'
+	htmlString += '<div style="font-size: 8pt; left: 30px; width: 118px; font-family: verdana; position: absolute; top: 283px; height: 13px">Use System Colors</div>'
+	
+	//Selected Color controls
+	htmlString += '<div style="FONT-SIZE: 8pt; LEFT: 8px; WIDTH: 33px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 322px; HEIGHT: 15px">Color:</div>'
+	htmlString += '<div id="systemColorsDisplay" style="FONT-SIZE: 8pt; BORDER-COLOR: white; LEFT: 60px; WIDTH: 270px; BORDER-STYLE: groove; LINE-HEIGHT: 3; FONT-FAMILY: verdana; POSITION: absolute; TOP: 310px; HEIGHT: 25px; TEXT-ALIGN: center; border-width: 1px">#000000</div>'
+	htmlString += '</table>'
+	
+	return htmlString
+}
+
+function fnCreateCustomColor()
+{
+	//Prepare html string for Custom Color tab
+	var htmlString = '<table style=visibility:hidden; id=customColor>'
+	
+	//Create slider controls for R G B
+	htmlString += '<div id="redScroll" NOWRAP style="FONT-SIZE: 256pt; LEFT: 50px; OVERFLOW: scroll; WIDTH: 282px; POSITION: absolute; TOP: 30px; HEIGHT: 16px" onscroll="fnOnScroll()">ThisisScrollableText</div>' 
+	htmlString += '<div id="greenScroll" NOWRAP style="FONT-SIZE: 256pt; LEFT: 50px; OVERFLOW: scroll; WIDTH: 282px; POSITION: absolute; TOP: 60px; HEIGHT: 16px" onscroll="fnOnScroll()">ThisisScrollableText</div>'
+	htmlString += '<div id="blueScroll" NOWRAP style="FONT-SIZE: 256pt; LEFT: 50px; OVERFLOW: scroll; WIDTH: 282px; POSITION: absolute; TOP: 90px; HEIGHT: 16px" onscroll="fnOnScroll()">ThisisScrollableText</div>'
+	
+	//Preview control
+	htmlString += '<div id="customeColorPreview" style="LEFT: 50px; WIDTH: 280px; POSITION: absolute; TOP: 150px; HEIGHT: 130px; BACKGROUND-COLOR: black"></div>'
+		
+	//labels Red:, Green:, Blue:, Preview:
+	htmlString += '<div style="FONT-SIZE: 8pt; LEFT: 8px; WIDTH: 33px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 30px; HEIGHT: 15px">Red:</div>'
+	htmlString += '<div style="FONT-SIZE: 8pt; LEFT: 8px; WIDTH: 33px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 60px; HEIGHT: 15px">Green:</div>'
+	htmlString += '<div style="FONT-SIZE: 8pt; LEFT: 8px; WIDTH: 33px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 90px; HEIGHT: 13px">Blue:</div>'
+	htmlString += '<div style="FONT-SIZE: 8pt; LEFT: 8px; WIDTH: 33px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 125px; HEIGHT: 15px">Preview:</div>'
+	htmlString += '<div id="rValue" style="FONT-SIZE: 8pt; LEFT: 322px; WIDTH: 23px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 30px; HEIGHT: 15px">0</div>'
+	htmlString += '<div id="gValue" style="FONT-SIZE: 8pt; LEFT: 322px; WIDTH: 23px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 60px; HEIGHT: 15px">0</div>'
+	htmlString += '<div id="bValue" style="FONT-SIZE: 8pt; LEFT: 322px; WIDTH: 23px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 90px; HEIGHT: 15px">0</div>'
+	
+	//Selected Color controls
+	htmlString += '<div style="FONT-SIZE: 8pt; LEFT: 8px; WIDTH: 33px; FONT-FAMILY: verdana; POSITION: absolute; TOP: 322px; HEIGHT: 15px">Color:</div>'
+	htmlString += '<div id="customColorDisplay" style="FONT-SIZE: 8pt; BORDER-COLOR: white; LEFT: 60px; WIDTH: 270px; BORDER-STYLE: groove; LINE-HEIGHT: 3; FONT-FAMILY: verdana; POSITION: absolute; TOP: 310px; HEIGHT: 25px; TEXT-ALIGN: center; border-width: 1px">#000000</div>'
+	htmlString += '</table>'
+	
+	//return the prepared string
+	return htmlString
+}
+
+//------------------------------------------------------------------------
+//
+//  Function:	fnGetColor / fnPutColor
+//
+//  Synopsis:	This property is used to set, get, hour value to be displayed
+//
+//
+//  Arguments:	The put method requires string value of color for the controls 
+//				display
+//
+//  Returns:	The get method will return the string value of color 
+//
+//  Notes:		none
+//
+//------------------------------------------------------------------------
+
+function fnGetColor()
+{
+  return resultColorString
+}
+
+function fnPutColor(strColor)
+{
+  resultColorString = strColor
+}
+
+</script>
+<public:property put=fnPutColor	   get=fnGetColor          name="Color">
+<public:method name="fnSetGivenColor">
+</public:component>
+	

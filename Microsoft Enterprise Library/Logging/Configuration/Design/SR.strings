@@ -1,0 +1,147 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Logging and Instrumentation Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.UICultureInfo
+
+[strings]
+
+ExceptionCollectionAlreadyExists = This collection type already appears in this node and can only appear once.
+
+#Descriptions - Client Settings
+CategoryFilterSettingsDescription = Categories to explicitly allow or explicitly deny
+TracingEnabledDescription = Enable or disable trace logging
+LoggingEnabledDescription = Enable or disable all logging
+DistributionStrategyDescription = Synchronous or asynchronous log distribution strategy
+MsmqPathDescription = Private or public message queue path
+MinimumPriority = Minimum message priority to be delivered
+InProcDistributionStrategyDescription = Synchronous in process distribution strategy
+DistributionStrategyTypeNameDescription = The fully qualified assembly name of the Distribution Strategy
+
+#Descriptions - Distributor Settings
+DistributorServiceNameDescription = Distributor windows service name
+DefaultCategoryDescription = Category to use if a category is not defined or is misspelled
+QueueTimerIntervalDescription = Timer interval for the distributor service to check MSMQ for new messages
+DefaultFormatDescription = Formatter to use if a formatter is not defined
+
+SinkDescription = Destination log sink.
+FormatDescription = Destination format.  Optional.
+SinkTypeNameDescription = The fully qualified assembly name of the log sink
+
+FormatterTypeDescription = The fully qualified assembly name of the formatter
+
+CustomFormatterAttributesDescription = Custom configuration properties for this Formatter.
+CustomSinkAttributesDescription = Custom configuration properties for this Sink.
+CustomDistributionStrategyAttributesDescription = Custom configuration properties for this Distribution Strategy.
+
+EmailSinkToAddressDescription = One or more email addresses separated by semicolons
+EmailSinkFromAddressDescription = From email address
+EmailSinkSubjectLineStarterDescription = Standard text to be added to the message subject before log message severity
+EmailSinkSubjectLineEnderDescription = Standard text to be added to the message subject after log message severity
+EmailSinkSmtpServerDescription = SMTP server to send emails
+
+EventLogSinkEventLogNameDescription = Event log name.  Optional - defaults to Application log.
+EventLogSinkEventSourceNameDescription = Event source name.
+
+FlatFileSinkFlatFileName = File name and directory.
+FlatFileSinkHeader = Header to append before each log entry.  Optional.
+FlatFileSinkFooter = Footer to append after each log entry.  Optional.
+
+RollingFlatFileSinkFlatFileName = File name and directory.
+RollingFlatFileSinkHeader = Header to append before each log entry.  Optional.
+RollingFlatFileSinkFooter = Footer to append after each log entry.  Optional.
+
+ConsoleSinkHeader = Header to append before each log entry.  Optional.
+ConsoleSinkFooter = Footer to append after each log entry.  Optional.
+
+WSSinkUrl = Http://localhost/Webservice1/Service1.asmx
+
+MsmqSinkQueuePathDescription = Private or public message queue
+MsmqSinkMessagePriorityDescription = A priority for the message when sent to the queue.
+
+Name = Name
+
+
+#Node Names
+LogSettingsNode = Logging and Instrumentation Application Block
+LogSettingsCmd = Logging and Instrumentation Application Block
+
+ClientSettings = Client Settings
+
+DistributionStrategy = Distribution Strategy
+DistributionStrategies = Distribution Strategies
+CustomDistributionStrategy = Custom Distribution Strategy
+MsmqDistributionStrategy = MSMQ
+InProcDistributionStrategy = In Process
+
+DistributorSettings = Distributor Settings
+
+Sinks = Sinks
+Sink = Sink
+CustomSink = Custom Sink
+DatabaseSink = Database Sink
+EmailSink = Email Sink
+EventLogSink = Event Log Sink
+FlatFileSink = Flat File Sink
+RollingFlatFileSink = Rolling Flat File Sink
+ConsoleSink = Console Sink
+MsmqSink = MSMQ Sink
+WmiLogSink = WMI Sink
+WSSink = Web Service Sink
+
+Formatters = Formatters
+Formatter = Formatter
+Categories = Categories
+Category = Category
+
+CustomFormatter = Custom Formatter
+TextFormatter = Text Formatter
+
+Destinations = Destinations
+Destination = Destination
+
+DistributorService = MSMQ Distributor Service
+
+TemplatePlaceHolder = <template>
+
+CategoryFilterSummaryAllow = Allow all except
+CategoryFilterSummaryDeny = Deny all except
+
+
+# Default Values
+DefaultFormatter = Text Formatter
+DefaultFormatterDescription = Default Formatter
+
+DefaultCategory = General
+DefaultCategoryDestination = Event Log Destination
+
+DefaultTracingCategory = Trace
+DefaultTracingFileSink = Flat File Sink
+DefaultTracingDestination = Flat File Destination
+
+DefaultTextFormat = Timestamp: {timestamp}\r\nMessage: {message}\r\nCategory: {category}\r\nPriority: {priority}\r\nEventId: {eventid}\r\nSeverity: {severity}\r\nTitle:{title}\r\nMachine: {machine}\r\nApplication Domain: {appDomain}\r\nProcess Id: {processId}\r\nProcess Name: {processName}\r\nWin32 Thread Id: {win32ThreadId}\r\nThread Name: {threadName}\r\nExtended Properties: {dictionary({key} - {value}\r\n)}
+
+GenericCreateStatusText(string name) = Create a new {0}
+
+; Category for all properties in a property grid
+CategoryGeneral = General
+
+DuplicateSinkInDestationMessage(string destinationName, string sinkName) = The destination {0} already contains a definition for sink {1}. Each destination must have a unique sink.

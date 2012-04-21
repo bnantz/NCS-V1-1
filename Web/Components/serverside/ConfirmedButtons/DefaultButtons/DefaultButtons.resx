@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Startup Script"><![CDATA[
+<script language="javascript">
+<!--
+DefaultButton_Init();
+//-->
+</script>
+	]]></data>
+	<data name="Library Script"><![CDATA[
+<script language="javascript" >
+<!--
+function DefaultButton_Init() {
+	if ( !DefaultButton_BrowserCapable() ) return false;
+	
+	for( var i=0; i<DefaultButtons.length; i++ ) {
+		var defaultButtonSetting = DefaultButtons[i].split("©");
+		if ( defaultButtonSetting.length != 3 ) { return; }
+		var inputControl = document.getElementById( defaultButtonSetting[0] );
+		var postBackScript = defaultButtonSetting[1];
+		var causesValidation = ( defaultButtonSetting[2] == 'True' );
+		if ( inputControl != null ) {
+			if ( i==0 ) {
+				var theForm = inputControl.form;
+				theForm.EnsureDefault = false;
+				theForm.defaultButtonPostBackScript = "";
+				theForm.causesValidation = false;
+			}
+			inputControl.defaultButtonPostBackScript = postBackScript;
+			inputControl.causesValidation = causesValidation;
+			
+			if ( typeof( inputControl.addEventListener ) != "undefined" ) {
+				inputControl.addEventListener("focus",DefaultButton_RegisterDefault,false);
+				inputControl.addEventListener("blur",DefaultButton_UnRegisterDefault,false);
+			} else if ( typeof ( inputControl.attachEvent ) != "undefined" ) {
+				inputControl.attachEvent("onfocus",DefaultButton_RegisterDefault);
+				inputControl.attachEvent("onblur",DefaultButton_UnRegisterDefault);
+			} else {
+				inputControl.onfocus = DefaultButton_RegisterDefault;
+				inputControl.onblur = DefaultButton_UnRegisterDefault;
+			}
+		}
+	}
+}
+function DefaultButton_BrowserCapable() {
+	if ( typeof( document.getElementById ) == "undefined" ) {
+		if( typeof( document.all ) != "undefined" ) {
+			document.getElementById = function( elementId ) { return document.all[elementId]; };
+		} else {
+			return false;
+		}
+	}
+	return true;
+}
+function DefaultButton_RegisterDefault(e) {
+	var src = DefaultButton_GetSrcElement(e);
+	src.form.EnsureDefault = true;
+	src.form.defaultButtonPostBackScript = src.defaultButtonPostBackScript;
+	src.form.causesValidation = src.causesValidation;
+}
+function DefaultButton_UnRegisterDefault(e) {
+	var src = DefaultButton_GetSrcElement(e);
+	src.form.EnsureDefault = false;
+	src.form.defaultButtonPostBackScript = "";
+	src.form.causesValidation = false;
+}
+function DefaultButton_RequireOwnPostback(form) {
+	if ( form.EnsureDefault && form.defaultButtonPostBackScript != "" ) {
+		form.EnsureDefault = false;
+		window.setTimeout( 'DefaultButton_Postback( "' + form.defaultButtonPostBackScript + '", ' + form.causesValidation + ');', 10 );
+		return true;
+	} else {
+		return false;
+	}
+}
+function DefaultButton_Postback( postBackScript, causesValidation ) {
+	if (typeof(Page_ClientValidate) == 'function' && causesValidation) {
+		if (  Page_ClientValidate() ) {
+			eval(postBackScript);
+		}
+	} else {
+		eval(postBackScript);
+	}
+}
+function DefaultButton_GetSrcElement(e) {
+	if ( typeof( window.event ) != "undefined" ) {
+		return window.event.srcElement;
+	}
+	if ( e != null && typeof( e.target ) != "undefined" ) {
+		return e.target;
+	}
+	return null;
+}
+//-->
+</script>
+	]]></data>
+</root>

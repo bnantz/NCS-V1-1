@@ -1,0 +1,81 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Configuration Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+#
+# Exception Messages
+#
+ExceptionManagerInvalidSectionName = The section name can not be null or an empty string, please provide a valid section name.
+ExceptionConfigFileNotLoaded = You must load the configuration file before working with it.
+ExceptionUnrecognizedElement = Unrecognized element.
+ExceptionConfigReserved = Tag names beginning with 'config' are reserved.
+ExceptionLocationReserved = The tag name 'location' is reserved for <location> sections.
+ExceptionOnlyOneConfigSections = Only one <configSections> element allowed per config file and if present must be the first child of the root <configuration> element.
+ExceptionMustBeXmlNode = The section object must be of type XmlNode.
+ExceptionNotInSerializedObj = The required element '<xmlSerializationSection>/' missing in the specified Xml configuration file.
+ExceptionSerializationTypeMissing = The type name could not be found in the specified Xml.\n The expected location is in the 'type' attribute on the 'xmlSerializerSection' element.\n Please check the Xml and validate that this name is correct and exists on the system.
+ExceptionSerializedObjectMissing = The serialized object is missing from the file.
+ExceptionItemAlreadyAdded = This item has already been added to the collection
+ExceptionKeyNotString = Key must be of type String.
+ExceptionUnregoconizedConfigSection(name) = Unrecognized configuration section {0}.	
+ExceptionSectionGroupIsDefined(name) = Section or group name '{0}' already defined.
+ExceptionUnrecognizedAttribute(attribute) = Unrecognized attribute '{0}'
+ExceptionNoRootConfigTag(configFile) = Configuration file {0} does not have root <configuration> tag.
+ExceptionCouldNotCreateType(typeName) = Could not create {0}.
+ExceptionNotICSH(typeName) = {0} does not implement IConfigurationSectionHandler.
+ExceptionHandlerNotWritable(sectionName) = The specified section handler does not support the IConfigFormatter interface - {0}.
+ExceptionRemoveSectionHandler(handler) = Could not remove section handler {0}.
+ExceptionInvalidXmlStorageFile(fileName) = The external Xml storage file '{0}' is invalid.
+ExceptionTypeCreateError(typeName) = An error occurred when creating the specified type '{0}'.\n
+ExceptionInvalidArgumentType(typeName) = Argument must be of type {0}.
+ExceptionConfigurationFileNotFound(path, sectionName) = Can not find the configuration file {0}. You must check the 'path' attribute in the section '{1}'
+ExceptionAttributeMissing(attribute, tag) = The '{0}' attribute must be specified on the '{1}' tag.
+ExceptionLoadingXml(file, message) = Error loading XML file {0} {1}.
+ExceptionXmlStorageSectionNotFoundError(sectionName, fileName) = The section name '{0}' could not be found in the Xml file {1}.
+ExceptionSectionNameInvalid(sectionName, requestedConfigFile, otherConfigFile) = Invalid section name. The section '{0}' does not exist in the requested configuration file '{1}' or the file '{2}'. Make sure that the 'enterpriseLibrary.configurationSections' configuration section exists in one of the files and that the section '{0}' is defined.
+ExceptionNullProviderDataName = The name of the provider data can not be null.
+ExceptionActivatorCacheCannotCreateType(type) = Unable to create type '{0}'.
+ExceptionCannotInstantiateProviderWithNullTypeName(string factoryName, string providerName) = Cannot instantiate {0} '{1}' provider with a null type name or the type name's length is 0.
+ExceptionCannotInstantiateProviderWithNullName(string factoryName, string providerName) = Cannot instantiate {0} '{1}' provider with a null provider name or the name's length is 0.
+ExceptionProviderTypeMismatchExceptionMessage(string expectedType, string actualType) = Failed to create an instance of type '{1}' because it is not assignable from the type '{0}'.
+ExceptionProviderNotFoundExceptionMessage(string providerType, string providerName) = The {0} provider named '{1}' could not be found.
+ExceptionDefaultProviderNotSpecified(string providerName) = There is no default provider specified for the '{0}' providers.
+ExceptionProviderMissingConstructor(string type) = The type {0} does not have a public constructor with no arguments.
+ExceptionFactoryTypeLoadError(typeName, factoryName) = The type '{0}' could not be loaded for the '{1}'.
+ExceptionFactoryTypeInvokeError(typeName, providerName, factoryName) = An error occurred when creating the type '{0}' for the {2} '{1}' provider.
+ExceptionFactoryMethodAccessError(typeName, factoryName) = The constructor for the type '{0}' is either private or protected and can not be invoked for the {1}.
+ExceptionProviderNotTypeOfConfigurationProvider(typeName) = The type '{0}' does not implement the IConfigurationProvider interface.
+ExceptionOutOfRangeDpapiStorageMode = The value provided was out of the excepted valid ranges for DpapiStorageMode.
+ExceptionKeyAlgorithmPairLoad = The KeyAlgorithmPair could not be loaded from storage.
+ExceptionNoKeyAlgorithmStorageProvider = The data is set to be encrypted and no KeyAlgorithmPairStorageProvider is defined to encrypt the data.
+ExceptionConfigurationSettingsMissing = The meta configuration settings are not present in the context.
+ExceptionEventRaisingFailed = There was an error raising an event.
+
+Transformer = Transformer
+StorageProvider = Storage Provider
+KeyAlgorithmPairStorageProvider = Key Algorithm Pair Storage Provider
+Value = value
+
+FileWatcherEventSource = Enterprise Library Configuration
+ApplicationLog = Application

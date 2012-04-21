@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="LibraryScript"><![CDATA[
+<script language="javascript">
+<!--
+var Page_ConfirmationVer = "2.0";
+
+function ConfirmationOnLoad() {
+    if ( !ConfirmationBrowserCapable() ) return;
+    if (typeof(Page_Confirmations) == "undefined") return;
+    var i, confirmButton;
+    for (i = 0; i < Page_Confirmations.length; i++) {
+        confirmButton = Page_Confirmations[i];
+        if (typeof(confirmButton) == "string") {
+            confirmButton = document.getElementById( confirmButton );
+        }
+        if ( typeof(confirmButton.confirmationmessage ) == "undefined" ) {
+            if ( typeof( confirmButton.attributes ) != "undefined" ) {
+                confirmButton.confirmationmessage = confirmButton.attributes["confirmationmessage"].value;
+            } else {
+                confirmButton.confirmationmessage = "Are you sure you want to do this?";
+            }
+        }
+        confirmButton.confirmationmessage = confirmButton.confirmationmessage.replace("\\n","\n");
+        ConfirmationHookupControl(confirmButton);
+    }
+}
+
+function ConfirmationBrowserCapable() {
+    if ( typeof( document.getElementById ) == "undefined" ) {
+        if( typeof( document.all ) != "undefined" ) {
+            document.getElementById = function( elementId ) { return document.all[elementId]; };
+            return true;
+        }
+        return false;
+    }
+    return true;
+}
+
+function ConfirmationHookupControl( confirmButton ) {
+    var ev = confirmButton.onclick;
+    if (typeof(ev) == "function" ) {            
+        ev = ev.toString();
+        ev = ev.substring(ev.indexOf("{") + 1, ev.lastIndexOf("}"));
+    }
+    else {
+        ev = "";
+    }
+    var func = new Function("if ( !ConfirmationOnClick( this ) ){return false;} " + ev);
+    confirmButton.onclick = func;
+}
+
+function ConfirmationOnClick( confirmButton ) {
+    return confirm( confirmButton.confirmationmessage );
+}
+//-->
+</script>
+	]]></data>
+	<data name="StartupScript"><![CDATA[
+<script language="javascript">
+<!--
+if (typeof(Page_ConfirmationVer) == "undefined")
+    alert("Unable to find script library. Make sure the url referenced in web.config is correct.");
+else if (Page_ConfirmationVer != "2.0")
+    alert("This page uses an incorrect version of the script library. The controls expect version 2.0. The script library is " + Page_ConfirmationVer + ".");
+else
+    ConfirmationOnLoad();
+//-->
+</script>	
+	]]></data>
+</root>

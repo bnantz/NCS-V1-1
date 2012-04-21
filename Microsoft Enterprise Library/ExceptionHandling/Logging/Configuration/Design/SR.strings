@@ -1,0 +1,37 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Exception Handling Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+; category for all properties
+CategoryGeneral = General
+
+LoggingHandlerName = Logging Handler
+DefaultLogCategoryDescription = The Default Log Category
+DefaultEventIdDescription = The Default EventID
+DefaultSeverityDescription = Default Severity
+DefaultTitleDescription = The default title of the log entry
+DefaultTitle = Enterprise Library Exception Handling
+FormatterTypeNameDescription = The formatter used to format the exception.
+MinimumPriorityDescription = The value for messages to be processed.
+DefaultCategory = Default Category

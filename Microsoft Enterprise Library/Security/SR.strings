@@ -1,0 +1,76 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Security Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Comments are lines starting with ";" or "#"
+
+# Comments should be added before the string. 
+
+# Options are specified as lines starting with "#!"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+AndOperatorString(string left, string right) = ({0} AND {1})
+OrOperatorString(string left, string right) = ({0} OR {1})
+PlaceHolderString = #
+NotOperatorString(string expression) = Not({0})
+IdentityExpressionString(string name) = I:{0}
+RoleExpressionString(string name) = R:{0}
+AnyIdentityExpressionString = *
+AnonymousIdentityExpressionString = ?
+Or =or
+
+Authorization = Authorization
+Authentication = Authentication
+Roles = Roles
+Profile = Profile
+SecurityCache = Security Cache
+
+#
+# Instrumentation
+#
+InstrumentationEventSource = Enterprise Library Security
+InstrumentationCounterCategory = Enterprise Library Security
+InstrumentationCounterCategoryHelp = Enterprise Library Security application performance counters.
+
+PerfCounterNumAuthenticationChecksSecMsg = Number of authentication checks per second.
+PerfCounterNumAuthenticationFailuresSecMsg = Number of authentication failures per second.
+PerfCounterNumAuthorizationChecksSecMsg = Number of authorization checks per second.
+PerfCounterNumAuthorizationFailuresSecMsg = Number of authorization failures per second.
+PerfCounterNumProfileLoadsSecMsg = Number of profile loads per second.
+PerfCounterNumProfileSavesSecMsg = Number of profile saves per second.
+PerfCounterNumRoleLoadsSecMsg = Number of role loads per second.
+PerfCounterNumCacheHitsSecMsg = The number of cache hits per second.
+PerfCounterNumCacheMissesSecMsg = The number of cache misses per second.
+PerfCounterRatioCacheHitsMsg = Ratio of hits from all cache calls.
+PerfCounterCacheAccessAttemptsMsg = Total number of cache reads.
+
+#
+# Exception messages
+#
+AuthorizationRuleNotFoundMsg(ruleName) = Authorization rule {0} not found in configuration.
+NotFoundExceptionMessage(string providerType, string providerName) = The {0} provider named '{1}' could not be found.
+InvalidArgument(string argumentName, string typeName) = Argument '{0}' must be of type '{1}'.
+IdentityIsNull = The provided IIdentity object is null.
+IdentityInvalid = The provided IIdentity object is incomplete or invalid.
+UnexpectedTokenMessage(string expected, string actual, int index) = Found token "{1}" when expecting {0} at position {2}.
+ExceptionSecurityCacheProviderNotFound(string name) = The security cache provider named '{0}' could not be found in configuration.
+ExceptionRolesProviderNotFound(string name) = The roles provider named '{0}' could not be found in configuration.
+ExceptionProfileProviderNotFound(string name) = The profile provider named '{0}' could not be found in configuration.
+ExceptionAuthorizationProviderNotFound(string name) = The authorization provider named '{0}' could not be found in configuration.
+ExceptionAuthenticationProviderNotFound(string name) = The authentication provider named '{0}' could not be found in configuration.

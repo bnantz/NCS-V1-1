@@ -1,0 +1,49 @@
+ADAM Setup 
+
+In order to use the default installation of the Security.ActiveDirectory roles provider,  follow the steps below. This will install an instance of the ADAM service (Active Directory Application Mode), implement a default configuration and direct you to utilities that can assist in prepopulating the directory.
+
+
+SETUP AND CONFIGURE ADAM
+
+1. Download the setup file called ADAMretailX86.exe from MS at the following location:
+
+	http://www.microsoft.com/downloads/details.aspx?FamilyId=9688F8B9-1034-4EF6-A3E5-2A2A57B5C8E4&displaylang=en#filelist
+
+2. Run to unzip to a temp directory.
+
+3. Run ADAMSetup.exe to start the setup. A wizard will take you through most of the subsequent steps.
+
+4. Click next at the intro screen and accept the license agreement at the following dialog.
+
+5. Installation Options - select to install 'ADAM and ADAM administration tools'
+
+6. Setup Options - select a unique instance
+
+7. Instance Name - can be anything...recommend AdamForEntLib.
+
+8. Ports - Accept the defaults
+
+9. Application Directory partition - can be any valid partition name. Note, subsequent tools and queries need to reference this partition so needs to be consistent. Recommend "OU=EntLibPartition,O=EntLib,C=US"
+
+10. File Locations - where the ADAM system files are installed...recommend accepting the defaults
+
+11. Service Account Selection - account ADAM service runs under...recommend not taking the default, selecting 'This account' and specifying 'LocalService' account.
+
+12. ADAM Adminstrators - user or group of ADAM system adminstrators...recommend not taking the default, choose 'This account' and specifying the local Adminstrators (assuming ADAM admins are members of this group).
+
+13. Importing LDIF Files - schema files for special objects in AD...select 'Import the selected...', select MS-InetOrgPerson.LDF and MS-User.LDF and click next.
+
+14. Ready to install - click next to install.
+
+
+PREPOPULATE WITH TEST DATA
+
+1. Build and run the ADAMUnitTestDataLoader. This console app will prompt you for the full bind string for the instance of ADAM you are connecting to. Note, you can just hit return and the utility will assume a default bind string based on the Application Directory Partition recommended during step 9 of the ADAM install.
+
+
+Installation, configuration and data load should now be complete and ready for unit tests.
+
+
+
+
+

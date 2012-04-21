@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="MustCreateRole">
+    <value>You must first create a role.</value>
+  </data>
+  <data name="MustSelectUserToAdd">
+    <value>You must select user to add.</value>
+  </data>
+  <data name="MustSelectUserToRemove">
+    <value>You must select user to remove.</value>
+  </data>
+  <data name="MustSelectUserToDelete">
+    <value>You must select a user to delete.</value>
+  </data>
+  <data name="MustSelectRoleToDelete">
+    <value>You must select a role to delete.</value>
+  </data>
+  <data name="DeleteRoleConfirmation">
+    <value>Are you sure you want to delete this role?</value>
+  </data>
+  <data name="UsersInRole">
+    <value>Users in Role {0}</value>
+    <comment>.
+ Parameters: 0 - role (string) </comment>
+  </data>
+  <data name="PasswordsMustMatch">
+    <value>Passwords must match.</value>
+  </data>
+  <data name="UserAlreadyExists">
+    <value>User already exists.</value>
+  </data>
+  <data name="RoleAlreadyExists">
+    <value>Role already exists.</value>
+  </data>
+  <data name="UnhandledException">
+    <value>An unhandled exception has occurred</value>
+  </data>
+  <data name="NewPasswordLabel">
+    <value>New Password</value>
+  </data>
+  <data name="DeleteUserConfirmation">
+    <value>Are you sure you want to delete this user?</value>
+  </data>
+  <data name="DeleteUserConfirmationCaption">
+    <value>Delete user confirmation</value>
+  </data>
+  <data name="DatabaseConnectionError">
+    <value>Error Connecting to Database</value>
+  </data>
+  <data name="NoDatabaseExceptionMessage">
+    <value>Unable to connect to the specified security database. Please make sure that your database server is running, and that you have executed the scripts that create the security database schema. {0}If you wish to modify the database connection information used by the Security Database Console, use the Enterprise Library Configuration tool to edit the Security Database Console's configuration file (securitydatabaseconsole.exe.config). {1} The following exception was returned when attempting to connect to the database: {2}{3}</value>
+    <comment>.
+ Parameters: 0 - paragraphSeparator1 (string), 1 - paragraphSeparator2 (string), 2 - paragraphSeparator3 (string), 3 - exceptionMessage (string) </comment>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

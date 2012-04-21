@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="StartupScript"><![CDATA[
+<script>
+<!--
+ResizeMonitor_Init();
+//-->
+</script>
+	]]></data>
+	<data name="LibraryScript"><![CDATA[
+<script>
+<!--
+function ResizeMonitor_Init() {
+	if( ResizeMonitor_BrowserCapable() ) {
+		document.ResizeMonitor_LastWidth = ResizeMonitor_CurrentWidth();
+		document.ResizeMonitor_LastHeight = ResizeMonitor_CurrentHeight();
+		ResizeMonitor_AttachResizeHandler();
+		document.ResizeMonitor_LastTimer = 0;
+		ResizeMonitor_SaveDimensions();
+	}
+}
+function ResizeMonitor_BrowserCapable() {
+	if( typeof( window.setTimeout ) == "undefined" ) { return false; }
+	if( typeof( window.clearTimeout ) == "undefined" ) { return false; }
+	if ( ResizeMonitor_CurrentWidth() == 0 || ResizeMonitor_CurrentHeight() == 0) {return false; }
+	if ( !ResizeMonitor_FindForm() ) { return false; }
+	return true;
+}
+function ResizeMonitor_AttachResizeHandler() {
+	if ( window.opera ) { window.setInterval("ResizeMonitor_CheckSize();", document.ResizeMonitor_TimeoutLength / 2 ); }
+	else { window.onresize=ResizeMonitor_CheckSize; }
+}
+function ResizeMonitor_CurrentWidth() {
+	if ( typeof(window.innerWidth) != "undefined" ) { return window.innerWidth; }
+	if ( typeof(document.body) != "undefined" && typeof(document.body.parentElement) != "undefined" && typeof(document.body.parentElement.clientWidth) != "undefined") { return document.body.parentElement.clientWidth; }
+	return 0;
+}
+function ResizeMonitor_CurrentHeight() {
+	if ( typeof(window.innerHeight) != "undefined" ) { return window.innerHeight; }
+	if ( typeof(document.body) != "undefined" && typeof(document.body.parentElement) != "undefined" && typeof(document.body.parentElement.clientHeight) != "undefined") { return document.body.parentElement.clientHeight; }
+	return 0;
+}
+function ResizeMonitor_CheckSize() {
+	if ( (document.ResizeMonitor_LastHeight != ResizeMonitor_CurrentHeight() ) || (document.ResizeMonitor_LastWidth != ResizeMonitor_CurrentWidth() ) ) {
+		document.ResizeMonitor_LastWidth = ResizeMonitor_CurrentWidth();
+		document.ResizeMonitor_LastHeight = ResizeMonitor_CurrentHeight();
+		if ( document.ResizeMonitor_LastTimer != 0 ) { window.clearTimeout( document.ResizeMonitor_LastTimer ); }
+		document.ResizeMonitor_LastTimer = window.setTimeout("ResizeMonitor_Postback();", document.ResizeMonitor_TimeoutLength);
+	}
+}
+function ResizeMonitor_SaveDimensions() {
+	document.ResizeMonitor_Form[document.ResizeMonitor_WidthHolder].value = ResizeMonitor_CurrentWidth();
+	document.ResizeMonitor_Form[document.ResizeMonitor_HeightHolder].value = ResizeMonitor_CurrentHeight();
+}
+function ResizeMonitor_FindForm() {
+	for( var i = 0; i < document.forms.length; i++ ) {
+		var myForm = document.forms[i];
+		if ( typeof( myForm[document.ResizeMonitor_WidthHolder] ) != "undefined" ) {
+			document.ResizeMonitor_Form = myForm;
+			return true;
+		}
+	}
+	return false;
+}
+//-->
+</script>
+	]]></data>
+</root>

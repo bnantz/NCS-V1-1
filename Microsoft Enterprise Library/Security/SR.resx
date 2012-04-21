@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="AndOperatorString">
+    <value>({0} AND {1})</value>
+    <comment>.
+ Parameters: 0 - left (string), 1 - right (string) </comment>
+  </data>
+  <data name="OrOperatorString">
+    <value>({0} OR {1})</value>
+    <comment>.
+ Parameters: 0 - left (string), 1 - right (string) </comment>
+  </data>
+  <data name="PlaceHolderString">
+    <value>#</value>
+  </data>
+  <data name="NotOperatorString">
+    <value>Not({0})</value>
+    <comment>.
+ Parameters: 0 - expression (string) </comment>
+  </data>
+  <data name="IdentityExpressionString">
+    <value>I:{0}</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="RoleExpressionString">
+    <value>R:{0}</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="AnyIdentityExpressionString">
+    <value>*</value>
+  </data>
+  <data name="AnonymousIdentityExpressionString">
+    <value>?</value>
+  </data>
+  <data name="Or">
+    <value>or</value>
+  </data>
+  <data name="Authorization">
+    <value>Authorization</value>
+  </data>
+  <data name="Authentication">
+    <value>Authentication</value>
+  </data>
+  <data name="Roles">
+    <value>Roles</value>
+  </data>
+  <data name="Profile">
+    <value>Profile</value>
+  </data>
+  <data name="SecurityCache">
+    <value>Security Cache</value>
+  </data>
+  <data name="InstrumentationEventSource">
+    <value>Enterprise Library Security</value>
+  </data>
+  <data name="InstrumentationCounterCategory">
+    <value>Enterprise Library Security</value>
+  </data>
+  <data name="InstrumentationCounterCategoryHelp">
+    <value>Enterprise Library Security application performance counters.</value>
+  </data>
+  <data name="PerfCounterNumAuthenticationChecksSecMsg">
+    <value>Number of authentication checks per second.</value>
+  </data>
+  <data name="PerfCounterNumAuthenticationFailuresSecMsg">
+    <value>Number of authentication failures per second.</value>
+  </data>
+  <data name="PerfCounterNumAuthorizationChecksSecMsg">
+    <value>Number of authorization checks per second.</value>
+  </data>
+  <data name="PerfCounterNumAuthorizationFailuresSecMsg">
+    <value>Number of authorization failures per second.</value>
+  </data>
+  <data name="PerfCounterNumProfileLoadsSecMsg">
+    <value>Number of profile loads per second.</value>
+  </data>
+  <data name="PerfCounterNumProfileSavesSecMsg">
+    <value>Number of profile saves per second.</value>
+  </data>
+  <data name="PerfCounterNumRoleLoadsSecMsg">
+    <value>Number of role loads per second.</value>
+  </data>
+  <data name="PerfCounterNumCacheHitsSecMsg">
+    <value>The number of cache hits per second.</value>
+  </data>
+  <data name="PerfCounterNumCacheMissesSecMsg">
+    <value>The number of cache misses per second.</value>
+  </data>
+  <data name="PerfCounterRatioCacheHitsMsg">
+    <value>Ratio of hits from all cache calls.</value>
+  </data>
+  <data name="PerfCounterCacheAccessAttemptsMsg">
+    <value>Total number of cache reads.</value>
+  </data>
+  <data name="AuthorizationRuleNotFoundMsg">
+    <value>Authorization rule {0} not found in configuration.</value>
+    <comment>.
+ Parameters: 0 - ruleName (string) </comment>
+  </data>
+  <data name="NotFoundExceptionMessage">
+    <value>The {0} provider named '{1}' could not be found.</value>
+    <comment>.
+ Parameters: 0 - providerType (string), 1 - providerName (string) </comment>
+  </data>
+  <data name="InvalidArgument">
+    <value>Argument '{0}' must be of type '{1}'.</value>
+    <comment>.
+ Parameters: 0 - argumentName (string), 1 - typeName (string) </comment>
+  </data>
+  <data name="IdentityIsNull">
+    <value>The provided IIdentity object is null.</value>
+  </data>
+  <data name="IdentityInvalid">
+    <value>The provided IIdentity object is incomplete or invalid.</value>
+  </data>
+  <data name="UnexpectedTokenMessage">
+    <value>Found token "{1}" when expecting {0} at position {2}.</value>
+    <comment>.
+ Parameters: 0 - expected (string), 1 - actual (string), 2 - index (int) </comment>
+  </data>
+  <data name="ExceptionSecurityCacheProviderNotFound">
+    <value>The security cache provider named '{0}' could not be found in configuration.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionRolesProviderNotFound">
+    <value>The roles provider named '{0}' could not be found in configuration.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionProfileProviderNotFound">
+    <value>The profile provider named '{0}' could not be found in configuration.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionAuthorizationProviderNotFound">
+    <value>The authorization provider named '{0}' could not be found in configuration.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionAuthenticationProviderNotFound">
+    <value>The authentication provider named '{0}' could not be found in configuration.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

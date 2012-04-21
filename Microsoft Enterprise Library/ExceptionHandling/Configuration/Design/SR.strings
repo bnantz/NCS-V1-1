@@ -1,0 +1,79 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Exception Handling Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+; category for all properties
+CategoryGeneral = General
+
+; The defaul name of the ExceptionPolicyNode
+DefaultExceptionPolicyNodeName = Exception Policy
+
+; The default name for the ExceptionTypeNode
+DefaultExceptionTypeNodeName = Exception Type
+
+; The default name of the ExceptionHandlingSettingsNode
+DefaultExceptionHandlingSettingsNodeName = Exception Handling Application Block
+
+; The default name of WrapHandlerNode
+DefaultWrapHandlerNodeName = Wrap Handler
+
+; The default name of ReplaceHandlerNode
+DefaultReplaceHandlerNodeName = Replace Handler
+
+; The default name of CustomHandlerNode
+DefaultCustomHandlerNodeName = Custom Handler
+
+; select type dialog caption
+SelectTypeDialogCaption = Select Exception Type.
+
+; Message for duplication
+DuplicateExceptionTypeErrorMessage(string exceptionTypeName) = An exception of type {0} is already configured for this policy.
+
+#
+# Node Property Descriptions
+#
+ExceptionTypeNodeNameDescription = The fully qualified name of the type of Exception to get handled.  Must inherit from System.Exception.
+WrapHandlerNodeMessageDescription = The optional message for the wrap exception.
+ExceptionReplaceMessageDescription = The optional message for the replace exception.
+ExceptionWrapTypeNameDescription = The fully qualified name of the type of exception to use for wrapping.
+ExceptionReplaceTypeNameDescription = The fully qualified name of the type of exception to use for replacing.
+ExceptionTypePostHandlingActionDescription = Determines what action should occur after an exception is handled by the configured exception handling chain. \nNone: Indicates that no post handling action should occur.\nNotifyRethrow: Notifies the caller that a Rethrow of the original exception is recommended.\nThrowNewException: Throws the resulting exception from the completed exception handling chain.
+ExceptionHandlerNameDescription = The friendly name of the exception handler.
+ExceptionHandlerTypeDescription = The fully qualified name of the type of exception handler.
+ExceptionHandlerAdditionalPropertiesDescription = Defines any number of custom properties that can be passed to a handler.
+
+; Menu Text
+ExceptionHandlingSettingsNodeMenuText = Exception Handling Application Block
+ExceptionPolicyNodeMenuText = Exception Policy
+ExceptionTypeNodeMenuText = Exception Type
+MoveUpMenuItemText = Move Up
+MoveDownMenuItemText = Move Down
+
+; Statusbar Text
+GenericCreateStatusText(string name) = Create a new {0}
+ExceptionTypeNodeStatusText = Create a new Exception Type
+ExceptionPolicyNodeStatusText = Create a new Exception Type
+ExceptionHandlingSettingsNodeStatusText = Add the Exception Handling Application Block to the configuration
+MoveUpStatusText = Move currently selected node up
+MoveDownStatusText = Move currently selected node down

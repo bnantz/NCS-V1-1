@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="ExceptionManagerInvalidSectionName">
+    <value>The section name can not be null or an empty string, please provide a valid section name.</value>
+  </data>
+  <data name="ExceptionConfigFileNotLoaded">
+    <value>You must load the configuration file before working with it.</value>
+  </data>
+  <data name="ExceptionUnrecognizedElement">
+    <value>Unrecognized element.</value>
+  </data>
+  <data name="ExceptionConfigReserved">
+    <value>Tag names beginning with 'config' are reserved.</value>
+  </data>
+  <data name="ExceptionLocationReserved">
+    <value>The tag name 'location' is reserved for &lt;location&gt; sections.</value>
+  </data>
+  <data name="ExceptionOnlyOneConfigSections">
+    <value>Only one &lt;configSections&gt; element allowed per config file and if present must be the first child of the root &lt;configuration&gt; element.</value>
+  </data>
+  <data name="ExceptionMustBeXmlNode">
+    <value>The section object must be of type XmlNode.</value>
+  </data>
+  <data name="ExceptionNotInSerializedObj">
+    <value>The required element '&lt;xmlSerializationSection&gt;/' missing in the specified Xml configuration file.</value>
+  </data>
+  <data name="ExceptionSerializationTypeMissing">
+    <value>The type name could not be found in the specified Xml.
+ The expected location is in the 'type' attribute on the 'xmlSerializerSection' element.
+ Please check the Xml and validate that this name is correct and exists on the system.</value>
+  </data>
+  <data name="ExceptionSerializedObjectMissing">
+    <value>The serialized object is missing from the file.</value>
+  </data>
+  <data name="ExceptionItemAlreadyAdded">
+    <value>This item has already been added to the collection</value>
+  </data>
+  <data name="ExceptionKeyNotString">
+    <value>Key must be of type String.</value>
+  </data>
+  <data name="ExceptionUnregoconizedConfigSection">
+    <value>Unrecognized configuration section {0}.	</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionSectionGroupIsDefined">
+    <value>Section or group name '{0}' already defined.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionUnrecognizedAttribute">
+    <value>Unrecognized attribute '{0}'</value>
+    <comment>.
+ Parameters: 0 - attribute (string) </comment>
+  </data>
+  <data name="ExceptionNoRootConfigTag">
+    <value>Configuration file {0} does not have root &lt;configuration&gt; tag.</value>
+    <comment>.
+ Parameters: 0 - configFile (string) </comment>
+  </data>
+  <data name="ExceptionCouldNotCreateType">
+    <value>Could not create {0}.</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="ExceptionNotICSH">
+    <value>{0} does not implement IConfigurationSectionHandler.</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="ExceptionHandlerNotWritable">
+    <value>The specified section handler does not support the IConfigFormatter interface - {0}.</value>
+    <comment>.
+ Parameters: 0 - sectionName (string) </comment>
+  </data>
+  <data name="ExceptionRemoveSectionHandler">
+    <value>Could not remove section handler {0}.</value>
+    <comment>.
+ Parameters: 0 - handler (string) </comment>
+  </data>
+  <data name="ExceptionInvalidXmlStorageFile">
+    <value>The external Xml storage file '{0}' is invalid.</value>
+    <comment>.
+ Parameters: 0 - fileName (string) </comment>
+  </data>
+  <data name="ExceptionTypeCreateError">
+    <value>An error occurred when creating the specified type '{0}'.
+</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="ExceptionInvalidArgumentType">
+    <value>Argument must be of type {0}.</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="ExceptionConfigurationFileNotFound">
+    <value>Can not find the configuration file {0}. You must check the 'path' attribute in the section '{1}'</value>
+    <comment>.
+ Parameters: 0 - path (string), 1 - sectionName (string) </comment>
+  </data>
+  <data name="ExceptionAttributeMissing">
+    <value>The '{0}' attribute must be specified on the '{1}' tag.</value>
+    <comment>.
+ Parameters: 0 - attribute (string), 1 - tag (string) </comment>
+  </data>
+  <data name="ExceptionLoadingXml">
+    <value>Error loading XML file {0} {1}.</value>
+    <comment>.
+ Parameters: 0 - file (string), 1 - message (string) </comment>
+  </data>
+  <data name="ExceptionXmlStorageSectionNotFoundError">
+    <value>The section name '{0}' could not be found in the Xml file {1}.</value>
+    <comment>.
+ Parameters: 0 - sectionName (string), 1 - fileName (string) </comment>
+  </data>
+  <data name="ExceptionSectionNameInvalid">
+    <value>Invalid section name. The section '{0}' does not exist in the requested configuration file '{1}' or the file '{2}'. Make sure that the 'enterpriseLibrary.configurationSections' configuration section exists in one of the files and that the section '{0}' is defined.</value>
+    <comment>.
+ Parameters: 0 - sectionName (string), 1 - requestedConfigFile (string), 2 - otherConfigFile (string) </comment>
+  </data>
+  <data name="ExceptionNullProviderDataName">
+    <value>The name of the provider data can not be null.</value>
+  </data>
+  <data name="ExceptionActivatorCacheCannotCreateType">
+    <value>Unable to create type '{0}'.</value>
+    <comment>.
+ Parameters: 0 - type (string) </comment>
+  </data>
+  <data name="ExceptionCannotInstantiateProviderWithNullTypeName">
+    <value>Cannot instantiate {0} '{1}' provider with a null type name or the type name's length is 0.</value>
+    <comment>.
+ Parameters: 0 - factoryName (string), 1 - providerName (string) </comment>
+  </data>
+  <data name="ExceptionCannotInstantiateProviderWithNullName">
+    <value>Cannot instantiate {0} '{1}' provider with a null provider name or the name's length is 0.</value>
+    <comment>.
+ Parameters: 0 - factoryName (string), 1 - providerName (string) </comment>
+  </data>
+  <data name="ExceptionProviderTypeMismatchExceptionMessage">
+    <value>Failed to create an instance of type '{1}' because it is not assignable from the type '{0}'.</value>
+    <comment>.
+ Parameters: 0 - expectedType (string), 1 - actualType (string) </comment>
+  </data>
+  <data name="ExceptionProviderNotFoundExceptionMessage">
+    <value>The {0} provider named '{1}' could not be found.</value>
+    <comment>.
+ Parameters: 0 - providerType (string), 1 - providerName (string) </comment>
+  </data>
+  <data name="ExceptionDefaultProviderNotSpecified">
+    <value>There is no default provider specified for the '{0}' providers.</value>
+    <comment>.
+ Parameters: 0 - providerName (string) </comment>
+  </data>
+  <data name="ExceptionProviderMissingConstructor">
+    <value>The type {0} does not have a public constructor with no arguments.</value>
+    <comment>.
+ Parameters: 0 - type (string) </comment>
+  </data>
+  <data name="ExceptionFactoryTypeLoadError">
+    <value>The type '{0}' could not be loaded for the '{1}'.</value>
+    <comment>.
+ Parameters: 0 - typeName (string), 1 - factoryName (string) </comment>
+  </data>
+  <data name="ExceptionFactoryTypeInvokeError">
+    <value>An error occurred when creating the type '{0}' for the {2} '{1}' provider.</value>
+    <comment>.
+ Parameters: 0 - typeName (string), 1 - providerName (string), 2 - factoryName (string) </comment>
+  </data>
+  <data name="ExceptionFactoryMethodAccessError">
+    <value>The constructor for the type '{0}' is either private or protected and can not be invoked for the {1}.</value>
+    <comment>.
+ Parameters: 0 - typeName (string), 1 - factoryName (string) </comment>
+  </data>
+  <data name="ExceptionProviderNotTypeOfConfigurationProvider">
+    <value>The type '{0}' does not implement the IConfigurationProvider interface.</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="ExceptionOutOfRangeDpapiStorageMode">
+    <value>The value provided was out of the excepted valid ranges for DpapiStorageMode.</value>
+  </data>
+  <data name="ExceptionKeyAlgorithmPairLoad">
+    <value>The KeyAlgorithmPair could not be loaded from storage.</value>
+  </data>
+  <data name="ExceptionNoKeyAlgorithmStorageProvider">
+    <value>The data is set to be encrypted and no KeyAlgorithmPairStorageProvider is defined to encrypt the data.</value>
+  </data>
+  <data name="ExceptionConfigurationSettingsMissing">
+    <value>The meta configuration settings are not present in the context.</value>
+  </data>
+  <data name="ExceptionEventRaisingFailed">
+    <value>There was an error raising an event.</value>
+  </data>
+  <data name="Transformer">
+    <value>Transformer</value>
+  </data>
+  <data name="StorageProvider">
+    <value>Storage Provider</value>
+  </data>
+  <data name="KeyAlgorithmPairStorageProvider">
+    <value>Key Algorithm Pair Storage Provider</value>
+  </data>
+  <data name="Value">
+    <value>value</value>
+  </data>
+  <data name="FileWatcherEventSource">
+    <value>Enterprise Library Configuration</value>
+  </data>
+  <data name="ApplicationLog">
+    <value>Application</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

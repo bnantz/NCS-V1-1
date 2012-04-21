@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="GenericCreateStatusText">
+    <value>Create a new {0}</value>
+    <comment> Statusbar Text.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="AuthenticationProviderCollectionNodeName">
+    <value>Authentication</value>
+  </data>
+  <data name="AuthenticationProviderCollectionNodeCommandName">
+    <value>Authentication Settings</value>
+  </data>
+  <data name="AuthenticationProviderNodeName">
+    <value>Authentication Provider</value>
+  </data>
+  <data name="CustomAuthenticationProviderCommandName">
+    <value>Custom Authentication Provider</value>
+  </data>
+  <data name="AuthorizationProviderCollectionNodeName">
+    <value>Authorization</value>
+  </data>
+  <data name="AuthorizationProviderCollectionNodeCommandName">
+    <value>Authorization Settings</value>
+  </data>
+  <data name="AuthorizationProviderNodeName">
+    <value>Authorization Provider</value>
+  </data>
+  <data name="CustomAuthorizationProviderCommandName">
+    <value>Custom Authorization Provider</value>
+  </data>
+  <data name="RolesProviderCollectionNodeName">
+    <value>Roles</value>
+  </data>
+  <data name="RolesProviderCollectionNodeCommandName">
+    <value>Roles Settings</value>
+  </data>
+  <data name="RolesProviderNodeName">
+    <value>Roles Provider</value>
+  </data>
+  <data name="CustomRolesProviderCommandName">
+    <value>Custom Roles Provider</value>
+  </data>
+  <data name="ProfileProviderCollectionNodeName">
+    <value>Profile</value>
+  </data>
+  <data name="ProfileProviderCollectionNodeCommandName">
+    <value>Profile Settings</value>
+  </data>
+  <data name="ProfileProviderNodeName">
+    <value>Profile Provider</value>
+  </data>
+  <data name="CustomProfileProviderCommandName">
+    <value>Custom Profile Provider</value>
+  </data>
+  <data name="AddConfigurationSectionCommandName">
+    <value>Security Application Block </value>
+  </data>
+  <data name="SecuritySettingsNodeName">
+    <value>Security Application Block</value>
+  </data>
+  <data name="SecuritySettingsNodeCommandName">
+    <value>Security Application Block</value>
+  </data>
+  <data name="SecurityCacheNodeDefaultName">
+    <value>Security Cache Provider</value>
+  </data>
+  <data name="SecurityCacheNodeCommandName">
+    <value>Security Cache Provider</value>
+  </data>
+  <data name="CustomSecurityCacheNodeCommandName">
+    <value>Custom Cache Provider</value>
+  </data>
+  <data name="CustomSecurityCacheNodeDefaultName">
+    <value>Custom Cache Provider</value>
+  </data>
+  <data name="SecurityCacheCollectionNodeCommandName">
+    <value>Security Cache</value>
+  </data>
+  <data name="AuthorizationRuleProviderName">
+    <value>RuleProvider</value>
+  </data>
+  <data name="AuthorizationRuleProviderCommandName">
+    <value>Authorization Rule Provider</value>
+  </data>
+  <data name="AuthorizationRuleNodeName">
+    <value>Rule</value>
+  </data>
+  <data name="AuthorizationRuleCommandName">
+    <value>Rule</value>
+  </data>
+  <data name="NotOperatorNodeName">
+    <value>Not</value>
+  </data>
+  <data name="NotOperatorNodeCommandName">
+    <value>Not Operator</value>
+  </data>
+  <data name="BooleanExpressionNodeName">
+    <value>Expression</value>
+  </data>
+  <data name="IdentityExpressionCommandName">
+    <value>Identity Expression</value>
+  </data>
+  <data name="IdentityExpressionNodeName">
+    <value>Identity</value>
+  </data>
+  <data name="AnyIdentityExpressionNodeName">
+    <value>*</value>
+  </data>
+  <data name="AnyIdentityExpressionNodeCommandName">
+    <value>Any Identity (*)</value>
+  </data>
+  <data name="AnonymousIdentityExpressionNodeName">
+    <value>?</value>
+  </data>
+  <data name="AnonymousIdentityExpressionNodeCommandName">
+    <value>Anonymous Identity (?)</value>
+  </data>
+  <data name="OrOperatorNodeName">
+    <value>Or</value>
+  </data>
+  <data name="OrOperatorNodeCommandName">
+    <value>Or Operator</value>
+  </data>
+  <data name="AndOperatorNodeName">
+    <value>And</value>
+  </data>
+  <data name="AndOperatorNodeCommandName">
+    <value>And Operator</value>
+  </data>
+  <data name="RoleExpressionNodeName">
+    <value>Role</value>
+  </data>
+  <data name="RoleExpressionNodeCommandName">
+    <value>Role Expression</value>
+  </data>
+  <data name="DefaultProviderDescription">
+    <value>The default authentication provider.</value>
+  </data>
+  <data name="ProviderTypeNameDescription">
+    <value>The name of a class that implements the IAuthenticationProvider interface.</value>
+  </data>
+  <data name="ParseSucceededMessageBox">
+    <value>Expression is valid.</value>
+  </data>
+  <data name="ParseSucceededMessageBoxCaption">
+    <value>Expression is valid.</value>
+  </data>
+  <data name="ParseFailedMessage">
+    <value>Expression is invalid. {0}</value>
+    <comment>.
+ Parameters: 0 - message (string) </comment>
+  </data>
+  <data name="ParseFailedCaption">
+    <value>Expression is invalid.</value>
+  </data>
+  <data name="EvaluateMessageBox">
+    <value>Evaluation returned {0}.</value>
+    <comment>.
+ Parameters: 0 - result (bool) </comment>
+  </data>
+  <data name="EvaluateMessageBoxCaption">
+    <value>Evaluate Expression</value>
+  </data>
+  <data name="UnableToParseDialogMessage">
+    <value>Unable to parse expression.  Are you sure you want to exit?</value>
+  </data>
+  <data name="UnableToParseDialogCaption">
+    <value>Unable to parse expression</value>
+  </data>
+  <data name="AccessGranted">
+    <value>Authorized</value>
+  </data>
+  <data name="AccessDenied">
+    <value>Not Authorized</value>
+  </data>
+  <data name="RuleNameRequired">
+    <value>You must specify a name for this Rule.</value>
+  </data>
+  <data name="CategoryGeneral">
+    <value>Category</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

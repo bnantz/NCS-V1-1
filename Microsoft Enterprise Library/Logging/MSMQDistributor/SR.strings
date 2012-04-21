@@ -1,0 +1,117 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Logging and Instrumentation Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+
+ApplicationLogName = Application
+DistributorEventLoggerDefaultApplicationName = Enterprise Library Distributor Service
+
+InstallerCannotReadServiceName = Unable to locate serviceName in distributor configuration file
+
+ProcessQMsgSeeDetails = See 'Exception Information Details' below for more information.
+
+####
+InitializeComponentStartedMessage = InitializeComponent - begin
+InitializeComponentStarted = The windows service initialization sequence has started.
+
+ErrorLoadingDistributorConfiguration = Error loading Logging Distributor configuration file.
+
+InitializeComponentCompletedMessage = InitializeComponent - end
+InitializeComponentCompleted = The windows service initialization sequence is complete. No errors have occurred.
+
+####
+ErrorInitializingService = Error initializing the service. See EventLog for error details.
+InitializeStartupSequenceStartedMessage = InitializeStartupSequence - begin
+InitializeStartupSequenceFinishedMessage = InitializeStartupSequence - end
+InitializeStartupSequenceErrorMessage = InitializeStartupSequence - error
+ValidationStarted = The validation sequence has been started.
+ValidationComplete = The validation sequence is complete. No errors have occurred.
+ValidationError = An error occurred in one of the validation sequences. See 'Exception Information Details' below for more information. The service will be stopped.
+
+####
+ListenerStopStartedMessage = StopListener - begin
+ListenerStopStarted = Attempting to stop the queue listener.
+
+ListenerStopCompletedMessage = StopListener - end
+ListenerStopCompleted(attempts) = The queue listener was successfully stopped. No errors occurred. Note: it took [{0}] tries to stop the queue listener.
+
+StopListenerWarningMessage = StopListener - warning
+ListenerCannotStop(attempts) = The queue listener could not be successfully stopped. No errors occurred. Note: it took [{0}] tries to stop the queue listener. The queue listener might be busy, please retry.
+
+ListenerStopErrorMessage = StopListener - error
+ListenerStopError = An error occurred while trying to stop the queue listener. See 'Exception Information Detail' below for more information.
+
+ListenerStartingMessage = StartListener - begin
+ListenerStarting = Attempting to start the queue listener.
+
+ListenerStartCompleteMessage = StartListener - end
+ListenerStartComplete(int interval) = The queue listener has started successfully. Note: the listener timer is set to [{0}] milliseconds.
+
+ListenerStartErrorMessage = StartListener - error
+ListenerStartError = An error occurred while trying to start the queue listener. See 'Exception Information Detail' below for more information.
+
+#######
+ServiceStartComplete(service) = The service '{0}' started correctly.
+
+ServiceStartError(service) = An error occurred while starting the service {0}.\nSee 'Summary for {0}' and additional 'Exception Information Details' below for more information. The service needs to be stopped.
+
+ServiceStopComplete(service) = The service '{0}' stopped correctly.
+
+ServiceStopWarning(service) = The service '{0}' did not stop gracefully. \nSee 'Summary for {0}' and additional 'Exception Information Details' below for more information.
+
+ServiceStopError(service) = The service '{0}' did not stop correctly.\nSee 'Summary for {0}' and additional 'Exception Information Details' below for more information. The service will be stopped.
+
+ServicePausedSuccess(service) = The service '{0}' was paused correctly.
+
+ServicePauseWarning(service) = The service '{0}' did not pause gracefully. \nSee 'Summary for {0}' and additional 'Exception Information Details' below for more information.
+
+ServicePauseError(service) = The service '{0}' did not pause correctly.\nSee 'Summary for {0}' and additional 'Exception Information Details' below for more information. The service will be stopped.
+
+###########
+ServiceUnableToShutdown = An error occurred while creating the domain for DoCallBack. This error will disable the ability for this service to shut itself down.
+
+ServiceResumeComplete(service) =  The service '{0}' resumed correctly.
+
+ServiceResumeError(service) =  The service '{0}' was not resumed correctly.\nSee 'Summary for {0}' and additional 'Exception Information Details' below for more information. The service will be stopped.
+
+QueueTimedEventError = An error occurred while receiving message(s) from the queue. The service will be stopped.
+
+ServiceControllerStopError(service) = The Service Controller could not stop the service '{0}'. Make sure the service name listed in the Service Management Console is the same as {0}.\n To solve this problem, stop the service manually and uninstall it. Try the installation procedure again and make sure the same application configuration file is available when the service is started.
+
+ServiceControllerStopException(p) = Cannot stop the service '{0}'.
+
+###############
+MsmqInvalidTransactionUsage(msmqPath) = The MSMQDistributor queue '{0}' returned an invalid transaction usage error.  See 'Exception Information Details' below for more information.
+
+MsmqReceiveTimeout(msmqPath) = The DistributorMSMQ queue  '{0}'  encountered a receive timeout error.  See 'Exception Information Details' below for more information.
+
+MsmqAccessDenied(msmqPath, identity) = Access denied to the DistributorMSMQ queue '{0}'. Identity trying to access the queue : {1}.   See 'Exception Information Details' below for more information.
+
+MsmqReceiveError(msmqPath) = An error occurred while receiving a message from the queue '{0}'.  See 'Exception Information Details' below for more information.
+
+MsmqReceiveGeneralError(msmqPath) = A general error occurred while receiving a message from the queue '{0}'.
+
+MsmqLogReceived(messageBody) = Log received by MSMQ Log Distributor.  \n\nMessage: {0}
+
+UnknownError = An unknown error has occurred.

@@ -1,0 +1,307 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Configuration Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+; Exception Messages
+ExceptionAppAlreadyOpened = The application is already open.
+; An operation requires the component to be sited and it hasn't been yet.
+ExceptionComponentNotSited = The component hasn't been properly initialized yet.
+; Receives the service that is unavailable.
+ExceptionServiceUnavailable(serviceTypeName) = Can't perform operation because service '{0}' is not setup properly. Ensure the Microsoft IPE Wizards add-in is loaded.
+; Failed to proffer a service
+ExceptionProfferServiceCOMFailure(serviceTypeName) = Failed to proffer service {0}.
+; Service already exists in a ServiceContainer
+ExceptionServiceExists(serviceTypeName) = Service {0} already exists.
+; The service instance for the container is invalid
+ExceptionInvalidServiceInstance = Invalid service instance.
+; The name is invalid for the component
+ExceptionInvalidComponentName(string name) = The name {0} is invalid for the component.
+; Expection message for the required attribute
+ExceptionValueNullMessage(string name) = The value for {0} can not be null.
+; Could not save all the files
+ExceptionFilesNotSaved = Could not save one or more of the application files.
+; File already exists in the document table
+ExceptionFileAlreadyExists(string file) = The file {0} already exits in the application. Please choose another name for one of the files.
+; Type not assignable to another type
+ExceptionNotAssignableType(assemblyName, typeName) = The type '{0}' must be assignable from the type '{1}'.
+; A node in the hierarchy already has this name
+ExceptionNodeNameAlreadyExists(string name) = A sibling node with the name '{0}' already exists.
+; cannot compare a node to something arbitrary
+ExceptionConfigNodeCompareError(typeName) = Cannot compare an object of type {0} to a configuration node.
+; Can only reorder sibling nodes
+ExceptionOnlyReorderSiblings = Can only re-order sibling nodes.
+; Expected a config node
+ExceptionConfigNodeExpected = The type of command must be a ConfigurationNode.
+; Exception for when lower bound out of range
+ExceptionLowerBoundOutOfRange(lowerBound, upperBound) = The lowerBound value '{0}' is not less than or equal to the upperBound value '{1}'.
+; exception when the ReferenceType attribute is not set
+ExceptionNoRefPathAttribute = The reference type for the node was not set.  Please add the ReferenceTypeAttribute to your property.
+; exception when no base type attribute was set for the type selector
+ExceptionNoBaseTypeAttribute = There is not a valid base type attribute for the selector.
+; exception when a type is not valid
+ExceptionTypeNotValid(string typeName) = The type {0} is not valid.
+ExceptionTypeNotConfigurationNode(string typeName) = The type '{0}' must be a type of ConfigurationNode.
+
+; Menu Items Text
+RemoveNodeMenuItemText = Remove
+ValidateNodeMenuItemText = Validate
+ConfigurationSectionCollectionMenuItemText = Configuration Application Block
+ConfigurationSectionMenuItemText = Configuration Section
+XmlIncludeTypeMenuItem = Xml Include Type
+CloseApplicationMenuItemText = Close Application
+
+; Menu Items StatusBar Text
+RemoveNodeMenuItemStatusText = Remove the current node
+ValidateNodeMenuItemStatusText = Validate the current node
+ConfigurationSectionCollectionStatusText = Create a new Configuration Application Block
+GenericCreateStatusText(string name) = Create a new {0}
+ConfigurationSectionStatusText = Create a new configuration section
+CloseApplicationStatusText = Close the current application
+
+; Message Box messages and captions
+SaveApplicationRequest = The application has not been saved, would you like to save before closing?
+OverwriteFilesCaption = Overwrite files?
+OverwriteFilesMessage(string file) = The file {0} already exists. Do you want to overwrite it and all associated configuration files?
+SaveApplicationErrorMessage = One or more errors occurred while trying to save the configuration.
+SaveApplicationErrorRequestMessage = One or more errors occurred while trying to save the configuration. Would you still like to close the application without saving?
+SaveApplicationCaption = Save Application
+ValidationErrorsMessage = One or more validation errors occurred.
+OpenApplicationCaption = Open Application
+OpenApplicationErrorMessage = One or more errors occurred while trying to open the configuration.
+ValidationCaption = Validation
+CanNotSaveApplicationMessage = Can not save the application if the application file is not set. Please set the application file name.
+RemoveLinkedNodeMessage(string nodeName) = If you remove this node, the following node(s) {0} will also be removed. Do you wish to continue?
+RemoveNodeCaption = Remove Node
+
+; Default Application Name
+DefaultApplicationName = Application
+
+; SaveFileEditor Defaults
+GenericFileFilter = All Files(*.*)|*.*
+ConfigurationFileFilter = Configuration files (*.config)|*.config|All files(*.*)|*.*
+GenericSaveFile = Save File
+
+; Category for all properties in a property grid
+CategoryGeneral = General
+
+; the default when using the reference editor
+None = (none)
+
+; used to ToString a ValidationError
+ValidationErrorToString(property, invalidObject, invalidObjectType, message) = The property {0} of object {1} of type {2} is invalid. {3}
+
+; used to ToString a ConfigurationError
+ConfigurationErrorToString(string name, string path, string errorMessage) = {0} at path {1}.\n{2}\n\n
+
+; used to ToString a ConfigurationErrorCollection
+ConfigurationErrorCollectionToString = The following configuration nodes are invalid...\n\n
+
+; RegExAttributes error message
+RegExErrorMessage(string value) = The value {0} does not match the regular expression.
+
+; AssertRangeAttribute error message
+ValueNotInRangeErrorMessage(string name) = The value for {0} is not in the specified range.
+
+; DenyRangeAttribute strings
+ValueOutsideRangeErrorMessage(string name) = The value for {0} is not outside of the specified range.
+
+; MaximumLengthAttribute
+MaxLengthExceededErrorMessage(string name, int length) = The length of the string {0} must not exceed {1}.
+
+; MinimumLengthAttribute
+MinLengthExceededErrorMessage(string name, int length) = The string {0} must have a length of at least {1}.
+
+; TypeSelectorEditor* strings
+TypeSubclassErrorMsg(string typeName) = The selected type must be a subclass of {0}
+AssemblyLoadFailedErrorMessage(string message) = Unable to load the assembly. The error message is '{0}'.
+TypeSelectorInterfaceRootNodeText(string typeName) = Types that implement {0}
+TypeSelectorClassRootNodeText(string typeName) = Classes that inherit from {0}
+NoTypesFoundInAssemblyErrorMessage(string assemblyName, string baseType) = There were no types found in the assembly '{0}' that implement or inherit from the base type '{1}'.
+NoTypesFoundInAssemblyCaption = No Types Found In Assembly.
+
+; ApplicationNode.ConfigurationFile description
+ConfigurationFilePathDescription = The path to the application configuration file.
+
+; The description for ConfigurationSectionNode.DefaultSection
+ConfigurationDefaultSectionDescription = The default configuration section.
+
+; default name for the ConfigurationSectionCollectionNode
+DefaultConfigurationSectionCollectionNodeName = Configuration Application Block
+
+; default name for the ConfigurationSectionName
+DefaultConfigurationSectionNodeName = Configuration Section
+
+; The description for ConfigurationSection.Encrypt
+ConfigurationSectionNodeEncryptDescription = Gets or sets if this section is encrypted. You must configure a "key algorithm storage provider" (Configuration Application Block->Encryption Settings->New->[Storage Provider]) in order to utilize encryption.
+
+; The description for XmlFileStorageProviderNode.TypeName
+XmlFileStorageProviderNodeTypeNameDescription = The name of a .NET class that implements the IConfigurationStorageProvider interface.
+
+; The description for XmlFileStorageProviderNode.FileName
+XmlFileStorageProviderNodeFileNameDescription = The name of the external Xml file to store the configuration data.
+
+; The friendly name for a XmlFileStorageProviderNode
+XMLStorageProviderNodeFriendlyName = XML File Storage Provider
+
+; The friendly name for a XmlSerializerTransformerNode
+XmlSerializerTransformerNodeFriendlyName = Xml Serializer Transformer
+
+; The default name for a XmlIncludeTypeNode
+DefaultXmlIncludeTypeNodeName = Xml Include Type
+
+; Default files for the configuration file dialog editor
+ConfigurationFileDialogFilter = Configuration Files(web.config, *.exe.config, app.config)|web.config;*.exe.config;app.config|All Files(*.*)|*.*
+
+; message to ask if we want to overwrite files
+OverwriteFileMessage(string fileName) = The file {0} cannot be saved because it is write-protected.\n\nDo you want to remove the write-protection and overwrite the file in its current location.
+OverwriteFileCaption = Save of Read-Only File
+
+# Protection
+; The default name of the FileKeyAlgorithmStorageProviderNode
+DefaultFileKeyAlgorithmStorageProviderNodeName = File Key Algorithm Storage Provider
+
+; The friendly name of the FileKeyAlgorithmStorageProviderNode
+FileKeyAlgorithmStorageProviderNodeFriendlyName = File Key Algorithm Storage Provider
+
+; The friendly name of the ConfigurationSectionNode
+ConfigurationSectionNodeFriendlyName = Configuration Section
+
+; The friendly name of the ReadOnlyConfigurationSectionNode
+ReadOnlyConfigurationSectionNodeFriendlyName = Read-only Configuration Section
+
+; The default name for the EncryptionSettingsNode
+DefaultEncryptionSettingsNodeName = Encryption Settings
+
+; The display EncryptionSettingsNode.KeyAlgorithmPair description
+EncryptionSettingsNodeKeyAlgorithmPairDescription = You can manage a key algorithm pair from a "key algorithm pair storage provider". The storage provider is responsible for storing the key and algorithm used to encrypt configuration. To create a new provider, right click on Encryption Settings->New->[Storage Providers] and select the provider you wish to use.
+
+; The KeyInfoLabel.ToString
+KeyInfoLabelToString = <Hidden>
+
+; error message for invalid key length
+KeyManagerUIInvalidKeyLengthErrorMessage = Invalid key length
+
+; error message that the key must be in hex
+KeyManagerUIInvalidKeyCharactersErrorMessage = Key must be in hexadecimal form (for example, 49FFC7)
+
+; label text for wizard load page intro
+FileKeyAlgorithmWizardLoadIntroText = Select the file in which to load an existing key algorithm pair.
+
+; label text for wizard save page intro
+FileKeyAlgorithmWizardSaveIntroText = Select the file in which to save the configured key algorithm pair.
+
+; The text for the load label wizard
+FileKeyAlgorithmWizardDpapiLoadLabelText = This file is DPAPI protected.
+
+; The text for the save label wizard
+FileKeyAlgorithmWizardDpapiSaveLabelText = Enable DPAPI protection.
+
+; Error message when not able to load the key
+FileKeyAlgorithmWizardUnableToLoadKeyErrorMessage(string message) = Unable to load the selected key file, please check your DPAPI settings.\n\nAdditionalInformation: {0}
+FileKeyAlgorithmWizardUnableToLoadKeyCaption = Unable to load the selected key file.
+
+; Description for FileKeyAlgorithmStorageProviderNode.KeyAlgorithmPair
+FileKeyAlgorithmStorageProviderNodeKeyAlgorithmPairDescription = You can not view or edit the key algorithm pair. You must remove this storage provider and create a new one if you wish to define a new key.
+
+; Error message when update to save dapi settings
+FileKeyAlgorithmDpapiSettingsEditorUnableToSaveNewDpapiSettingsErrorMessage(string reason) = Unable to save file with new DPAPI settings. Make sure that the original DPAPI settings are correct when you loaded the key file. You may need to reload the key (remove this node and recreate) with the correct DPAPI settings.\n\nAdditional Information: {0}
+FileKeyAlgorithmDpapiSettingsEditorUnableToSaveNewDpapiSettingsCaption = Unable to save file with new DPAPI settings
+
+; error message when a key algorithm storage provider is not provided 
+KeyAlgorithmStorageProviderRequiredValidationErrorMessage = You must configure a key algorithm storage provider (Configuration Application Block->Encryption Settings->New->[Storage Provider]) in order to Encrypt this configuration section.
+
+; message to display first time running the dpapi settings
+DpapiSettingsFirstRunInstructionMessage = Please select the data protection mode.  "User" mode will encrypt your data using the credentials of the currently logged in user.  "Machine" mode will allow any user on this computer to encrypt and decrypt data. "None" (if applicable) will not use any DPAPI protection. \n\nIMPORTANT: When using "Machine" mode be sure to save the entropy in a safe place. Your configuration can not be recovered if the entropy is lost.
+
+; warning message for dpapi settings
+DpapiSettingsWarningMessage = WARNING: Data encrypted with the current storage mode and entropy (if applicable) will not be able to be decrypted if changed.
+
+; error message when the dpapi mode are missing
+DpapiMissingModeCaption = Error
+DpapiMissingModeErrorMessage = Mode is required.  You must select a mode before closing this dialog.
+
+; message to ask the user if the really want to change their dpapi settings
+DpapiChangeConfirmCaption = Confirmation
+DpapiChangeConfirmMessage = Are you sure you want to continue? Data encrypted with the current storage mode and entropy (if applicable) will not be able to be decrypted if changed.
+DpapiConvertKeyConfirmMessage = This will convert your existing key file to the newly configured DPAPI settings. Do you wish to continue?
+
+; error message when the minimum size for the entropy is wrong
+DpapiEntropyMinSizeCaption = Error
+DpapiEntropyConvertErrorMessage = Entropy is not valid.
+
+; the default ToString for DPAPIMode
+DefaultDpapiModeToString = (none)
+
+; the default ToString for DPAPIMode
+DpapiModeToString(string mode) = DPAPI Mode: {0}
+
+; Help information on DPAPI
+DpapiInformationMessage = DPAPI is part of the operating system and can be used to encrypt the file containing the key algorithm pair. DPAPI operates in either user or machine mode. In user mode, the ability to decrypt the file is restricted to a single account. Machine mode restricts the ability to decrypt the file to the computer used when the file was encrypted. Please see the Enterprise Library Documentation for information about the use of this option.
+DpapiInformationCaption = About DPAPI Protection
+
+; message telling user that passwards don't match
+MismatchedPasswordMessage = The passwords do not match. Passwords are case sensitive (e.g. "password" does not equal "PassWord"). Please try again.
+MismatchedPasswordCaption = Passwords do not match
+
+; The description for ConfigurationNode.Name
+NodeNameDescription = Gets or sets the name of the node.
+
+; The description for a type name
+TypeNameDescription = Gets or sets the qualified type name.
+
+; The default name of CustomStorageProviderNode
+CustomStorageProviderNodeDefaultName = Custom Storage Provider
+
+; The default name of CustomTransformerProviderNode 
+CustomTransformerNodeDefaultName = Custom Transformer Provider
+
+; The default name of CustomStorageProviderNode
+CustomKeyAlgorithmPairStorageProviderNodeDefaultName = Custom Key Algorithm Pair Storage Provider
+
+; The description for the name value pairs for the custom storage provider
+CustomStorageProviderAttributesDescription = Defines any number of custom properties that can be passed to a the custom storage provider.
+
+; The description for the name value pairs for the custom storage provider
+CustomTransformerAttributesDescription = Defines any number of custom properties that can be passed to a the custom transformer.
+
+; The description for the name value pairs for the custom storage provider
+CustomKeyAlgorithmPairStorageProviderAttributesDescription = Defines any number of custom properties that can be passed to a the custom key algorithm pair storage provider.
+
+; The description for the TypeName of CustomStorageProviderNode
+CustomStorageProviderNodeTypeNameDescription = The fully qualified type name of the custom storage provider.
+
+; The description for the TypeName of CustomStorageProviderNode
+CustomTransformerNodeTypeNameDescription = The fully qualified type name of the custom transformer.
+
+; The description for the TypeName of CustomStorageProviderNode
+CustomKeyAlgorithmPairStorageProviderNodeTypeNameDescription = The fully qualified type name of the key algorithm pair storage provider.
+
+KeyFilesString = Key Files (*.key)|*.key|All files (*.*)|*.*
+
+FileKeyAlgorithmStorageProviderNodeDpapiSettingsDescription = Gets or sets the DPAPI settings used to protect the file.
+
+FileKeyAlgorithmStorageProviderNodeFileDescription = Gets or sets the path of the file for storage
+
+AssembliesLabelText = Assemblies
+

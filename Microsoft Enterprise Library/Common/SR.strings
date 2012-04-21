@@ -1,0 +1,72 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Enterprise Library Shared Library
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+# Exception messsges
+ExceptionAccessDeniedFailure = Access Denied - the current user does not have permission to perform the action.  \n
+ExceptionCollectionModified = Collection was modified after the enumerator was instantiated.
+ExceptionCreateInstanceFailure(name, value) = Failed to create instances of performance counter '{0}' - {1}.
+ExceptionSetRawValueFailure(name, value) = Failed to set raw value for performance counter '{0}' - {1}.
+ExceptionCollectionReadOnly = Collection is read-only.
+ExceptionIncrementValueFailure(name, value) = Failed to increment the value for performance counter '{0}' - {1}
+ExceptionDecrementValueFailure(name, value) = Failed to decrement the value for performance counter '{0}' - {1}
+ExceptionDuplicateEntry(name) = The collection already contains an entry for '{0}'.
+ExceptionDetails = Exception Information Details:
+ExceptionStackTraceDetails = StackTrace Information Details:
+ExceptionSummary = Summary for
+ExceptionStringArray = The array must be a string array.
+ExceptionByteArrayValueMustBeGreaterThanZeroBytes = The value must be greater than 0 bytes.
+ExceptionEmptyString(string name) = The value of '{0}' can not be an empty string.
+ExceptionExpectedType(string typeName) = The type is invalid. Expected type '{0}'.
+ExceptionInvalidNullNameArgument(string name) = The name for the '{0}' can not be null or an empty string.
+ExceptionDecrypting = Unable to decrypt data.
+ExceptionCreatingSymmetricAlgorithmInstance = Unable to load algorithm.
+ExceptionCastingSymmetricAlgorithmInstance = Type must inherit from SymmetricAlgorithm
+ExceptionCreatingHashAlgorithmInstance = Unable to load algorithm.
+ExceptionCastingHashAlgorithmInstance = Type must inherit from HashAlgorithm.
+ExceptionEnumerationNotDefined(string variableName, string typeName) = {0} is not a valid value for {1}.
+
+# Dpapi
+DpapiFormattingError(int errorCode) = A formatting error occurred with an error code of {0}.
+DpapiMustHaveEntropyForMachineMode = You must define the entropy when using machine mode.
+DpapiZeroLengthEntropy = Entropy length must be greater than zero.
+DpapiAllocatingEntropyBuffer = Unable to allocate entropy buffer.
+DpapiEncryptionFailed(string reason) = Encryption failed: {0}.
+DpapiUnableToAllocateCipherTextBuffer = Unable to allocate cipher text buffer.
+DpapiDecryptionFailed(string reason) = Decryption failed: {0}.
+
+# Crypto
+InvalidHexString = String must represent a valid hexadecimal (e.g. : 0F99DD)
+EnterpriseLibraryCryptography = Enterprise Library Cryptography
+
+# Instrumentation strings
+LogName = Application
+MachineName = .
+FailureLogSource = Enterprise Library Instrumentation
+LineSeperator = -----------------------------------
+WmiEventFailure(eventName, exceptionMessage) = Failed to fire the WMI event '{0}'.  Exception: {1}.
+DefaultInstanceName = Enterprise Library Application
+GlobalInstanceName = _total_
+AppSettingApplicationName = Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationManager.ApplicationName
+ExceptionType = Exception Type

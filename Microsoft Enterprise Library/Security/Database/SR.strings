@@ -1,0 +1,47 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Security Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Comments are lines starting with ";" or "#"
+
+# Comments should be added before the string. 
+
+# Options are specified as lines starting with "#!"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+[strings]
+NamePasswordCredentialsAreNull = The provided NamePassword Credentials object was null.
+NamePasswordCredentialsInvalid = The provided NamePassword Credentials are invalid or incomplete.
+DBAuthenticationProviderConfigDataIsNull = The provided DB Authentication Provider Configuration data was null.
+DBAuthenticationProviderConfigDataInvalid = The provided DB Authentication Provider Configuration data was incomplete.
+IdentityIsNull = The provided IIdentity object is null.
+IdentityInvalid = The provided IIdentity object is incomplete or invalid.
+
+DBProfileProviderConfigDataIsNull = The provided DB Profile Provider Configuration data was null.
+DBProfileProviderConfigDataInvalid = The provided DB Profile Provider Configuration data was incomplete.
+ProfileDictionaryZeroItems = Profile dictionary must contain 1 or more items.
+ConversionException(keyValue, type) = Unable to convert '{0}' into {1}.
+
+ProfileIsNull = The provided Profile object is null.
+ProfileExceedsMaxLength(int length, int maxLength) = The profile has a length of {0}.  This exceeds the maximum allowed length of {1}.
+
+LoadingProfileException(userName) = Error loading the profile for the following user '{0}'.
+SavingProfileException(userName) = Error saving the profile for the following user '{0}'.
+
+NoUserExists(userName) = There was an error deleting user '{0}'. User does not exist.
+NoRoleExists(roleName) = There was an error deleting role '{0}'. Role does not exist.
+BatchNoUserExists = One or more users did not exist while deleting user-roles. The data is unchanged.
+BatchNoRoleExists = One or more roles did not exist while deleting user-roles. The data is unchanged.

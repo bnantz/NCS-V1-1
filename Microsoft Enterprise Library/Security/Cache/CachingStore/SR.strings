@@ -1,0 +1,33 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Security Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Comments are lines starting with ";" or "#"
+
+# Comments should be added before the string. 
+
+# Options are specified as lines starting with "#!"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+; Error message displayed when the app can't open a file
+FileOpenError(filename, description) = Unable to open {0} : {1}
+SecurityCacheConfigDataNull = Security Cache Configuration Data is Null.
+SecurityCacheConfigDataInvalid = Security Cache Configuration Data is Incomplete or Invalid.
+ExceptionRangeSlidingExpiration = Sliding time should be greater than or equal to 1 second.
+EmptySecurityCacheInstanceNameException = Security cache instance name is required.

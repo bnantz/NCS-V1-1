@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode">
+            <summary>
+            Node representing configuration from <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData)">
+            <summary>
+            Constructor for AzManAuthorizationProviderDataNode.
+            </summary>
+            <param name="azManAuthorizationProviderData">Configuration data for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider"></see></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.Application">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData.Application"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.Scope">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData.Scope"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.StoreLocation">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData.StoreLocation"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.AuditIdentifierPrefix">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData.AuditIdentifierPrefix"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.TypeName">
+            <summary>
+            The fully qualified type name for the AzMan provider 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.AuthorizationProviderData">
+            <summary>
+            See <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationProviderNode.AuthorizationProviderData"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.Resources">
+            <devdoc>
+            Used for the common ui culture in SR
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SecurityAzManConfigurationDesignManager">
+            <summary>
+            Configuration Design Manager for AzMan. <seealso cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationDesignManager"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SecurityAzManConfigurationDesignManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SecurityAzManConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SecurityAzManConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SecurityAzManConfigurationDesignManager.Open(System.IServiceProvider)">
+            <summary>
+            <para>Opens the configuration settings and registers them with the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SecurityAzManConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            <para>Saves the configuration settings created for the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SecurityAzManConfigurationDesignManager.BuildContext(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary)">
+            <summary>
+            <para>Adds to the dictionary configuration data for 
+            the enterpriselibrary.configurationSettings configuration section.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+            <param name="configurationDictionary">
+            <para>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.ConfigurationDictionary"/> to add 
+            configuration data to.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SRCategoryAttribute">
+            <devdoc>
+            Represents a localized vertion of a CategoryAttribute. It uses the local string resources for localization.
+            This class cannot be inherited from
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SRDescriptionAttribute">
+            <devdoc>
+            Represents a localized vertion of a DescriptionAttribute. It uses the local strings resouce to get its description.
+            This class cannot be inherited from 
+            </devdoc>
+        </member>
+    </members>
+</doc>

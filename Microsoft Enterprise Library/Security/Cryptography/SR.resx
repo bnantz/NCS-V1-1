@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="MissingPassword">
+    <value>Key file is password protected and no password was provided.</value>
+  </data>
+  <data name="MustUseKeyedHashAlgorithmProvider">
+    <value>You must use a KeyedHashAlgorithmProvider for a KeyedHashAlgorithm.</value>
+  </data>
+  <data name="SymmetricCryptoFactory">
+    <value>Symmetric Cryptography Factory</value>
+  </data>
+  <data name="HashFactory">
+    <value>Hash Factory</value>
+  </data>
+  <data name="ExceptionCreatingHashAlgorithmInstance">
+    <value>Unable to load algorithm.</value>
+  </data>
+  <data name="ExceptionCreatingSymmetricAlgorithmInstance">
+    <value>Unable to load algorithm.</value>
+  </data>
+  <data name="ExceptionCastingSymmetricAlgorithmInstance">
+    <value>Type must inherit from SymmetricAlgorithm</value>
+  </data>
+  <data name="ExceptionValidatingDataArgument">
+    <value>Data is invalid.</value>
+  </data>
+  <data name="ExceptionDecrypting">
+    <value>Unable to decrypt data.</value>
+  </data>
+  <data name="ExceptionNoSymmetricCryptoProvider">
+    <value>The symmetric cryptography provider '{0}' could not be found in configuration.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionCryptoSettingsMissing">
+    <value>The cryptography settings are not present in configuration.</value>
+  </data>
+  <data name="ExceptionNoCryptoProvider">
+    <value>'{0}' is not a named symmetric cryptography provider in configuration.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionNoHashProvider">
+    <value>'{0}' is not a named hash cryptography provider in configuration.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="InstrumentationEventSource">
+    <value>Enterprise Library Security Cryptography</value>
+  </data>
+  <data name="InstrumentationCounterCategory">
+    <value>Enterprise Library Security Cryptography</value>
+  </data>
+  <data name="InstrumentationCounterCategoryHelp">
+    <value>Enterprise Library Security Cryptography application performance counters.</value>
+  </data>
+  <data name="PerfCounterNumSymmEncryptionSecMsg">
+    <value>Number of symmetric encryptions per second.</value>
+  </data>
+  <data name="PerfCounterNumSymmDecryptionSecMsg">
+    <value>Number of symmetric decryptions per second.</value>
+  </data>
+  <data name="PerfCounterNumCreateHashSecMsg">
+    <value>Number of hash creates per second.</value>
+  </data>
+  <data name="PerfCounterNumCheckHashSecMsg">
+    <value>Number of hash checks per second.</value>
+  </data>
+  <data name="PerfCounterNumCheckHashFailureSecMsg">
+    <value>Number of hash check failures per second.</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

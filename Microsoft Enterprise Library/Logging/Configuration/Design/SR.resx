@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="ExceptionCollectionAlreadyExists">
+    <value>This collection type already appears in this node and can only appear once.</value>
+  </data>
+  <data name="CategoryFilterSettingsDescription">
+    <value>Categories to explicitly allow or explicitly deny</value>
+  </data>
+  <data name="TracingEnabledDescription">
+    <value>Enable or disable trace logging</value>
+  </data>
+  <data name="LoggingEnabledDescription">
+    <value>Enable or disable all logging</value>
+  </data>
+  <data name="DistributionStrategyDescription">
+    <value>Synchronous or asynchronous log distribution strategy</value>
+  </data>
+  <data name="MsmqPathDescription">
+    <value>Private or public message queue path</value>
+  </data>
+  <data name="MinimumPriority">
+    <value>Minimum message priority to be delivered</value>
+  </data>
+  <data name="InProcDistributionStrategyDescription">
+    <value>Synchronous in process distribution strategy</value>
+  </data>
+  <data name="DistributionStrategyTypeNameDescription">
+    <value>The fully qualified assembly name of the Distribution Strategy</value>
+  </data>
+  <data name="DistributorServiceNameDescription">
+    <value>Distributor windows service name</value>
+  </data>
+  <data name="DefaultCategoryDescription">
+    <value>Category to use if a category is not defined or is misspelled</value>
+  </data>
+  <data name="QueueTimerIntervalDescription">
+    <value>Timer interval for the distributor service to check MSMQ for new messages</value>
+  </data>
+  <data name="DefaultFormatDescription">
+    <value>Formatter to use if a formatter is not defined</value>
+  </data>
+  <data name="SinkDescription">
+    <value>Destination log sink.</value>
+  </data>
+  <data name="FormatDescription">
+    <value>Destination format.  Optional.</value>
+  </data>
+  <data name="SinkTypeNameDescription">
+    <value>The fully qualified assembly name of the log sink</value>
+  </data>
+  <data name="FormatterTypeDescription">
+    <value>The fully qualified assembly name of the formatter</value>
+  </data>
+  <data name="CustomFormatterAttributesDescription">
+    <value>Custom configuration properties for this Formatter.</value>
+  </data>
+  <data name="CustomSinkAttributesDescription">
+    <value>Custom configuration properties for this Sink.</value>
+  </data>
+  <data name="CustomDistributionStrategyAttributesDescription">
+    <value>Custom configuration properties for this Distribution Strategy.</value>
+  </data>
+  <data name="EmailSinkToAddressDescription">
+    <value>One or more email addresses separated by semicolons</value>
+  </data>
+  <data name="EmailSinkFromAddressDescription">
+    <value>From email address</value>
+  </data>
+  <data name="EmailSinkSubjectLineStarterDescription">
+    <value>Standard text to be added to the message subject before log message severity</value>
+  </data>
+  <data name="EmailSinkSubjectLineEnderDescription">
+    <value>Standard text to be added to the message subject after log message severity</value>
+  </data>
+  <data name="EmailSinkSmtpServerDescription">
+    <value>SMTP server to send emails</value>
+  </data>
+  <data name="EventLogSinkEventLogNameDescription">
+    <value>Event log name.  Optional - defaults to Application log.</value>
+  </data>
+  <data name="EventLogSinkEventSourceNameDescription">
+    <value>Event source name.</value>
+  </data>
+  <data name="FlatFileSinkFlatFileName">
+    <value>File name and directory.</value>
+  </data>
+  <data name="FlatFileSinkHeader">
+    <value>Header to append before each log entry.  Optional.</value>
+  </data>
+  <data name="FlatFileSinkFooter">
+    <value>Footer to append after each log entry.  Optional.</value>
+  </data>
+  <data name="MsmqSinkQueuePathDescription">
+    <value>Private or public message queue</value>
+  </data>
+  <data name="MsmqSinkMessagePriorityDescription">
+    <value>A priority for the message when sent to the queue.</value>
+  </data>
+  <data name="Name">
+    <value>Name</value>
+  </data>
+  <data name="LogSettingsNode">
+    <value>Logging and Instrumentation Application Block</value>
+  </data>
+  <data name="LogSettingsCmd">
+    <value>Logging and Instrumentation Application Block</value>
+  </data>
+  <data name="ClientSettings">
+    <value>Client Settings</value>
+  </data>
+  <data name="DistributionStrategy">
+    <value>Distribution Strategy</value>
+  </data>
+  <data name="DistributionStrategies">
+    <value>Distribution Strategies</value>
+  </data>
+  <data name="CustomDistributionStrategy">
+    <value>Custom Distribution Strategy</value>
+  </data>
+  <data name="MsmqDistributionStrategy">
+    <value>MSMQ</value>
+  </data>
+  <data name="InProcDistributionStrategy">
+    <value>In Process</value>
+  </data>
+  <data name="DistributorSettings">
+    <value>Distributor Settings</value>
+  </data>
+  <data name="Sinks">
+    <value>Sinks</value>
+  </data>
+  <data name="Sink">
+    <value>Sink</value>
+  </data>
+  <data name="CustomSink">
+    <value>Custom Sink</value>
+  </data>
+  <data name="DatabaseSink">
+    <value>Database Sink</value>
+  </data>
+  <data name="EmailSink">
+    <value>Email Sink</value>
+  </data>
+  <data name="EventLogSink">
+    <value>Event Log Sink</value>
+  </data>
+  <data name="FlatFileSink">
+    <value>Flat File Sink</value>
+  </data>
+  <data name="RollingFlatFileSink">
+    <value>Rolling Flat File Sink</value>
+  </data>
+  <data name="ConsoleSink">
+    <value>Console Sink</value>
+  </data>
+  <data name="MsmqSink">
+    <value>MSMQ Sink</value>
+  </data>
+  <data name="WmiLogSink">
+    <value>WMI Sink</value>
+  </data>
+  <data name="WSSink">
+    <value>Web service Sink</value>
+  </data>
+  <data name="Formatters">
+    <value>Formatters</value>
+  </data>
+  <data name="Formatter">
+    <value>Formatter</value>
+  </data>
+  <data name="Categories">
+    <value>Categories</value>
+  </data>
+  <data name="Category">
+    <value>Category</value>
+  </data>
+  <data name="CustomFormatter">
+    <value>Custom Formatter</value>
+  </data>
+  <data name="TextFormatter">
+    <value>Text Formatter</value>
+  </data>
+  <data name="Destinations">
+    <value>Destinations</value>
+  </data>
+  <data name="Destination">
+    <value>Destination</value>
+  </data>
+  <data name="DistributorService">
+    <value>MSMQ Distributor Service</value>
+  </data>
+  <data name="TemplatePlaceHolder">
+    <value>&lt;template&gt;</value>
+  </data>
+  <data name="CategoryFilterSummaryAllow">
+    <value>Allow all except</value>
+  </data>
+  <data name="CategoryFilterSummaryDeny">
+    <value>Deny all except</value>
+  </data>
+  <data name="DefaultFormatter">
+    <value>Text Formatter</value>
+  </data>
+  <data name="DefaultFormatterDescription">
+    <value>Default Formatter</value>
+  </data>
+  <data name="DefaultCategory">
+    <value>General</value>
+  </data>
+  <data name="DefaultCategoryDestination">
+    <value>Event Log Destination</value>
+  </data>
+  <data name="DefaultTracingCategory">
+    <value>Trace</value>
+  </data>
+  <data name="DefaultTracingFileSink">
+    <value>Flat File Sink</value>
+  </data>
+  <data name="DefaultTracingDestination">
+    <value>Flat File Destination</value>
+  </data>
+  <data name="DefaultTextFormat">
+    <value>Timestamp: {timestamp}
+Message: {message}
+Category: {category}
+Priority: {priority}
+EventId: {eventid}
+Severity: {severity}
+Title:{title}
+Machine: {machine}
+Application Domain: {appDomain}
+Process Id: {processId}
+Process Name: {processName}
+Win32 Thread Id: {win32ThreadId}
+Thread Name: {threadName}
+Extended Properties: {dictionary({key} - {value}
+)}</value>
+  </data>
+  <data name="GenericCreateStatusText">
+    <value>Create a new {0}</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="CategoryGeneral">
+    <value>General</value>
+    <comment> Category for all properties in a property grid</comment>
+  </data>
+  <data name="DuplicateSinkInDestationMessage">
+    <value>The destination {0} already contains a definition for sink {1}. Each destination must have a unique sink.</value>
+    <comment>.
+ Parameters: 0 - destinationName (string), 1 - sinkName (string) </comment>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

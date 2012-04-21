@@ -1,0 +1,908 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{8DF66423-5A9B-4763-B6F9-80185F887161}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "NCS.Web"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "NCS.Web"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "System.Web"
+                    AssemblyName = "System.Web"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Design"
+                    AssemblyName = "System.Design"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Design.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\javascript\javascript.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ComboBox\ComboBox.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\ComboBox\ComboBox.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ComboBox\ComboBox.resx"
+                    DependentUpon = "ComboBox.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Components\serverside\ComboBox\ComboBoxDesigner.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ComboBox\ToolBox Icon.psd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\ClientScriptUtil.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\ClientScriptUtil.resx"
+                    DependentUpon = "ClientScriptUtil.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\ConfirmedButton.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\ConfirmedButton.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\ConfirmedButtonColumn.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\ConfirmedEditCommandColumn.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\ConfirmedImageButton.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\ConfirmedImageButton.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\ConfirmedLinkButton.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\ConfirmedLinkButton.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\ToolboxIcon.psd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\WebUIConfirmation.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\DefaultButtons\DefaultButtons.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\DefaultButtons\DefaultButtons.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\DefaultButtons\DefaultButtons.resx"
+                    DependentUpon = "DefaultButtons.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\DefaultButtons\DefaultButtonsDesigner.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\DefaultButtons\DefaultButtonSetting.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\DefaultButtons\DefaultButtonSettingCollection.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\DefaultButtons\DefaultButtonSettingControlBuilder.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ConfirmedButtons\DefaultButtons\ToolBox Icon.psd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Components\serverside\DatePicker\DatePicker.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DatePicker\DatePicker.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DatePicker\DatePickerControlBuilder.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DatePicker\ClientFiles\Calendar.htc"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DatePicker\ClientFiles\CalendarFrame.htm"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DatePicker\ClientFiles\DatePicker.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DatePicker\ClientFiles\Error.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DatePicker\ClientFiles\Picker.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DatePicker\Design\DatePickerDesigner.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogControlConverter.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogDesigner.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogHandlerFactory.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogImageHandler.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogInputBox.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogInputBox.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogInputBoxPage.cs"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogMessageBox.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogMessageBox.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogMessageBoxButtons.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogMessageBoxIcon.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogMessageBoxPage.cs"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogOpenButton.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogOpenButton.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogOpenLink.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogOpenLink.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogPage.cs"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogResultEvent.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogWindow.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogWindow.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogWindowBase.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\DialogWindowBaseScript.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\exclamation.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\information.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\OpenerDesigner.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\question.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DialogWindow\DialogWindow\stop.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DropDownColorPicker\DropDownColorPicker.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\DropDownColorPicker\DropDownColorPicker.htc"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DropDownColorPicker\DropDownColorPicker.htm"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\DropDownColorPicker\mpc.htc"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\FileUpload\FileUpload.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\FirstFocus\FirstFocus.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\FirstFocus\FirstFocus.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\FirstFocus\FirstFocus.psd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Components\serverside\FirstFocus\FirstFocusControlIdConverter.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\FirstFocus\FirstFocusDesigner.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\FirstFocus\FirstFocusScript.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\ListView\ListView.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\ListView\ListView.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ListView\ListViewCommandEventArgs.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ListView\ListViewCommandType.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ListView\ListViewItem.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ListView\ListViewItemCollection.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ListView\ListViewItemEventArgs.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ListView\ListViewItemType.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ListView\ListViewPanel.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ListView\ListViewPanelStyle.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ListView\ListViewTable.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ListView\Design\ListViewDesigner.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\OneClick\OneClick.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\OneClick\OneClick.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\OneClick\OneClickDesigner.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\RemoteWindow\RemoteWindow.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ResizeMonitor\ResizeMonitor.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\ResizeMonitor\ResizeMonitor.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\ResizeMonitor\ResizeMonitor.resx"
+                    DependentUpon = "ResizeMonitor.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Components\serverside\ResizeMonitor\ResizeMonitor.psd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Components\serverside\ResizeMonitor\ResizeMonitorDesigner.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\TreeViewClass\TreeView.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\TreeViewClass\treeview.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\WebPanelBar\Group.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\WebPanelBar\Groups.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\WebPanelBar\Item.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\WebPanelBar\Items.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Components\serverside\WebPanelBar\Readme.txt"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\WebPanelBar\WebPanelBar.bmp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Components\serverside\WebPanelBar\WebPanelBar.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\AdRotator.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\AdRotator.resx"
+                    DependentUpon = "AdRotator.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\Button.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Button.resx"
+                    DependentUpon = "Button.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\Calendar.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Calendar.resx"
+                    DependentUpon = "Calendar.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\CheckBox.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\CheckBox.resx"
+                    DependentUpon = "CheckBox.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\CheckedListBox.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\CheckedListBox.resx"
+                    DependentUpon = "CheckedListBox.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\CompareValidator.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\CompareValidator.resx"
+                    DependentUpon = "CompareValidator.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\CustomValidator.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\CustomValidator.resx"
+                    DependentUpon = "CustomValidator.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\DataGrid.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\DataGrid.resx"
+                    DependentUpon = "DataGrid.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\DataList.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\DataList.resx"
+                    DependentUpon = "DataList.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\DropDownList.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\DropDownList.resx"
+                    DependentUpon = "DropDownList.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\HyperLink.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\HyperLink.resx"
+                    DependentUpon = "HyperLink.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\Image.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Image.resx"
+                    DependentUpon = "Image.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\ImageButton.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\ImageButton.resx"
+                    DependentUpon = "ImageButton.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\Label.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Label.resx"
+                    DependentUpon = "Label.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\LinkedButton.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\LinkedButton.resx"
+                    DependentUpon = "LinkedButton.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\ListBox.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\ListBox.resx"
+                    DependentUpon = "ListBox.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\Literal.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Literal.resx"
+                    DependentUpon = "Literal.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\Panel.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Panel.resx"
+                    DependentUpon = "Panel.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\PlaceHolder.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\PlaceHolder.resx"
+                    DependentUpon = "PlaceHolder.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\RadioButton.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\RadioButton.resx"
+                    DependentUpon = "RadioButton.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\RadioButtonList.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\RadioButtonList.resx"
+                    DependentUpon = "RadioButtonList.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\RangeValidator.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\RangeValidator.resx"
+                    DependentUpon = "RangeValidator.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\RegularExpressionValidator.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\RegularExpressionValidator.resx"
+                    DependentUpon = "RegularExpressionValidator.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\Repeater.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Repeater.resx"
+                    DependentUpon = "Repeater.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\RequiredFieldValidator.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\RequiredFieldValidator.resx"
+                    DependentUpon = "RequiredFieldValidator.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\Table.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Table.resx"
+                    DependentUpon = "Table.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\TextBox.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\TextBox.resx"
+                    DependentUpon = "TextBox.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\ValidationSummary.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\ValidationSummary.resx"
+                    DependentUpon = "ValidationSummary.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\Xml.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Xml.resx"
+                    DependentUpon = "Xml.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <Folder RelPath = "images\" />
+                <File
+                    RelPath = "Provider Model Pattern\Providers\Providers\System\Configuration\Providers\ProviderBase.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Provider Model Pattern\Providers\Providers\System\Web\Security\Membership.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Provider Model Pattern\Providers\Providers\System\Web\Security\MembershipConfiguration.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Provider Model Pattern\Providers\Providers\System\Web\Security\MembershipConfigurationHandler.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Provider Model Pattern\Providers\Providers\System\Web\Security\MembershipProvider.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Provider Model Pattern\Providers\SqlMembershipProvider\SqlMembershipProvider.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

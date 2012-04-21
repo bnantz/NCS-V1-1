@@ -1,0 +1,90 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Security Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Comments are lines starting with ";" or "#"
+
+# Comments should be added before the string. 
+
+# Options are specified as lines starting with "#!"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+; Statusbar Text
+GenericCreateStatusText(string name) = Create a new {0}
+
+AuthenticationProviderCollectionNodeName = Authentication
+AuthenticationProviderCollectionNodeCommandName = Authentication Settings
+AuthenticationProviderNodeName = Authentication Provider
+CustomAuthenticationProviderCommandName = Custom Authentication Provider
+AuthorizationProviderCollectionNodeName = Authorization
+AuthorizationProviderCollectionNodeCommandName = Authorization Settings
+AuthorizationProviderNodeName = Authorization Provider
+CustomAuthorizationProviderCommandName = Custom Authorization Provider
+RolesProviderCollectionNodeName = Roles
+RolesProviderCollectionNodeCommandName = Roles Settings
+RolesProviderNodeName = Roles Provider
+CustomRolesProviderCommandName = Custom Roles Provider
+ProfileProviderCollectionNodeName = Profile
+ProfileProviderCollectionNodeCommandName = Profile Settings
+ProfileProviderNodeName = Profile Provider
+CustomProfileProviderCommandName = Custom Profile Provider
+AddConfigurationSectionCommandName =Security Application Block 
+SecuritySettingsNodeName = Security Application Block
+SecuritySettingsNodeCommandName = Security Application Block
+SecurityCacheNodeDefaultName = Security Cache Provider
+SecurityCacheNodeCommandName = Security Cache Provider
+CustomSecurityCacheNodeCommandName = Custom Cache Provider
+CustomSecurityCacheNodeDefaultName = Custom Cache Provider
+SecurityCacheCollectionNodeCommandName = Security Cache
+
+AuthorizationRuleProviderName = RuleProvider
+AuthorizationRuleProviderCommandName = Authorization Rule Provider
+AuthorizationRuleNodeName = Rule
+AuthorizationRuleCommandName = Rule
+NotOperatorNodeName = Not
+NotOperatorNodeCommandName = Not Operator
+BooleanExpressionNodeName = Expression
+IdentityExpressionCommandName = Identity Expression
+IdentityExpressionNodeName = Identity
+AnyIdentityExpressionNodeName = *
+AnyIdentityExpressionNodeCommandName = Any Identity (*)
+AnonymousIdentityExpressionNodeName = ?
+AnonymousIdentityExpressionNodeCommandName = Anonymous Identity (?)
+OrOperatorNodeName = Or
+OrOperatorNodeCommandName = Or Operator
+AndOperatorNodeName = And
+AndOperatorNodeCommandName = And Operator
+RoleExpressionNodeName = Role
+RoleExpressionNodeCommandName = Role Expression
+
+DefaultProviderDescription = The default authentication provider.
+ProviderTypeNameDescription = The name of a class that implements the IAuthenticationProvider interface.
+ParseSucceededMessageBox = Expression is valid.
+ParseSucceededMessageBoxCaption = Expression is valid.
+ParseFailedMessage(string message) = Expression is invalid. {0}
+ParseFailedCaption = Expression is invalid.
+EvaluateMessageBox(bool result) = Evaluation returned {0}.
+EvaluateMessageBoxCaption = Evaluate Expression
+UnableToParseDialogMessage = Unable to parse expression.  Are you sure you want to exit?
+UnableToParseDialogCaption = Unable to parse expression
+AccessGranted = Authorized
+AccessDenied = Not Authorized
+RuleNameRequired = You must specify a name for this Rule.
+
+CategoryGeneral = Category

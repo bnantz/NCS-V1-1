@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="UserName">
+    <value>User id,uid</value>
+  </data>
+  <data name="Password">
+    <value>Password,pwd</value>
+  </data>
+  <data name="FactoryName">
+    <value>Database</value>
+  </data>
+  <data name="ExceptionMsg">
+    <value> Exception: </value>
+  </data>
+  <data name="EventSource">
+    <value>Enterprise Library Data Service</value>
+  </data>
+  <data name="CounterCategory">
+    <value>Enterprise Library Data Service</value>
+  </data>
+  <data name="CounterCategoryHelp">
+    <value>Enterprise Library Data Service application performance counters.</value>
+  </data>
+  <data name="LogName">
+    <value>Application</value>
+  </data>
+  <data name="NumConnPerSec">
+    <value># of Connections Opened/Sec</value>
+  </data>
+  <data name="NumConnPerSecMsg">
+    <value>Number of database connections opened by the Enterprise Library Data Service.</value>
+  </data>
+  <data name="NumConnFailPerSec">
+    <value># of Connection Failures/Sec</value>
+  </data>
+  <data name="NumConnFailPerSecMsg">
+    <value>Number of database connections that failed to open by the Enterprise Library Data Service.</value>
+  </data>
+  <data name="NumCmdsPerSec">
+    <value># of Commands Executed/Sec</value>
+  </data>
+  <data name="NumCmdsPerSecMsg">
+    <value>Number of database commands executed by the Enterprise Library Data Service.</value>
+  </data>
+  <data name="NumCmdsFailPerSec">
+    <value># of Command Failures/Sec</value>
+  </data>
+  <data name="NumCmdsFailPerSecMsg">
+    <value>Number of database commands that failed to execute by the Enterprise Library Data Service.</value>
+  </data>
+  <data name="NumTransOpenPerSec">
+    <value># of Transactions Opened/Sec</value>
+  </data>
+  <data name="NumTransOpenPerSecMsg">
+    <value>Number of database transactions opened by the Enterprise Library Data Service.</value>
+  </data>
+  <data name="NumTransFailPerSec">
+    <value># of Transaction Failures/Sec</value>
+  </data>
+  <data name="NumTransFailPerSecMsg">
+    <value>Number of database transactions that failed to open by the Enterprise Library Data Service.</value>
+  </data>
+  <data name="NumTransCommitPerSec">
+    <value># of Transactions Committed/Sec</value>
+  </data>
+  <data name="NumTransCommitPerSecMsg">
+    <value>Number of database transactions committed by the Enterprise Library Data Service.</value>
+  </data>
+  <data name="NumTransAbortPerSec">
+    <value># of Transactions Aborted/Sec</value>
+  </data>
+  <data name="NumTransAbortPerSecMsg">
+    <value>Number of database transactions rolled back by the Enterprise Library Data Service.</value>
+  </data>
+  <data name="AvgCmdTime">
+    <value>Average Command Execution Time</value>
+  </data>
+  <data name="AvgCmdTimeMsg">
+    <value>Average round-trip time, in seconds, for executing a database command.</value>
+  </data>
+  <data name="TotalCmd">
+    <value>Total Command Executions</value>
+  </data>
+  <data name="TotalCmdMsg">
+    <value>Total database command executed.</value>
+  </data>
+  <data name="MessageConnection">
+    <value>Connection: {0}</value>
+    <comment>.
+ Parameters: 0 - connectionString (string) </comment>
+  </data>
+  <data name="MessageDataConnectionOpened">
+    <value>Data Connection opened: {0}</value>
+    <comment>.
+ Parameters: 0 - connectionString (string) </comment>
+  </data>
+  <data name="ExceptionConnectionStringNotSet">
+    <value>The connection string value is not set.</value>
+  </data>
+  <data name="ExceptionParameterStringIsEmpty">
+    <value>The contents of this parameter cannot be empty.</value>
+  </data>
+  <data name="ExceptionCommandTypeNotValid">
+    <value>The value of the parameter was not valid.</value>
+  </data>
+  <data name="ExceptionTableNameArrayEmpty">
+    <value>The table name array used to map results to user-specified table names cannot be empty.</value>
+  </data>
+  <data name="ExceptionTableNameEmpty">
+    <value>The specified table name is empty.</value>
+  </data>
+  <data name="ExceptionExpectedType">
+    <value>The type is invalid. Expected type '{0}'.</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="ExceptionDatabaseSettingsMissing">
+    <value>The database settings are not present in the context.</value>
+  </data>
+  <data name="ExceptionMessageCreateServiceFailure">
+    <value>Error creating EnterpriseLibrary.DataService database "{0}".</value>
+    <comment>.
+ Parameters: 0 - databaseServiceKey (string) </comment>
+  </data>
+  <data name="ExceptionMessageDatabaseCommandFailed">
+    <value>Database command failed: {0}</value>
+    <comment>.
+ Parameters: 0 - connectionString (string) </comment>
+  </data>
+  <data name="ExceptionMessageDatabaseConnectionFailed">
+    <value>Data connection failed to open: {0}</value>
+    <comment>.
+ Parameters: 0 - connectionString (string) </comment>
+  </data>
+  <data name="ExceptionMessageConfigurationLoadFailed">
+    <value>Unable to load configuration file "{0}".  Exception: {1}</value>
+    <comment>.
+ Parameters: 0 - configFilename (string), 1 - exceptionMessage (string) </comment>
+  </data>
+  <data name="ExceptionMessageNoDefault">
+    <value>A default instance was not defined in configuration so no database can be created.</value>
+  </data>
+  <data name="ExceptionMessageUpdateDataSetArgumentFailure">
+    <value>At least one command must be initialized</value>
+  </data>
+  <data name="ExceptionMessageUpdateDataSetRowFailure">
+    <value>Failed to update row </value>
+  </data>
+  <data name="ExceptionNoInstance">
+    <value>'{0}' is not a named instance in configuration.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionNoDatabaesType">
+    <value>'{0}' is not a named database type in configuration.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionNoConnectionStringType">
+    <value>'{0}' is not a named connection string in configuration.</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionMessageParameterMatchFailure">
+    <value>The number of parameters does not match number of values for stored procedure.</value>
+  </data>
+  <data name="ExceptionMessageEmptyTableName">
+    <value>Expected a non-empty string for SourceTable name.</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

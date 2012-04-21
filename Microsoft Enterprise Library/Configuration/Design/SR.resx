@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xs:schema id="root" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="root" msdata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="comment" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" />
+              <xs:attribute name="type" type="xs:string" />
+              <xs:attribute name="mimetype" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data name="ExceptionAppAlreadyOpened">
+    <value>The application is already open.</value>
+    <comment> Exception Messages</comment>
+  </data>
+  <data name="ExceptionComponentNotSited">
+    <value>The component hasn't been properly initialized yet.</value>
+    <comment> An operation requires the component to be sited and it hasn't been yet.</comment>
+  </data>
+  <data name="ExceptionServiceUnavailable">
+    <value>Can't perform operation because service '{0}' is not setup properly. Ensure the Microsoft IPE Wizards add-in is loaded.</value>
+    <comment> Receives the service that is unavailable..
+ Parameters: 0 - serviceTypeName (string) </comment>
+  </data>
+  <data name="ExceptionProfferServiceCOMFailure">
+    <value>Failed to proffer service {0}.</value>
+    <comment> Failed to proffer a service.
+ Parameters: 0 - serviceTypeName (string) </comment>
+  </data>
+  <data name="ExceptionServiceExists">
+    <value>Service {0} already exists.</value>
+    <comment> Service already exists in a ServiceContainer.
+ Parameters: 0 - serviceTypeName (string) </comment>
+  </data>
+  <data name="ExceptionInvalidServiceInstance">
+    <value>Invalid service instance.</value>
+    <comment> The service instance for the container is invalid</comment>
+  </data>
+  <data name="ExceptionInvalidComponentName">
+    <value>The name {0} is invalid for the component.</value>
+    <comment> The name is invalid for the component.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionValueNullMessage">
+    <value>The value for {0} can not be null.</value>
+    <comment> Expection message for the required attribute.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionFilesNotSaved">
+    <value>Could not save one or more of the application files.</value>
+    <comment> Could not save all the files</comment>
+  </data>
+  <data name="ExceptionFileAlreadyExists">
+    <value>The file {0} already exits in the application. Please choose another name for one of the files.</value>
+    <comment> File already exists in the document table.
+ Parameters: 0 - file (string) </comment>
+  </data>
+  <data name="ExceptionNotAssignableType">
+    <value>The type '{0}' must be assignable from the type '{1}'.</value>
+    <comment> Type not assignable to another type.
+ Parameters: 0 - assemblyName (string), 1 - typeName (string) </comment>
+  </data>
+  <data name="ExceptionNodeNameAlreadyExists">
+    <value>A sibling node with the name '{0}' already exists.</value>
+    <comment> A node in the hierarchy already has this name.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ExceptionConfigNodeCompareError">
+    <value>Cannot compare an object of type {0} to a configuration node.</value>
+    <comment> cannot compare a node to something arbitrary.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="ExceptionOnlyReorderSiblings">
+    <value>Can only re-order sibling nodes.</value>
+    <comment> Can only reorder sibling nodes</comment>
+  </data>
+  <data name="ExceptionConfigNodeExpected">
+    <value>The type of command must be a ConfigurationNode.</value>
+    <comment> Expected a config node</comment>
+  </data>
+  <data name="ExceptionLowerBoundOutOfRange">
+    <value>The lowerBound value '{0}' is not less than or equal to the upperBound value '{1}'.</value>
+    <comment> Exception for when lower bound out of range.
+ Parameters: 0 - lowerBound (string), 1 - upperBound (string) </comment>
+  </data>
+  <data name="ExceptionNoRefPathAttribute">
+    <value>The reference type for the node was not set.  Please add the ReferenceTypeAttribute to your property.</value>
+    <comment> exception when the ReferenceType attribute is not set</comment>
+  </data>
+  <data name="ExceptionNoBaseTypeAttribute">
+    <value>There is not a valid base type attribute for the selector.</value>
+    <comment> exception when no base type attribute was set for the type selector</comment>
+  </data>
+  <data name="ExceptionTypeNotValid">
+    <value>The type {0} is not valid.</value>
+    <comment> exception when a type is not valid.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="ExceptionTypeNotConfigurationNode">
+    <value>The type '{0}' must be a type of ConfigurationNode.</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="RemoveNodeMenuItemText">
+    <value>Remove</value>
+    <comment> Menu Items Text</comment>
+  </data>
+  <data name="ValidateNodeMenuItemText">
+    <value>Validate</value>
+  </data>
+  <data name="ConfigurationSectionCollectionMenuItemText">
+    <value>Configuration Application Block</value>
+  </data>
+  <data name="ConfigurationSectionMenuItemText">
+    <value>Configuration Section</value>
+  </data>
+  <data name="XmlIncludeTypeMenuItem">
+    <value>Xml Include Type</value>
+  </data>
+  <data name="CloseApplicationMenuItemText">
+    <value>Close Application</value>
+  </data>
+  <data name="RemoveNodeMenuItemStatusText">
+    <value>Remove the current node</value>
+    <comment> Menu Items StatusBar Text</comment>
+  </data>
+  <data name="ValidateNodeMenuItemStatusText">
+    <value>Validate the current node</value>
+  </data>
+  <data name="ConfigurationSectionCollectionStatusText">
+    <value>Create a new Configuration Application Block</value>
+  </data>
+  <data name="GenericCreateStatusText">
+    <value>Create a new {0}</value>
+    <comment>.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ConfigurationSectionStatusText">
+    <value>Create a new configuration section</value>
+  </data>
+  <data name="CloseApplicationStatusText">
+    <value>Close the current application</value>
+  </data>
+  <data name="SaveApplicationRequest">
+    <value>The application has not been saved, would you like to save before closing?</value>
+    <comment> Message Box messages and captions</comment>
+  </data>
+  <data name="OverwriteFilesCaption">
+    <value>Overwrite files?</value>
+  </data>
+  <data name="OverwriteFilesMessage">
+    <value>The file {0} already exists. Do you want to overwrite it and all associated configuration files?</value>
+    <comment>.
+ Parameters: 0 - file (string) </comment>
+  </data>
+  <data name="SaveApplicationErrorMessage">
+    <value>One or more errors occurred while trying to save the configuration.</value>
+  </data>
+  <data name="SaveApplicationErrorRequestMessage">
+    <value>One or more errors occurred while trying to save the configuration. Would you still like to close the application without saving?</value>
+  </data>
+  <data name="SaveApplicationCaption">
+    <value>Save Application</value>
+  </data>
+  <data name="ValidationErrorsMessage">
+    <value>One or more validation errors occurred.</value>
+  </data>
+  <data name="OpenApplicationCaption">
+    <value>Open Application</value>
+  </data>
+  <data name="OpenApplicationErrorMessage">
+    <value>One or more errors occurred while trying to open the configuration.</value>
+  </data>
+  <data name="ValidationCaption">
+    <value>Validation</value>
+  </data>
+  <data name="CanNotSaveApplicationMessage">
+    <value>Can not save the application if the application file is not set. Please set the application file name.</value>
+  </data>
+  <data name="RemoveLinkedNodeMessage">
+    <value>If you remove this node, the following node(s) {0} will also be removed. Do you wish to continue?</value>
+    <comment>.
+ Parameters: 0 - nodeName (string) </comment>
+  </data>
+  <data name="RemoveNodeCaption">
+    <value>Remove Node</value>
+  </data>
+  <data name="DefaultApplicationName">
+    <value>Application</value>
+    <comment> Default Application Name</comment>
+  </data>
+  <data name="GenericFileFilter">
+    <value>All Files(*.*)|*.*</value>
+    <comment> SaveFileEditor Defaults</comment>
+  </data>
+  <data name="ConfigurationFileFilter">
+    <value>Configuration files (*.config)|*.config|All files(*.*)|*.*</value>
+  </data>
+  <data name="GenericSaveFile">
+    <value>Save File</value>
+  </data>
+  <data name="CategoryGeneral">
+    <value>General</value>
+    <comment> Category for all properties in a property grid</comment>
+  </data>
+  <data name="None">
+    <value>(none)</value>
+    <comment> the default when using the reference editor</comment>
+  </data>
+  <data name="ValidationErrorToString">
+    <value>The property {0} of object {1} of type {2} is invalid. {3}</value>
+    <comment> used to ToString a ValidationError.
+ Parameters: 0 - property (string), 1 - invalidObject (string), 2 - invalidObjectType (string), 3 - message (string) </comment>
+  </data>
+  <data name="ConfigurationErrorToString">
+    <value>{0} at path {1}.
+{2}
+
+</value>
+    <comment> used to ToString a ConfigurationError.
+ Parameters: 0 - name (string), 1 - path (string), 2 - errorMessage (string) </comment>
+  </data>
+  <data name="ConfigurationErrorCollectionToString">
+    <value>The following configuration nodes are invalid...
+
+</value>
+    <comment> used to ToString a ConfigurationErrorCollection</comment>
+  </data>
+  <data name="RegExErrorMessage">
+    <value>The value {0} does not match the regular expression.</value>
+    <comment> RegExAttributes error message.
+ Parameters: 0 - value (string) </comment>
+  </data>
+  <data name="ValueNotInRangeErrorMessage">
+    <value>The value for {0} is not in the specified range.</value>
+    <comment> AssertRangeAttribute error message.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="ValueOutsideRangeErrorMessage">
+    <value>The value for {0} is not outside of the specified range.</value>
+    <comment> DenyRangeAttribute strings.
+ Parameters: 0 - name (string) </comment>
+  </data>
+  <data name="MaxLengthExceededErrorMessage">
+    <value>The length of the string {0} must not exceed {1}.</value>
+    <comment> MaximumLengthAttribute.
+ Parameters: 0 - name (string), 1 - length (int) </comment>
+  </data>
+  <data name="MinLengthExceededErrorMessage">
+    <value>The string {0} must have a length of at least {1}.</value>
+    <comment> MinimumLengthAttribute.
+ Parameters: 0 - name (string), 1 - length (int) </comment>
+  </data>
+  <data name="TypeSubclassErrorMsg">
+    <value>The selected type must be a subclass of {0}</value>
+    <comment> TypeSelectorEditor* strings.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="AssemblyLoadFailedErrorMessage">
+    <value>Unable to load the assembly. The error message is '{0}'.</value>
+    <comment>.
+ Parameters: 0 - message (string) </comment>
+  </data>
+  <data name="TypeSelectorInterfaceRootNodeText">
+    <value>Types that implement {0}</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="TypeSelectorClassRootNodeText">
+    <value>Classes that inherit from {0}</value>
+    <comment>.
+ Parameters: 0 - typeName (string) </comment>
+  </data>
+  <data name="NoTypesFoundInAssemblyErrorMessage">
+    <value>There were no types found in the assembly '{0}' that implement or inherit from the base type '{1}'.</value>
+    <comment>.
+ Parameters: 0 - assemblyName (string), 1 - baseType (string) </comment>
+  </data>
+  <data name="NoTypesFoundInAssemblyCaption">
+    <value>No Types Found In Assembly.</value>
+  </data>
+  <data name="ConfigurationFilePathDescription">
+    <value>The path to the application configuration file.</value>
+    <comment> ApplicationNode.ConfigurationFile description</comment>
+  </data>
+  <data name="ConfigurationDefaultSectionDescription">
+    <value>The default configuration section.</value>
+    <comment> The description for ConfigurationSectionNode.DefaultSection</comment>
+  </data>
+  <data name="DefaultConfigurationSectionCollectionNodeName">
+    <value>Configuration Application Block</value>
+    <comment> default name for the ConfigurationSectionCollectionNode</comment>
+  </data>
+  <data name="DefaultConfigurationSectionNodeName">
+    <value>Configuration Section</value>
+    <comment> default name for the ConfigurationSectionName</comment>
+  </data>
+  <data name="ConfigurationSectionNodeEncryptDescription">
+    <value>Gets or sets if this section is encrypted. You must configure a "key algorithm storage provider" (Configuration Application Block-&gt;Encryption Settings-&gt;New-&gt;[Storage Provider]) in order to utilize encryption.</value>
+    <comment> The description for ConfigurationSection.Encrypt</comment>
+  </data>
+  <data name="XmlFileStorageProviderNodeTypeNameDescription">
+    <value>The name of a .NET class that implements the IConfigurationStorageProvider interface.</value>
+    <comment> The description for XmlFileStorageProviderNode.TypeName</comment>
+  </data>
+  <data name="XmlFileStorageProviderNodeFileNameDescription">
+    <value>The name of the external Xml file to store the configuration data.</value>
+    <comment> The description for XmlFileStorageProviderNode.FileName</comment>
+  </data>
+  <data name="XMLStorageProviderNodeFriendlyName">
+    <value>XML File Storage Provider</value>
+    <comment> The friendly name for a XmlFileStorageProviderNode</comment>
+  </data>
+  <data name="XmlSerializerTransformerNodeFriendlyName">
+    <value>Xml Serializer Transformer</value>
+    <comment> The friendly name for a XmlSerializerTransformerNode</comment>
+  </data>
+  <data name="DefaultXmlIncludeTypeNodeName">
+    <value>Xml Include Type</value>
+    <comment> The default name for a XmlIncludeTypeNode</comment>
+  </data>
+  <data name="ConfigurationFileDialogFilter">
+    <value>Configuration Files(web.config, *.exe.config, app.config)|web.config;*.exe.config;app.config|All Files(*.*)|*.*</value>
+    <comment> Default files for the configuration file dialog editor</comment>
+  </data>
+  <data name="OverwriteFileMessage">
+    <value>The file {0} cannot be saved because it is write-protected.
+
+Do you want to remove the write-protection and overwrite the file in its current location.</value>
+    <comment> message to ask if we want to overwrite files.
+ Parameters: 0 - fileName (string) </comment>
+  </data>
+  <data name="OverwriteFileCaption">
+    <value>Save of Read-Only File</value>
+  </data>
+  <data name="DefaultFileKeyAlgorithmStorageProviderNodeName">
+    <value>File Key Algorithm Storage Provider</value>
+    <comment> The default name of the FileKeyAlgorithmStorageProviderNode</comment>
+  </data>
+  <data name="FileKeyAlgorithmStorageProviderNodeFriendlyName">
+    <value>File Key Algorithm Storage Provider</value>
+    <comment> The friendly name of the FileKeyAlgorithmStorageProviderNode</comment>
+  </data>
+  <data name="ConfigurationSectionNodeFriendlyName">
+    <value>Configuration Section</value>
+    <comment> The friendly name of the ConfigurationSectionNode</comment>
+  </data>
+  <data name="ReadOnlyConfigurationSectionNodeFriendlyName">
+    <value>Read-only Configuration Section</value>
+    <comment> The friendly name of the ReadOnlyConfigurationSectionNode</comment>
+  </data>
+  <data name="DefaultEncryptionSettingsNodeName">
+    <value>Encryption Settings</value>
+    <comment> The default name for the EncryptionSettingsNode</comment>
+  </data>
+  <data name="EncryptionSettingsNodeKeyAlgorithmPairDescription">
+    <value>You can manage a key algorithm pair from a "key algorithm pair storage provider". The storage provider is responsible for storing the key and algorithm used to encrypt configuration. To create a new provider, right click on Encryption Settings-&gt;New-&gt;[Storage Providers] and select the provider you wish to use.</value>
+    <comment> The display EncryptionSettingsNode.KeyAlgorithmPair description</comment>
+  </data>
+  <data name="KeyInfoLabelToString">
+    <value>&lt;Hidden&gt;</value>
+    <comment> The KeyInfoLabel.ToString</comment>
+  </data>
+  <data name="KeyManagerUIInvalidKeyLengthErrorMessage">
+    <value>Invalid key length</value>
+    <comment> error message for invalid key length</comment>
+  </data>
+  <data name="KeyManagerUIInvalidKeyCharactersErrorMessage">
+    <value>Key must be in hexadecimal form (for example, 49FFC7)</value>
+    <comment> error message that the key must be in hex</comment>
+  </data>
+  <data name="FileKeyAlgorithmWizardLoadIntroText">
+    <value>Select the file in which to load an existing key algorithm pair.</value>
+    <comment> label text for wizard load page intro</comment>
+  </data>
+  <data name="FileKeyAlgorithmWizardSaveIntroText">
+    <value>Select the file in which to save the configured key algorithm pair.</value>
+    <comment> label text for wizard save page intro</comment>
+  </data>
+  <data name="FileKeyAlgorithmWizardDpapiLoadLabelText">
+    <value>This file is DPAPI protected.</value>
+    <comment> The text for the load label wizard</comment>
+  </data>
+  <data name="FileKeyAlgorithmWizardDpapiSaveLabelText">
+    <value>Enable DPAPI protection.</value>
+    <comment> The text for the save label wizard</comment>
+  </data>
+  <data name="FileKeyAlgorithmWizardUnableToLoadKeyErrorMessage">
+    <value>Unable to load the selected key file, please check your DPAPI settings.
+
+AdditionalInformation: {0}</value>
+    <comment> Error message when not able to load the key.
+ Parameters: 0 - message (string) </comment>
+  </data>
+  <data name="FileKeyAlgorithmWizardUnableToLoadKeyCaption">
+    <value>Unable to load the selected key file.</value>
+  </data>
+  <data name="FileKeyAlgorithmStorageProviderNodeKeyAlgorithmPairDescription">
+    <value>You can not view or edit the key algorithm pair. You must remove this storage provider and create a new one if you wish to define a new key.</value>
+    <comment> Description for FileKeyAlgorithmStorageProviderNode.KeyAlgorithmPair</comment>
+  </data>
+  <data name="FileKeyAlgorithmDpapiSettingsEditorUnableToSaveNewDpapiSettingsErrorMessage">
+    <value>Unable to save file with new DPAPI settings. Make sure that the original DPAPI settings are correct when you loaded the key file. You may need to reload the key (remove this node and recreate) with the correct DPAPI settings.
+
+Additional Information: {0}</value>
+    <comment> Error message when update to save dapi settings.
+ Parameters: 0 - reason (string) </comment>
+  </data>
+  <data name="FileKeyAlgorithmDpapiSettingsEditorUnableToSaveNewDpapiSettingsCaption">
+    <value>Unable to save file with new DPAPI settings</value>
+  </data>
+  <data name="KeyAlgorithmStorageProviderRequiredValidationErrorMessage">
+    <value>You must configure a key algorithm storage provider (Configuration Application Block-&gt;Encryption Settings-&gt;New-&gt;[Storage Provider]) in order to Encrypt this configuration section.</value>
+    <comment> error message when a key algorithm storage provider is not provided </comment>
+  </data>
+  <data name="DpapiSettingsFirstRunInstructionMessage">
+    <value>Please select the data protection mode.  "User" mode will encrypt your data using the credentials of the currently logged in user.  "Machine" mode will allow any user on this computer to encrypt and decrypt data. "None" (if applicable) will not use any DPAPI protection. 
+
+IMPORTANT: When using "Machine" mode be sure to save the entropy in a safe place. Your configuration can not be recovered if the entropy is lost.</value>
+    <comment> message to display first time running the dpapi settings</comment>
+  </data>
+  <data name="DpapiSettingsWarningMessage">
+    <value>WARNING: Data encrypted with the current storage mode and entropy (if applicable) will not be able to be decrypted if changed.</value>
+    <comment> warning message for dpapi settings</comment>
+  </data>
+  <data name="DpapiMissingModeCaption">
+    <value>Error</value>
+    <comment> error message when the dpapi mode are missing</comment>
+  </data>
+  <data name="DpapiMissingModeErrorMessage">
+    <value>Mode is required.  You must select a mode before closing this dialog.</value>
+  </data>
+  <data name="DpapiChangeConfirmCaption">
+    <value>Confirmation</value>
+    <comment> message to ask the user if the really want to change their dpapi settings</comment>
+  </data>
+  <data name="DpapiChangeConfirmMessage">
+    <value>Are you sure you want to continue? Data encrypted with the current storage mode and entropy (if applicable) will not be able to be decrypted if changed.</value>
+  </data>
+  <data name="DpapiConvertKeyConfirmMessage">
+    <value>This will convert your existing key file to the newly configured DPAPI settings. Do you wish to continue?</value>
+  </data>
+  <data name="DpapiEntropyMinSizeCaption">
+    <value>Error</value>
+    <comment> error message when the minimum size for the entropy is wrong</comment>
+  </data>
+  <data name="DpapiEntropyConvertErrorMessage">
+    <value>Entropy is not valid.</value>
+  </data>
+  <data name="DefaultDpapiModeToString">
+    <value>(none)</value>
+    <comment> the default ToString for DPAPIMode</comment>
+  </data>
+  <data name="DpapiModeToString">
+    <value>DPAPI Mode: {0}</value>
+    <comment> the default ToString for DPAPIMode.
+ Parameters: 0 - mode (string) </comment>
+  </data>
+  <data name="DpapiInformationMessage">
+    <value>DPAPI is part of the operating system and can be used to encrypt the file containing the key algorithm pair. DPAPI operates in either user or machine mode. In user mode, the ability to decrypt the file is restricted to a single account. Machine mode restricts the ability to decrypt the file to the computer used when the file was encrypted. Please see the Enterprise Library Documentation for information about the use of this option.</value>
+    <comment> Help information on DPAPI</comment>
+  </data>
+  <data name="DpapiInformationCaption">
+    <value>About DPAPI Protection</value>
+  </data>
+  <data name="MismatchedPasswordMessage">
+    <value>The passwords do not match. Passwords are case sensitive (e.g. "password" does not equal "PassWord"). Please try again.</value>
+    <comment> message telling user that passwards don't match</comment>
+  </data>
+  <data name="MismatchedPasswordCaption">
+    <value>Passwords do not match</value>
+  </data>
+  <data name="NodeNameDescription">
+    <value>Gets or sets the name of the node.</value>
+    <comment> The description for ConfigurationNode.Name</comment>
+  </data>
+  <data name="TypeNameDescription">
+    <value>Gets or sets the qualified type name.</value>
+    <comment> The description for a type name</comment>
+  </data>
+  <data name="CustomStorageProviderNodeDefaultName">
+    <value>Custom Storage Provider</value>
+    <comment> The default name of CustomStorageProviderNode</comment>
+  </data>
+  <data name="CustomTransformerNodeDefaultName">
+    <value>Custom Transformer Provider</value>
+    <comment> The default name of CustomTransformerProviderNode </comment>
+  </data>
+  <data name="CustomKeyAlgorithmPairStorageProviderNodeDefaultName">
+    <value>Custom Key Algorithm Pair Storage Provider</value>
+    <comment> The default name of CustomStorageProviderNode</comment>
+  </data>
+  <data name="CustomStorageProviderAttributesDescription">
+    <value>Defines any number of custom properties that can be passed to a the custom storage provider.</value>
+    <comment> The description for the name value pairs for the custom storage provider</comment>
+  </data>
+  <data name="CustomTransformerAttributesDescription">
+    <value>Defines any number of custom properties that can be passed to a the custom transformer.</value>
+    <comment> The description for the name value pairs for the custom storage provider</comment>
+  </data>
+  <data name="CustomKeyAlgorithmPairStorageProviderAttributesDescription">
+    <value>Defines any number of custom properties that can be passed to a the custom key algorithm pair storage provider.</value>
+    <comment> The description for the name value pairs for the custom storage provider</comment>
+  </data>
+  <data name="CustomStorageProviderNodeTypeNameDescription">
+    <value>The fully qualified type name of the custom storage provider.</value>
+    <comment> The description for the TypeName of CustomStorageProviderNode</comment>
+  </data>
+  <data name="CustomTransformerNodeTypeNameDescription">
+    <value>The fully qualified type name of the custom transformer.</value>
+    <comment> The description for the TypeName of CustomStorageProviderNode</comment>
+  </data>
+  <data name="CustomKeyAlgorithmPairStorageProviderNodeTypeNameDescription">
+    <value>The fully qualified type name of the key algorithm pair storage provider.</value>
+    <comment> The description for the TypeName of CustomStorageProviderNode</comment>
+  </data>
+  <data name="KeyFilesString">
+    <value>Key Files (*.key)|*.key|All files (*.*)|*.*</value>
+  </data>
+  <data name="FileKeyAlgorithmStorageProviderNodeDpapiSettingsDescription">
+    <value>Gets or sets the DPAPI settings used to protect the file.</value>
+  </data>
+  <data name="FileKeyAlgorithmStorageProviderNodeFileDescription">
+    <value>Gets or sets the path of the file for storage</value>
+  </data>
+  <data name="AssembliesLabelText">
+    <value>Assemblies</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

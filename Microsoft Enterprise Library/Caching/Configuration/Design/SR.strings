@@ -1,0 +1,85 @@
+#===============================================================================
+# Microsoft patterns & practices Enterprise Library
+# Caching Application Block
+#===============================================================================
+# Copyright © Microsoft Corporation.  All rights reserved.
+# THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+# OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+# FITNESS FOR A PARTICULAR PURPOSE.
+#===============================================================================
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+#
+# Exceptions
+#
+; there can only be one cache manager collection node
+ExceptionOnlyOneCacheManagerCollectionNode = Only one Cache Manager Collection is allowed.
+
+#
+# Names
+#
+; The default name for the CacheManagerSetingsNode 
+DefaultCacheManagerSettingsNodeName = Caching Application Block
+
+; The default name for a CacheManagerNode
+DefaultCacheManagerNodeName = Cache Manager
+
+; The default name for the CacheManagerCollectionNode
+DefaultCacheManagerCollectionNodeName = Cache Managers
+
+; The default name of the default cache manager
+DefaultCacheManagerName = Cache Manager
+
+; The default CacheStorageNode name
+DefaultCacheStorageNodeName = Cache Storage
+
+; The default name of the CustomCacheStorageNode
+DefaultCustomCacheStorageNodeName = Custom Cache Storage
+
+; The name to give to custom null storage 
+NullStorageName = Null Storage
+
+; The default name of the IsolatedStorageNode
+DefaultIsolatedStorageNodeName = Isolated Storage
+
+#
+# Descriptions
+#
+DefaultCacheManagerDescription = The cache manager that is used if the user does not specify which cache manager to use
+CacheStorageNameDescription = Named instance of cache storage to associate with this cache manager
+ExpirationPollFrequencyInSecondsDescription = Frequency, in seconds, at which expirations are checked
+MaximumElementsInCacheBeforeScavengingDescription = Maximum number of cache items stored before scavenging occurs
+NumberToRemoveWhenScavengingDescription = Number of cache items to remove during scavenging
+CustomCacheStorageExtensionsDescription = Custom configuration extensions if applicable for this type.
+CacheStorageNodeTypeDescription = The type of Storage Provider which implements IBackingStore.
+IsolatedStorageAreaNameDescription = Name of the Isolated Storage area to use.
+DefaultStorageEncryptionNodeName = Storage Encryption
+CategoryGeneral = General
+
+#
+# Errors
+#
+DuplicateCacheStoragesName = You may not have multiple cache storages with the same name.
+
+; Menu Item Text
+CacheManagerMenuText = Cache Manager
+CacheSettingsMenuText = Caching Application Block
+
+; Statusbar Text
+GenericCreateStatusText(string name) = Create a new {0}
+CacheManagerStatusText = Create a new Cache Manager
+CacheSettingsStatusText = Caching Application Block
